@@ -1,0 +1,139 @@
+{
+  "accounts_total": 300,
+  "api": {
+    "/bi02/accounts": {
+      "keys": [
+        "items",
+        "page",
+        "page_size",
+        "total"
+      ],
+      "status": 200
+    },
+    "/bi02/accounts/{id}": {
+      "keys": [
+        "account",
+        "agent_steps",
+        "assessment",
+        "calls",
+        "evidence",
+        "facts",
+        "recommendation",
+        "repayments",
+        "statement_pull_shown"
+      ],
+      "status": 200
+    },
+    "/bi02/accounts?label=unassessed": {
+      "keys": [
+        "items",
+        "page",
+        "page_size",
+        "total"
+      ],
+      "status": 200
+    },
+    "/bi02/metrics": {
+      "keys": [
+        "abstention",
+        "accuracy",
+        "calibration",
+        "confusion",
+        "llm_stats",
+        "macro_f1",
+        "n_assessed",
+        "n_gold",
+        "per_label"
+      ],
+      "status": 200
+    },
+    "/bi02/recommendations": {
+      "item_keys": [
+        "account_id",
+        "action",
+        "channel",
+        "confidence",
+        "created_at",
+        "customer_name",
+        "id",
+        "label",
+        "reason",
+        "reasoning_summary",
+        "status"
+      ],
+      "status": 200
+    },
+    "/health": {
+      "keys": [
+        "ok"
+      ],
+      "status": 200
+    }
+  },
+  "gold_total": 300,
+  "input": {
+    "accounts": {
+      "md5": "7899f055993d4f72fe53bea3c330f56b",
+      "rows": 300
+    },
+    "calls": {
+      "md5": "5539538a5bd6dc48c2acab35d0900626",
+      "rows": 725
+    },
+    "gold_labels": {
+      "md5": "55ec646077c1745c9853cf0fef827a78",
+      "rows": 300
+    },
+    "promises": {
+      "md5": "4dc5d2a193105846d837c128008f10dd",
+      "rows": 669
+    },
+    "repayments": {
+      "md5": "be49e9139d9395a585668630b3916c78",
+      "rows": 1800
+    },
+    "statement_txns": {
+      "md5": "4dd1ba07c356ff5a1dfcf9ecc19751cf",
+      "rows": 37685
+    }
+  },
+  "other_tenant_detail_status": 404,
+  "other_tenant_total": 0,
+  "output_rows": {
+    "agent_runs": 56,
+    "agent_steps": 252,
+    "assessments": 56,
+    "evidence": 234,
+    "recommendations": 56
+  },
+  "pinned": {
+    "00500003906": {
+      "confidence": 0.86,
+      "label": "cant_pay"
+    },
+    "00500003911": {
+      "confidence": 0.9,
+      "label": "disputed"
+    },
+    "00500003912": {
+      "confidence": 0.9,
+      "label": "forgot"
+    },
+    "00500003914": {
+      "confidence": 0.88,
+      "label": "cant_pay"
+    },
+    "00500003920": {
+      "confidence": 0.9,
+      "label": "forgot"
+    }
+  },
+  "source_hashes": {
+    "agents/bi02/act.py": "01ba3704bdfaa6ffc298cd9a86a6c50ea4d2ac31015b4653df1ac17ecda0df4b",
+    "agents/bi02/decide.py": "8307cb5d82ed41f0e530216e9bc3d66fd4ffbecd9f674dceb81c8c0d4eb0e0f1",
+    "agents/bi02/evaluate.py": "d9e231ef270c3999807f7dd097de34405182750ac6d0a030020e1ddca9101728",
+    "agents/bi02/extract.py": "0c14dc3b1bb9cd6e31c26f5d3d98b9edede07f19e6ceb27a2a64635130753ea9",
+    "routers/bi02.py": "6714d4e8c6a70c64b9a6385bd9b58b85e6110d7a933710b2121519b29c011332",
+    "tools/account_tools.py": "b6582a7aa197bbd9a6ce274a1aa810b1ccb85f46a4523db711dce9a86ed72245"
+  }
+}
