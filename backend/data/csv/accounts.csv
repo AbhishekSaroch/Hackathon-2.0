@@ -1,0 +1,301 @@
+account_id,customer_name,product,branch,loan_amount,emi_amount,due_date,dpd,bucket,outstanding,status
+00500003906,Sana Gupta,Personal Loan,Mumbai,1457700.0,12900.0,2026-11-08,42,Bucket 2,1277100.0,delinquent
+00500003911,Priya Verma,Vehicle Loan,Pune,1176000.0,10500.0,2026-10-30,114,NPA,157500.0,delinquent
+00500003912,Priya Sharma,Vehicle Loan,Hyderabad,2555000.0,17500.0,2026-11-08,11,Bucket 1,595000.0,delinquent
+00500003914,Vikram Gupta,Vehicle Loan,Pune,2369100.0,15900.0,2026-11-10,40,Bucket 2,365700.0,delinquent
+00500003920,Arjun Shaikh,Vehicle Loan,Pune,2590500.0,15700.0,2026-10-26,24,Bucket 1,1114700.0,delinquent
+00500003923,Mohd Reddy,Home Loan,Chennai,1310000.0,13100.0,2026-11-07,12,Bucket 1,563300.0,delinquent
+00500003929,Neha Reddy,Vehicle Loan,Bengaluru,2560000.0,20000.0,2026-11-11,39,Bucket 2,380000.0,delinquent
+00500003933,Priya Gupta,Business Loan,Pune,1135200.0,8600.0,2026-11-09,41,Bucket 2,275200.0,delinquent
+00500003939,Mohd Nair,Business Loan,Delhi,525000.0,7500.0,2026-11-15,4,Bucket 1,412500.0,delinquent
+00500003943,Suresh Nair,Vehicle Loan,Mumbai,1998000.0,18000.0,2026-11-12,68,Bucket 3,1710000.0,delinquent
+00500003945,Suresh Patel,Personal Loan,Mumbai,2324000.0,14000.0,2026-11-14,5,Bucket 1,1092000.0,delinquent
+00500003951,Deepak Khan,Home Loan,Hyderabad,1663200.0,12600.0,2026-10-27,23,Bucket 1,718200.0,delinquent
+00500003957,Karan Saxena,Home Loan,Bengaluru,1186800.0,6900.0,2026-11-16,64,Bucket 3,186300.0,delinquent
+00500003959,Lakshmi Saxena,Vehicle Loan,Mumbai,1228200.0,17800.0,2026-11-13,98,NPA,267000.0,delinquent
+00500003963,Meena Vador,Business Loan,Pune,516000.0,4300.0,2026-11-16,95,NPA,266600.0,delinquent
+00500003968,Karan Mehta,Personal Loan,Pune,508800.0,5300.0,2026-11-02,109,NPA,137800.0,delinquent
+00500003969,Mohd Thakur,Home Loan,Hyderabad,759200.0,14600.0,2026-11-03,108,NPA,744600.0,delinquent
+00500003970,Rajesh Kapoor,Vehicle Loan,Pune,1040400.0,10200.0,2026-10-31,22,Bucket 1,265200.0,delinquent
+00500003973,Mayur Kapoor,Personal Loan,Mumbai,1071000.0,9000.0,2026-11-02,109,NPA,702000.0,delinquent
+00500003978,Priya Verma,Home Loan,Bengaluru,704900.0,13300.0,2026-11-06,74,Bucket 3,1157100.0,delinquent
+00500003980,Karan Rao,Business Loan,Hyderabad,508800.0,9600.0,2026-11-09,102,NPA,374400.0,delinquent
+00500003984,Mohd Gupta,Vehicle Loan,Mumbai,2448600.0,23100.0,2026-10-31,22,Bucket 1,462000.0,delinquent
+00500003987,Neha Rao,Vehicle Loan,Hyderabad,460800.0,6400.0,2026-11-02,78,Bucket 3,512000.0,delinquent
+00500003989,Rahul Moghe,Personal Loan,Hyderabad,845300.0,7900.0,2026-11-09,163,NPA,268600.0,delinquent
+00500003992,Rajesh Sharma,Personal Loan,Delhi,430700.0,5900.0,2026-10-30,114,NPA,442500.0,delinquent
+00500003995,Rahul Khan,Vehicle Loan,Delhi,873600.0,10400.0,2026-10-27,115,NPA,769600.0,delinquent
+00500003996,Rohit Shaikh,Business Loan,Bengaluru,1598400.0,10800.0,2026-10-30,114,NPA,1036800.0,delinquent
+00500004001,Priya Singh,Personal Loan,Hyderabad,1320000.0,8000.0,2026-10-28,83,Bucket 3,544000.0,delinquent
+00500004006,Deepak Khan,Home Loan,Chennai,1310400.0,8400.0,2026-10-26,54,Bucket 2,504000.0,delinquent
+00500004009,Rajesh Verma,Business Loan,Mumbai,828400.0,10900.0,2026-11-04,15,Bucket 1,708500.0,delinquent
+00500004013,Deepak Kapoor,Home Loan,Bengaluru,1464000.0,12200.0,2026-11-14,66,Bucket 3,390400.0,delinquent
+00500004015,Asha Nair,Personal Loan,Pune,2478000.0,21000.0,2026-11-15,35,Bucket 2,1491000.0,delinquent
+00500004017,Meena Rao,Business Loan,Mumbai,604500.0,15500.0,2026-11-11,69,Bucket 3,372000.0,delinquent
+00500004023,Meena Singh,Personal Loan,Mumbai,2172600.0,14200.0,2026-11-02,17,Bucket 1,497000.0,delinquent
+00500004025,Vikram Pillai,Home Loan,Hyderabad,348000.0,8700.0,2026-11-11,69,Bucket 3,435000.0,delinquent
+00500004029,Rajesh Nair,Vehicle Loan,Bengaluru,1115400.0,14300.0,2026-11-05,75,Bucket 3,1058200.0,delinquent
+00500004033,Rajesh Patel,Business Loan,Chennai,2527200.0,16200.0,2026-10-27,176,NPA,1247400.0,delinquent
+00500004037,Vikram Khan,Vehicle Loan,Bengaluru,1615000.0,19000.0,2026-10-26,85,Bucket 3,1235000.0,delinquent
+00500004039,Amit Singh,Vehicle Loan,Pune,626400.0,17400.0,2026-11-09,41,Bucket 2,1479000.0,delinquent
+00500004042,Vikram Singh,Home Loan,Hyderabad,704000.0,8000.0,2026-11-06,13,Bucket 1,464000.0,delinquent
+00500004048,Mayur Joshi,Vehicle Loan,Mumbai,2006000.0,17000.0,2026-11-04,15,Bucket 1,663000.0,delinquent
+00500004049,Meena Moghe,Home Loan,Chennai,2105400.0,12100.0,2026-11-09,102,NPA,834900.0,delinquent
+00500004050,Sana Thakur,Personal Loan,Mumbai,1344700.0,11300.0,2026-11-13,129,NPA,395500.0,delinquent
+00500004052,Rohit Shaikh,Home Loan,Hyderabad,1800000.0,10000.0,2026-10-30,83,Bucket 3,920000.0,delinquent
+00500004058,Mayur Singh,Home Loan,Bengaluru,518700.0,13300.0,2026-11-07,43,Bucket 2,332500.0,delinquent
+00500004062,Anjali Moghe,Business Loan,Pune,967200.0,15600.0,2026-11-02,48,Bucket 2,1279200.0,delinquent
+00500004065,Rohit Iyer,Personal Loan,Mumbai,842400.0,11700.0,2026-11-16,156,NPA,819000.0,delinquent
+00500004068,Mohd Das,Home Loan,Pune,2055000.0,15000.0,2026-11-15,96,NPA,1185000.0,delinquent
+00500004074,Pooja Saxena,Business Loan,Bengaluru,937500.0,7500.0,2026-11-12,68,Bucket 3,270000.0,delinquent
+00500004077,Meena Rao,Home Loan,Hyderabad,2566500.0,14500.0,2026-11-02,48,Bucket 2,797500.0,delinquent
+00500004078,Arjun Khan,Vehicle Loan,Chennai,522600.0,7800.0,2026-11-14,5,Bucket 1,140400.0,delinquent
+00500004080,Pooja Mehta,Vehicle Loan,Mumbai,1292000.0,17000.0,2026-11-08,164,NPA,1377000.0,delinquent
+00500004085,Rahul Sharma,Vehicle Loan,Pune,2585000.0,23500.0,2026-10-28,22,Bucket 1,1480500.0,delinquent
+00500004089,Asha Sharma,Home Loan,Mumbai,1108800.0,12600.0,2026-10-29,83,Bucket 3,856800.0,delinquent
+00500004092,Meena Sharma,Home Loan,Chennai,834200.0,9700.0,2026-11-12,38,Bucket 2,368600.0,delinquent
+00500004094,Mohd Verma,Personal Loan,Delhi,1701000.0,21000.0,2026-11-12,99,NPA,1491000.0,delinquent
+00500004098,Vikram Das,Vehicle Loan,Chennai,1584000.0,16000.0,2026-11-02,78,Bucket 3,208000.0,delinquent
+00500004100,Amit Pillai,Personal Loan,Mumbai,864600.0,13100.0,2026-11-05,45,Bucket 2,1152800.0,delinquent
+00500004106,Amit Joshi,Vehicle Loan,Chennai,316000.0,7900.0,2026-10-25,25,Bucket 1,774200.0,delinquent
+00500004112,Rajesh Reddy,Home Loan,Bengaluru,1864500.0,16500.0,2026-11-06,74,Bucket 3,973500.0,delinquent
+00500004117,Neha Joshi,Home Loan,Chennai,436800.0,11200.0,2026-10-31,114,NPA,963200.0,delinquent
+00500004120,Neha Pillai,Home Loan,Pune,1111000.0,10100.0,2026-11-02,109,NPA,303000.0,delinquent
+00500004121,Rahul Joshi,Vehicle Loan,Delhi,697200.0,8400.0,2026-10-25,25,Bucket 1,840000.0,delinquent
+00500004126,Sana Saxena,Personal Loan,Bengaluru,452600.0,7300.0,2026-11-14,128,NPA,343100.0,delinquent
+00500004131,Priya Vador,Vehicle Loan,Delhi,1706400.0,10800.0,2026-11-03,108,NPA,1080000.0,delinquent
+00500004132,Karan Iyer,Business Loan,Mumbai,1504000.0,18800.0,2026-11-05,75,Bucket 3,1240800.0,delinquent
+00500004133,Amit Rao,Home Loan,Delhi,897900.0,12300.0,2026-11-01,110,NPA,1057800.0,delinquent
+00500004134,Asha Pillai,Vehicle Loan,Bengaluru,1276800.0,7600.0,2026-11-12,68,Bucket 3,402800.0,delinquent
+00500004135,Sana Patel,Home Loan,Mumbai,1198800.0,10800.0,2026-11-17,63,Bucket 3,680400.0,delinquent
+00500004136,Suresh Moghe,Home Loan,Pune,467400.0,8200.0,2026-11-07,104,NPA,467400.0,delinquent
+00500004139,Shreya Kapoor,Business Loan,Mumbai,2006800.0,11600.0,2026-11-17,2,Bucket 1,545200.0,delinquent
+00500004143,Rajesh Patel,Personal Loan,Pune,226200.0,5800.0,2026-10-27,84,Bucket 3,493000.0,delinquent
+00500004146,Shreya Sharma,Home Loan,Hyderabad,1174500.0,26100.0,2026-11-13,129,NPA,652500.0,delinquent
+00500004147,Pooja Saxena,Business Loan,Bengaluru,860000.0,10000.0,2026-11-04,138,NPA,370000.0,delinquent
+00500004148,Pooja Joshi,Home Loan,Mumbai,2625000.0,17500.0,2026-11-14,97,NPA,245000.0,delinquent
+00500004153,Karan Joshi,Personal Loan,Pune,1476000.0,9000.0,2026-11-02,17,Bucket 1,477000.0,delinquent
+00500004156,Sana Rao,Home Loan,Mumbai,322500.0,4300.0,2026-11-11,100,NPA,129000.0,delinquent
+00500004162,Arjun Das,Vehicle Loan,Pune,2376000.0,13200.0,2026-11-06,44,Bucket 2,1214400.0,delinquent
+00500004163,Lakshmi Mehta,Vehicle Loan,Hyderabad,471500.0,11500.0,2026-11-01,141,NPA,621000.0,delinquent
+00500004166,Mayur Gupta,Personal Loan,Chennai,2688000.0,16800.0,2026-11-09,102,NPA,1377600.0,delinquent
+00500004172,Mayur Thakur,Business Loan,Mumbai,652500.0,4500.0,2026-11-10,162,NPA,234000.0,delinquent
+00500004176,Sana Verma,Business Loan,Hyderabad,935000.0,5500.0,2026-11-14,66,Bucket 3,214500.0,delinquent
+00500004180,Pooja Saxena,Vehicle Loan,Delhi,754800.0,14800.0,2026-11-02,109,NPA,1080400.0,delinquent
+00500004181,Amit Moghe,Business Loan,Bengaluru,997600.0,11600.0,2026-10-29,83,Bucket 3,1020800.0,delinquent
+00500004182,Anjali Nair,Home Loan,Mumbai,423300.0,5100.0,2026-11-11,69,Bucket 3,280500.0,delinquent
+00500004188,Meena Patel,Personal Loan,Chennai,1366800.0,10200.0,2026-10-27,84,Bucket 3,622200.0,delinquent
+00500004189,Suresh Pillai,Personal Loan,Chennai,2109000.0,18500.0,2026-11-09,10,Bucket 1,1813000.0,delinquent
+00500004193,Rajesh Iyer,Home Loan,Mumbai,2548000.0,18200.0,2026-11-14,97,NPA,455000.0,delinquent
+00500004199,Shreya Rao,Business Loan,Hyderabad,2636400.0,15600.0,2026-10-29,83,Bucket 3,468000.0,delinquent
+00500004202,Meena Shaikh,Home Loan,Chennai,655200.0,16800.0,2026-11-03,77,Bucket 3,705600.0,delinquent
+00500004203,Vikram Khan,Home Loan,Pune,1519000.0,15500.0,2026-10-29,83,Bucket 3,961000.0,delinquent
+00500004209,Pooja Patel,Personal Loan,Mumbai,2247900.0,12700.0,2026-11-08,11,Bucket 1,1016000.0,delinquent
+00500004215,Suresh Verma,Business Loan,Hyderabad,960000.0,9600.0,2026-10-28,114,NPA,355200.0,delinquent
+00500004218,Rajesh Iyer,Vehicle Loan,Mumbai,664200.0,5400.0,2026-11-16,64,Bucket 3,97200.0,delinquent
+00500004224,Suresh Shaikh,Personal Loan,Chennai,518300.0,7300.0,2026-11-05,14,Bucket 1,474500.0,delinquent
+00500004230,Priya Gupta,Vehicle Loan,Mumbai,1232000.0,7700.0,2026-11-01,79,Bucket 3,338800.0,delinquent
+00500004236,Mohd Khan,Home Loan,Delhi,462000.0,3300.0,2026-10-26,85,Bucket 3,234300.0,delinquent
+00500004240,Karan Sharma,Vehicle Loan,Bengaluru,1621400.0,12100.0,2026-11-12,68,Bucket 3,713900.0,delinquent
+00500004244,Asha Joshi,Business Loan,Chennai,1307200.0,7600.0,2026-10-27,53,Bucket 2,524400.0,delinquent
+00500004250,Amit Kapoor,Business Loan,Mumbai,2478600.0,15300.0,2026-11-07,104,NPA,826200.0,delinquent
+00500004256,Sana Patel,Home Loan,Hyderabad,1386100.0,16700.0,2026-10-26,85,Bucket 3,1603200.0,delinquent
+00500004261,Asha Mehta,Vehicle Loan,Pune,1393200.0,10800.0,2026-11-14,66,Bucket 3,950400.0,delinquent
+00500004264,Vikram Thakur,Personal Loan,Mumbai,717800.0,7400.0,2026-11-04,107,NPA,392200.0,delinquent
+00500004265,Mohd Nair,Vehicle Loan,Delhi,1328600.0,9100.0,2026-10-28,52,Bucket 2,600600.0,delinquent
+00500004271,Mayur Saxena,Business Loan,Hyderabad,2813000.0,19400.0,2026-10-26,54,Bucket 2,1222200.0,delinquent
+00500004272,Rajesh Pillai,Business Loan,Chennai,1887600.0,13200.0,2026-11-07,104,NPA,1082400.0,delinquent
+00500004273,Vikram Saxena,Vehicle Loan,Hyderabad,782600.0,9100.0,2026-10-31,22,Bucket 1,172900.0,delinquent
+00500004277,Deepak Vador,Home Loan,Mumbai,895400.0,7400.0,2026-11-04,15,Bucket 1,133200.0,delinquent
+00500004283,Mayur Sharma,Home Loan,Chennai,1222200.0,9700.0,2026-11-17,33,Bucket 2,776000.0,delinquent
+00500004285,Karan Vador,Vehicle Loan,Delhi,1033200.0,8200.0,2026-11-11,69,Bucket 3,114800.0,delinquent
+00500004288,Vikram Joshi,Personal Loan,Bengaluru,384800.0,10400.0,2026-11-05,45,Bucket 2,530400.0,delinquent
+00500004291,Imran Iyer,Vehicle Loan,Chennai,720000.0,6000.0,2026-11-17,63,Bucket 3,414000.0,delinquent
+00500004296,Rohit Verma,Business Loan,Bengaluru,1113000.0,10600.0,2026-11-17,94,NPA,636000.0,delinquent
+00500004299,Shreya Mehta,Home Loan,Chennai,2226000.0,15900.0,2026-10-29,83,Bucket 3,985800.0,delinquent
+00500004300,Rohit Singh,Personal Loan,Chennai,917600.0,6200.0,2026-10-30,114,NPA,173600.0,delinquent
+00500004306,Amit Joshi,Vehicle Loan,Mumbai,581000.0,8300.0,2026-11-14,5,Bucket 1,249000.0,delinquent
+00500004308,Anjali Verma,Home Loan,Delhi,613800.0,9900.0,2026-10-27,84,Bucket 3,930600.0,delinquent
+00500004312,Rajesh Mehta,Personal Loan,Chennai,1117800.0,8100.0,2026-11-09,41,Bucket 2,777600.0,delinquent
+00500004313,Rohit Nair,Personal Loan,Chennai,1070100.0,8700.0,2026-11-12,99,NPA,400200.0,delinquent
+00500004315,Rajesh Joshi,Vehicle Loan,Mumbai,876300.0,12700.0,2026-11-14,128,NPA,342900.0,delinquent
+00500004319,Rajesh Mehta,Home Loan,Hyderabad,1461600.0,23200.0,2026-10-30,52,Bucket 2,1090400.0,delinquent
+00500004324,Mohd Sharma,Vehicle Loan,Pune,2738800.0,16400.0,2026-10-29,22,Bucket 1,360800.0,delinquent
+00500004329,Imran Khan,Business Loan,Pune,906300.0,15900.0,2026-11-14,36,Bucket 2,810900.0,delinquent
+00500004334,Mayur Mehta,Home Loan,Bengaluru,529300.0,6700.0,2026-11-15,65,Bucket 3,589600.0,delinquent
+00500004340,Suresh Joshi,Home Loan,Pune,1882400.0,18100.0,2026-11-16,3,Bucket 1,235300.0,delinquent
+00500004344,Asha Pillai,Home Loan,Pune,1929600.0,14400.0,2026-10-25,25,Bucket 1,792000.0,delinquent
+00500004346,Arjun Singh,Business Loan,Hyderabad,3402000.0,21000.0,2026-11-08,11,Bucket 1,567000.0,delinquent
+00500004350,Anjali Patel,Home Loan,Delhi,1842100.0,16900.0,2026-10-29,83,Bucket 3,1436500.0,delinquent
+00500004352,Arjun Khan,Personal Loan,Delhi,1176000.0,7000.0,2026-11-15,65,Bucket 3,434000.0,delinquent
+00500004356,Rajesh Sharma,Business Loan,Mumbai,1788800.0,17200.0,2026-10-27,84,Bucket 3,1548000.0,delinquent
+00500004357,Rohit Rao,Business Loan,Pune,1292000.0,13600.0,2026-11-03,108,NPA,1128800.0,delinquent
+00500004358,Sana Rao,Personal Loan,Mumbai,1367300.0,12100.0,2026-11-05,14,Bucket 1,580800.0,delinquent
+00500004364,Mohd Iyer,Personal Loan,Chennai,815100.0,14300.0,2026-11-07,104,NPA,715000.0,delinquent
+00500004367,Rajesh Thakur,Vehicle Loan,Bengaluru,546700.0,7100.0,2026-10-28,52,Bucket 2,546700.0,delinquent
+00500004372,Arjun Kapoor,Business Loan,Delhi,540000.0,3600.0,2026-11-09,10,Bucket 1,234000.0,delinquent
+00500004373,Karan Nair,Business Loan,Bengaluru,1019200.0,10400.0,2026-10-30,83,Bucket 3,1029600.0,delinquent
+00500004378,Rohit Pillai,Personal Loan,Hyderabad,607200.0,6900.0,2026-11-15,65,Bucket 3,345000.0,delinquent
+00500004383,Deepak Sharma,Business Loan,Bengaluru,835700.0,6100.0,2026-11-13,67,Bucket 3,451400.0,delinquent
+00500004384,Karan Reddy,Personal Loan,Bengaluru,364800.0,9600.0,2026-11-12,99,NPA,316800.0,delinquent
+00500004387,Imran Reddy,Home Loan,Delhi,558000.0,4500.0,2026-10-27,23,Bucket 1,373500.0,delinquent
+00500004388,Kavita Verma,Personal Loan,Mumbai,775200.0,11400.0,2026-11-09,102,NPA,205200.0,delinquent
+00500004391,Neha Moghe,Personal Loan,Delhi,569400.0,7300.0,2026-10-30,52,Bucket 2,459900.0,delinquent
+00500004397,Pooja Verma,Vehicle Loan,Hyderabad,803000.0,7300.0,2026-11-04,15,Bucket 1,459900.0,delinquent
+00500004399,Rohit Mehta,Vehicle Loan,Hyderabad,1173900.0,9100.0,2026-11-02,48,Bucket 2,464100.0,delinquent
+00500004400,Imran Iyer,Home Loan,Mumbai,1453500.0,8500.0,2026-11-07,12,Bucket 1,620500.0,delinquent
+00500004404,Sana Mehta,Personal Loan,Chennai,1416800.0,15400.0,2026-11-01,79,Bucket 3,847000.0,delinquent
+00500004405,Lakshmi Kapoor,Business Loan,Delhi,1860200.0,14200.0,2026-11-12,99,NPA,710000.0,delinquent
+00500004410,Rahul Rao,Personal Loan,Mumbai,2786400.0,25800.0,2026-10-25,25,Bucket 1,1883400.0,delinquent
+00500004412,Suresh Das,Personal Loan,Pune,1224300.0,7700.0,2026-11-03,108,NPA,146300.0,delinquent
+00500004415,Lakshmi Gupta,Vehicle Loan,Delhi,1653000.0,9500.0,2026-11-13,98,NPA,161500.0,delinquent
+00500004419,Rohit Joshi,Business Loan,Pune,1504800.0,15200.0,2026-11-14,97,NPA,440800.0,delinquent
+00500004425,Mayur Vador,Business Loan,Chennai,1298600.0,15100.0,2026-10-31,52,Bucket 2,724800.0,delinquent
+00500004429,Pooja Mehta,Home Loan,Bengaluru,960400.0,9800.0,2026-11-10,70,Bucket 3,127400.0,delinquent
+00500004432,Shreya Nair,Home Loan,Bengaluru,982800.0,10800.0,2026-11-16,64,Bucket 3,205200.0,delinquent
+00500004436,Rohit Vador,Personal Loan,Chennai,756000.0,16800.0,2026-11-02,109,NPA,520800.0,delinquent
+00500004437,Imran Gupta,Personal Loan,Mumbai,316200.0,5100.0,2026-11-06,74,Bucket 3,423300.0,delinquent
+00500004441,Vikram Reddy,Personal Loan,Mumbai,1377000.0,8100.0,2026-10-27,23,Bucket 1,672300.0,delinquent
+00500004446,Sana Pillai,Personal Loan,Bengaluru,1132200.0,11100.0,2026-11-16,3,Bucket 1,355200.0,delinquent
+00500004450,Arjun Pillai,Business Loan,Bengaluru,900900.0,9900.0,2026-10-25,86,Bucket 3,118800.0,delinquent
+00500004454,Rohit Vador,Personal Loan,Chennai,1577600.0,11600.0,2026-11-01,79,Bucket 3,974400.0,delinquent
+00500004455,Mohd Das,Home Loan,Delhi,777000.0,11100.0,2026-10-25,147,NPA,1098900.0,delinquent
+00500004459,Sana Verma,Vehicle Loan,Hyderabad,2145000.0,14300.0,2026-11-04,168,NPA,257400.0,delinquent
+00500004460,Anjali Pillai,Home Loan,Delhi,1270200.0,8700.0,2026-11-17,63,Bucket 3,400200.0,delinquent
+00500004465,Sana Joshi,Vehicle Loan,Pune,1007000.0,9500.0,2026-11-08,164,NPA,627000.0,delinquent
+00500004467,Rohit Verma,Business Loan,Delhi,162800.0,4400.0,2026-11-07,73,Bucket 3,101200.0,delinquent
+00500004469,Meena Iyer,Business Loan,Pune,1098000.0,18300.0,2026-10-25,86,Bucket 3,347700.0,delinquent
+00500004470,Sana Rao,Business Loan,Chennai,516200.0,5800.0,2026-10-28,114,NPA,272600.0,delinquent
+00500004471,Mayur Verma,Vehicle Loan,Hyderabad,1688400.0,13400.0,2026-11-01,79,Bucket 3,1058600.0,delinquent
+00500004473,Shreya Iyer,Home Loan,Pune,1658500.0,15500.0,2026-10-27,115,NPA,1147000.0,delinquent
+00500004479,Karan Vador,Personal Loan,Mumbai,1922800.0,20900.0,2026-10-31,114,NPA,2090000.0,delinquent
+00500004482,Shreya Thakur,Personal Loan,Chennai,1728900.0,11300.0,2026-11-03,16,Bucket 1,1062200.0,delinquent
+00500004487,Anjali Vador,Personal Loan,Chennai,840000.0,16800.0,2026-11-13,6,Bucket 1,1008000.0,delinquent
+00500004493,Mohd Khan,Personal Loan,Mumbai,1847600.0,14900.0,2026-11-07,165,NPA,730100.0,delinquent
+00500004494,Asha Kapoor,Personal Loan,Pune,1241000.0,17000.0,2026-11-06,13,Bucket 1,1241000.0,delinquent
+00500004496,Rahul Vador,Home Loan,Mumbai,1411100.0,13700.0,2026-10-30,52,Bucket 2,274000.0,delinquent
+00500004497,Deepak Iyer,Home Loan,Chennai,1373400.0,21800.0,2026-11-07,73,Bucket 3,1896600.0,delinquent
+00500004498,Suresh Singh,Home Loan,Delhi,2240000.0,20000.0,2026-11-03,77,Bucket 3,1040000.0,delinquent
+00500004501,Lakshmi Rao,Business Loan,Delhi,1112400.0,10300.0,2026-11-07,104,NPA,628300.0,delinquent
+00500004506,Rajesh Shaikh,Home Loan,Bengaluru,823600.0,7100.0,2026-11-02,48,Bucket 2,639000.0,delinquent
+00500004510,Arjun Patel,Business Loan,Delhi,2222500.0,12700.0,2026-11-07,104,NPA,977900.0,delinquent
+00500004516,Asha Thakur,Business Loan,Delhi,664000.0,8000.0,2026-11-01,110,NPA,264000.0,delinquent
+00500004520,Rohit Singh,Home Loan,Hyderabad,206400.0,4300.0,2026-10-30,83,Bucket 3,210700.0,delinquent
+00500004526,Mayur Rao,Vehicle Loan,Hyderabad,1305400.0,10700.0,2026-11-05,75,Bucket 3,1005800.0,delinquent
+00500004527,Karan Sharma,Personal Loan,Delhi,1538600.0,15700.0,2026-11-05,45,Bucket 2,1444400.0,delinquent
+00500004530,Neha Thakur,Home Loan,Delhi,1263600.0,8100.0,2026-11-06,74,Bucket 3,121500.0,delinquent
+00500004531,Arjun Shaikh,Business Loan,Pune,746700.0,13100.0,2026-11-03,108,NPA,288200.0,delinquent
+00500004537,Priya Sharma,Personal Loan,Hyderabad,222000.0,6000.0,2026-10-26,54,Bucket 2,126000.0,delinquent
+00500004541,Arjun Reddy,Business Loan,Pune,1662600.0,16300.0,2026-10-25,25,Bucket 1,358600.0,delinquent
+00500004546,Anjali Patel,Home Loan,Pune,729600.0,11400.0,2026-11-06,74,Bucket 3,421800.0,delinquent
+00500004548,Karan Iyer,Home Loan,Mumbai,477400.0,6200.0,2026-11-04,15,Bucket 1,409200.0,delinquent
+00500004554,Vikram Joshi,Home Loan,Delhi,1740800.0,13600.0,2026-10-27,53,Bucket 2,1169600.0,delinquent
+00500004559,Meena Pillai,Personal Loan,Chennai,850000.0,5000.0,2026-10-25,86,Bucket 3,310000.0,delinquent
+00500004563,Shreya Shaikh,Home Loan,Chennai,523200.0,10900.0,2026-11-14,5,Bucket 1,1090000.0,delinquent
+00500004567,Priya Gupta,Business Loan,Delhi,1590400.0,11200.0,2026-11-14,36,Bucket 2,470400.0,delinquent
+00500004573,Karan Singh,Business Loan,Bengaluru,448400.0,11800.0,2026-11-15,96,NPA,1062000.0,delinquent
+00500004574,Karan Rao,Personal Loan,Chennai,952000.0,7000.0,2026-11-15,65,Bucket 3,441000.0,delinquent
+00500004575,Suresh Patel,Personal Loan,Mumbai,522600.0,13400.0,2026-10-29,114,NPA,522600.0,delinquent
+00500004578,Rahul Sharma,Personal Loan,Pune,1950000.0,12500.0,2026-11-09,102,NPA,862500.0,delinquent
+00500004579,Priya Gupta,Personal Loan,Pune,1269000.0,9400.0,2026-11-11,100,NPA,394800.0,delinquent
+00500004581,Asha Kapoor,Vehicle Loan,Bengaluru,1771200.0,16400.0,2026-10-30,22,Bucket 1,262400.0,delinquent
+00500004586,Vikram Rao,Business Loan,Mumbai,1632000.0,17000.0,2026-11-03,169,NPA,323000.0,delinquent
+00500004591,Pooja Pillai,Vehicle Loan,Bengaluru,1317600.0,10800.0,2026-11-13,129,NPA,637200.0,delinquent
+00500004596,Amit Gupta,Business Loan,Delhi,680000.0,13600.0,2026-11-12,38,Bucket 2,734400.0,delinquent
+00500004599,Deepak Gupta,Home Loan,Delhi,3519000.0,20700.0,2026-11-14,36,Bucket 2,952200.0,delinquent
+00500004605,Lakshmi Joshi,Home Loan,Bengaluru,915000.0,15000.0,2026-11-12,7,Bucket 1,1500000.0,delinquent
+00500004606,Lakshmi Verma,Personal Loan,Hyderabad,1377600.0,12300.0,2026-11-05,75,Bucket 3,258300.0,delinquent
+00500004610,Rahul Sharma,Vehicle Loan,Pune,1692600.0,18200.0,2026-10-28,22,Bucket 1,546000.0,delinquent
+00500004613,Mayur Reddy,Business Loan,Hyderabad,1626100.0,10100.0,2026-11-09,41,Bucket 2,707000.0,delinquent
+00500004616,Imran Pillai,Home Loan,Pune,642400.0,14600.0,2026-11-05,106,NPA,1401600.0,delinquent
+00500004617,Arjun Sharma,Personal Loan,Hyderabad,1315800.0,8600.0,2026-11-04,46,Bucket 2,335400.0,delinquent
+00500004623,Rajesh Verma,Vehicle Loan,Pune,2310800.0,21200.0,2026-11-11,100,NPA,1166000.0,delinquent
+00500004624,Vikram Pillai,Home Loan,Delhi,1500000.0,12000.0,2026-11-07,43,Bucket 2,288000.0,delinquent
+00500004627,Mayur Gupta,Personal Loan,Hyderabad,1184400.0,8400.0,2026-11-16,3,Bucket 1,730800.0,delinquent
+00500004630,Mayur Das,Business Loan,Chennai,716000.0,17900.0,2026-11-06,13,Bucket 1,1109800.0,delinquent
+00500004636,Rahul Das,Business Loan,Hyderabad,1162800.0,22800.0,2026-11-04,107,NPA,478800.0,delinquent
+00500004641,Karan Moghe,Personal Loan,Hyderabad,806400.0,7200.0,2026-11-17,33,Bucket 2,468000.0,delinquent
+00500004642,Mayur Nair,Vehicle Loan,Mumbai,793800.0,14700.0,2026-10-27,84,Bucket 3,823200.0,delinquent
+00500004646,Neha Das,Home Loan,Chennai,1037000.0,17000.0,2026-11-07,43,Bucket 2,221000.0,delinquent
+00500004652,Mohd Gupta,Vehicle Loan,Pune,2171700.0,17100.0,2026-11-16,64,Bucket 3,923400.0,delinquent
+00500004655,Mohd Singh,Business Loan,Hyderabad,2548000.0,18200.0,2026-11-09,71,Bucket 3,1183000.0,delinquent
+00500004658,Lakshmi Khan,Home Loan,Chennai,627000.0,5500.0,2026-11-04,107,NPA,456500.0,delinquent
+00500004662,Kavita Singh,Vehicle Loan,Chennai,1597200.0,13200.0,2026-11-05,75,Bucket 3,1161600.0,delinquent
+00500004667,Kavita Moghe,Vehicle Loan,Pune,2218800.0,12900.0,2026-10-31,22,Bucket 1,412800.0,delinquent
+00500004672,Meena Shaikh,Personal Loan,Pune,1965600.0,15600.0,2026-11-02,78,Bucket 3,811200.0,delinquent
+00500004673,Asha Reddy,Business Loan,Pune,483800.0,5900.0,2026-10-26,85,Bucket 3,377600.0,delinquent
+00500004675,Amit Rao,Home Loan,Bengaluru,2024000.0,11500.0,2026-11-01,18,Bucket 1,1092500.0,delinquent
+00500004676,Deepak Iyer,Business Loan,Mumbai,2615900.0,25900.0,2026-11-17,63,Bucket 3,2590000.0,delinquent
+00500004681,Anjali Joshi,Business Loan,Mumbai,1027000.0,7900.0,2026-11-14,158,NPA,426600.0,delinquent
+00500004685,Rahul Shaikh,Business Loan,Delhi,1376100.0,9900.0,2026-11-07,73,Bucket 3,663300.0,delinquent
+00500004687,Karan Shaikh,Personal Loan,Bengaluru,654500.0,7700.0,2026-10-29,52,Bucket 2,315700.0,delinquent
+00500004693,Vikram Rao,Home Loan,Mumbai,1014700.0,13900.0,2026-10-25,117,NPA,1056400.0,delinquent
+00500004695,Deepak Iyer,Personal Loan,Delhi,1835800.0,13400.0,2026-11-06,13,Bucket 1,214400.0,delinquent
+00500004699,Karan Singh,Personal Loan,Mumbai,2431800.0,19300.0,2026-11-17,63,Bucket 3,1659800.0,delinquent
+00500004700,Suresh Shaikh,Business Loan,Hyderabad,2347800.0,18200.0,2026-11-11,69,Bucket 3,946400.0,delinquent
+00500004703,Deepak Gupta,Home Loan,Delhi,1198400.0,11200.0,2026-10-25,25,Bucket 1,604800.0,delinquent
+00500004707,Mohd Kapoor,Vehicle Loan,Hyderabad,216000.0,4000.0,2026-11-13,67,Bucket 3,340000.0,delinquent
+00500004710,Deepak Shaikh,Home Loan,Bengaluru,1075200.0,19200.0,2026-11-09,71,Bucket 3,249600.0,delinquent
+00500004715,Mayur Verma,Vehicle Loan,Bengaluru,1117200.0,26600.0,2026-11-03,77,Bucket 3,1303400.0,delinquent
+00500004720,Meena Joshi,Personal Loan,Chennai,803600.0,9800.0,2026-10-30,52,Bucket 2,872200.0,delinquent
+00500004721,Kavita Saxena,Personal Loan,Mumbai,237600.0,3300.0,2026-10-26,116,NPA,105600.0,delinquent
+00500004725,Rohit Iyer,Vehicle Loan,Delhi,775200.0,13600.0,2026-10-28,52,Bucket 2,1088000.0,delinquent
+00500004730,Sana Thakur,Vehicle Loan,Pune,562400.0,3700.0,2026-10-28,22,Bucket 1,325600.0,delinquent
+00500004733,Asha Rao,Personal Loan,Pune,2158400.0,14200.0,2026-11-11,100,NPA,440200.0,delinquent
+00500004738,Arjun Mehta,Business Loan,Hyderabad,927200.0,7600.0,2026-10-26,54,Bucket 2,615600.0,delinquent
+00500004742,Meena Thakur,Business Loan,Chennai,780800.0,6100.0,2026-11-03,77,Bucket 3,244000.0,delinquent
+00500004743,Priya Singh,Business Loan,Mumbai,1491000.0,10500.0,2026-11-02,17,Bucket 1,987000.0,delinquent
+00500004749,Asha Moghe,Personal Loan,Pune,1965000.0,15000.0,2026-11-01,79,Bucket 3,1125000.0,delinquent
+00500004753,Mayur Patel,Vehicle Loan,Chennai,1424000.0,8000.0,2026-11-16,64,Bucket 3,344000.0,delinquent
+00500004754,Kavita Moghe,Personal Loan,Bengaluru,891800.0,9100.0,2026-11-02,78,Bucket 3,182000.0,delinquent
+00500004756,Lakshmi Iyer,Personal Loan,Mumbai,1305400.0,12200.0,2026-11-03,108,NPA,1073600.0,delinquent
+00500004758,Arjun Pillai,Business Loan,Mumbai,3201200.0,21200.0,2026-10-26,24,Bucket 1,1526400.0,delinquent
+00500004762,Rajesh Patel,Personal Loan,Chennai,1840800.0,15600.0,2026-11-10,9,Bucket 1,873600.0,delinquent
+00500004768,Imran Moghe,Business Loan,Pune,1275300.0,11700.0,2026-11-01,79,Bucket 3,631800.0,delinquent
+00500004772,Deepak Pillai,Vehicle Loan,Delhi,1689600.0,13200.0,2026-11-10,70,Bucket 3,792000.0,delinquent
+00500004776,Priya Pillai,Personal Loan,Hyderabad,2004300.0,13100.0,2026-11-05,106,NPA,327500.0,delinquent
+00500004778,Priya Gupta,Vehicle Loan,Bengaluru,861400.0,11800.0,2026-10-27,84,Bucket 3,247800.0,delinquent
+00500004783,Suresh Gupta,Personal Loan,Chennai,828000.0,13800.0,2026-11-05,75,Bucket 3,814200.0,delinquent
+00500004787,Rajesh Rao,Business Loan,Bengaluru,1272800.0,8600.0,2026-11-13,6,Bucket 1,249400.0,delinquent
+00500004792,Rahul Shaikh,Business Loan,Delhi,1026600.0,5800.0,2026-11-13,67,Bucket 3,440800.0,delinquent
+00500004793,Arjun Singh,Home Loan,Hyderabad,792000.0,4500.0,2026-10-30,83,Bucket 3,310500.0,delinquent
+00500004794,Shreya Singh,Personal Loan,Mumbai,326800.0,8600.0,2026-11-14,97,NPA,688000.0,delinquent
+00500004798,Shreya Mehta,Business Loan,Delhi,1846800.0,11400.0,2026-11-09,10,Bucket 1,786600.0,delinquent
+00500004804,Sana Moghe,Business Loan,Mumbai,561000.0,11000.0,2026-10-26,85,Bucket 3,737000.0,delinquent
+00500004806,Anjali Gupta,Home Loan,Bengaluru,1411000.0,8500.0,2026-10-26,116,NPA,841500.0,delinquent
+00500004808,Imran Gupta,Vehicle Loan,Bengaluru,1058200.0,7400.0,2026-11-13,98,NPA,540200.0,delinquent
+00500004814,Anjali Patel,Personal Loan,Bengaluru,2386800.0,15300.0,2026-10-25,25,Bucket 1,780300.0,delinquent
+00500004818,Anjali Pillai,Business Loan,Bengaluru,2803600.0,16300.0,2026-11-15,35,Bucket 2,472700.0,delinquent
+00500004822,Sana Sharma,Home Loan,Delhi,1140000.0,7600.0,2026-11-03,169,NPA,699200.0,delinquent
+00500004827,Karan Reddy,Vehicle Loan,Hyderabad,1905300.0,21900.0,2026-11-17,155,NPA,284700.0,delinquent
+00500004832,Kavita Sharma,Vehicle Loan,Hyderabad,1690500.0,14700.0,2026-11-16,64,Bucket 3,1440600.0,delinquent
+00500004837,Rahul Joshi,Home Loan,Mumbai,883500.0,9300.0,2026-10-25,55,Bucket 2,623100.0,delinquent
+00500004843,Arjun Verma,Personal Loan,Pune,406600.0,3800.0,2026-10-26,54,Bucket 2,235600.0,delinquent
+00500004844,Rohit Verma,Business Loan,Delhi,2409000.0,14600.0,2026-11-05,14,Bucket 1,321200.0,delinquent
+00500004850,Sana Sharma,Business Loan,Bengaluru,1388400.0,17800.0,2026-11-13,67,Bucket 3,409400.0,delinquent
+00500004852,Priya Singh,Vehicle Loan,Chennai,1125600.0,8400.0,2026-11-17,125,NPA,411600.0,delinquent
+00500004855,Shreya Rao,Home Loan,Chennai,432000.0,12000.0,2026-10-29,52,Bucket 2,1116000.0,delinquent
+00500004861,Lakshmi Joshi,Business Loan,Bengaluru,566500.0,10300.0,2026-10-26,24,Bucket 1,618000.0,delinquent
+00500004867,Deepak Verma,Business Loan,Chennai,504000.0,7200.0,2026-10-26,116,NPA,525600.0,delinquent
+00500004871,Rohit Mehta,Home Loan,Bengaluru,400400.0,9100.0,2026-11-16,95,NPA,309400.0,delinquent
+00500004877,Asha Reddy,Business Loan,Bengaluru,1725000.0,13800.0,2026-11-10,40,Bucket 2,717600.0,delinquent
+00500004882,Asha Vador,Home Loan,Pune,3615700.0,20900.0,2026-11-14,66,Bucket 3,1107700.0,delinquent
+00500004884,Pooja Patel,Vehicle Loan,Hyderabad,510400.0,8800.0,2026-11-14,97,NPA,519200.0,delinquent
+00500004887,Karan Verma,Personal Loan,Chennai,882900.0,10900.0,2026-11-14,36,Bucket 2,1046400.0,delinquent
+00500004892,Imran Rao,Business Loan,Delhi,1138800.0,7800.0,2026-10-31,22,Bucket 1,374400.0,delinquent
+00500004895,Vikram Reddy,Vehicle Loan,Pune,3343200.0,19900.0,2026-10-28,22,Bucket 1,676600.0,delinquent
+00500004896,Rahul Sharma,Personal Loan,Hyderabad,1209100.0,10700.0,2026-11-05,45,Bucket 2,502900.0,delinquent
+00500004900,Priya Moghe,Personal Loan,Pune,2083200.0,12400.0,2026-10-29,52,Bucket 2,1016800.0,delinquent
+00500004902,Rajesh Gupta,Business Loan,Mumbai,455800.0,4300.0,2026-10-29,22,Bucket 1,322500.0,delinquent
+00500004905,Arjun Patel,Business Loan,Mumbai,1378600.0,11300.0,2026-11-01,18,Bucket 1,960500.0,delinquent
+00500004911,Imran Khan,Vehicle Loan,Mumbai,1038000.0,6000.0,2026-10-29,22,Bucket 1,306000.0,delinquent
+00500004916,Lakshmi Kapoor,Personal Loan,Chennai,661500.0,13500.0,2026-11-14,97,NPA,1147500.0,delinquent
+00500004917,Arjun Reddy,Business Loan,Mumbai,324800.0,5600.0,2026-11-05,14,Bucket 1,464800.0,delinquent
+00500004920,Lakshmi Reddy,Home Loan,Pune,440800.0,11600.0,2026-11-03,169,NPA,719200.0,delinquent
+00500004926,Deepak Rao,Business Loan,Hyderabad,940800.0,14700.0,2026-10-26,24,Bucket 1,176400.0,delinquent
+00500004930,Shreya Kapoor,Personal Loan,Chennai,2774200.0,19400.0,2026-10-30,52,Bucket 2,834200.0,delinquent
+00500004933,Mayur Shaikh,Home Loan,Bengaluru,1308100.0,12700.0,2026-11-04,46,Bucket 2,1016000.0,delinquent
+00500004936,Neha Khan,Home Loan,Pune,636500.0,6700.0,2026-11-05,75,Bucket 3,288100.0,delinquent
+00500004938,Anjali Rao,Home Loan,Delhi,2425200.0,18800.0,2026-10-27,115,NPA,1428800.0,delinquent
+00500004942,Amit Iyer,Business Loan,Pune,2456600.0,14200.0,2026-11-09,10,Bucket 1,326600.0,delinquent
+00500004946,Amit Pillai,Vehicle Loan,Pune,1206000.0,20100.0,2026-11-06,74,Bucket 3,361800.0,delinquent

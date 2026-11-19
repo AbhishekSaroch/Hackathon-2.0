@@ -1,0 +1,71 @@
+/* Page-level styles (extends styles.css tokens) */
+.muted { color: var(--muted); }
+.grow { flex: 1; }
+.row-flex { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 6px 0; }
+.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0 0 12px; }
+.empty { padding: 28px; text-align: center; color: var(--muted); background: var(--white); }
+.progress { font-weight: 600; color: var(--teal); }
+.progress.ok { color: #1e7a31; }
+.alert-error { margin: 0 0 12px; padding: 10px 14px; background: #fde4e1; color: #b42318; border-left: 4px solid #e5484d; }
+.note { margin: 0 0 16px; padding: 10px 14px; background: #e8f4fb; border-left: 4px solid #4baeea; color: #1f2937; }
+.table-scroll { overflow-x: auto; }
+
+/* confidence bar */
+.conf { display: flex; align-items: center; gap: 8px; min-width: 110px; }
+.conf-bar { flex: 1; height: 8px; background: #e3e3e3; border-radius: 4px; overflow: hidden; }
+.conf-fill { height: 100%; }
+.conf-fill.hi { background: #2e9e47; } .conf-fill.mid { background: #e0a100; } .conf-fill.lo { background: #b0b0b0; }
+
+/* channel chips */
+.chip { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: #e8eef0; color: var(--teal); }
+.chip-whatsapp { background: #e1f5e6; color: #1e7a31; }
+.chip-telecall { background: #e1f1fb; color: #0a6ca8; }
+.chip-field_visit { background: #fde4e1; color: #b42318; }
+.chip-dispute_team { background: #ece6fb; color: #5b3fb5; }
+.chip-human { background: #eeeeee; color: #555; }
+
+/* account detail */
+.detail-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 960px) { .detail-grid { grid-template-columns: 1fr; } }
+.reason { margin: 8px 0 4px; font-size: 14px; line-height: 1.55; }
+.next-action { border-left: 4px solid var(--green); }
+.why { margin: 4px 0 8px; padding: 8px 12px; background: var(--white); border-left: 3px solid var(--divider); font-size: 12.5px; }
+
+.evidence { display: flex; gap: 10px; padding: 8px 0; border-top: 1px solid var(--divider); }
+.evidence:first-of-type { border-top: 0; }
+.src { flex: none; width: 34px; height: 22px; display: grid; place-items: center; border-radius: 4px; background: var(--teal); color: #fff; font-size: 11px; font-weight: 700; }
+.src-D5 { background: #0a6ca8; } .src-D6 { background: #8a5a00; } .src-D3 { background: #5b3fb5; }
+.sub { color: var(--muted); font-size: 12px; }
+
+.timeline { margin: 0; padding-left: 22px; }
+.timeline li { padding: 4px 0; }
+.timeline li.hl { font-weight: 700; color: var(--teal); }
+
+.call { border-top: 1px solid var(--divider); padding: 6px 0; }
+.call summary { cursor: pointer; font-weight: 600; }
+.transcript { margin: 8px 0 4px; padding: 10px 12px; background: var(--white); border-left: 3px solid var(--divider); line-height: 1.55; }
+
+.fact { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-top: 1px solid var(--divider); }
+.fact:first-of-type { border-top: 0; }
+.fact span { color: var(--muted); }
+.fact b { text-align: right; }
+
+table.mini { width: 100%; border-collapse: collapse; }
+.mini th { text-align: left; padding: 6px 8px; color: #202020; font-weight: 600; }
+.mini td { padding: 6px 8px; border-top: 1px solid var(--divider); background: var(--white); }
+.mini .num { text-align: right; }
+.mini.wide td, .mini.wide th { padding: 9px 12px; }
+
+/* approve queue */
+.rec-list { display: grid; gap: 12px; }
+.rec { margin: 0; }
+
+/* evaluation */
+.card .big small { font-size: 15px; color: var(--muted); font-weight: 600; }
+.matrix { border-collapse: collapse; }
+.matrix th { padding: 8px 12px; font-weight: 600; text-align: center; color: #202020; }
+.matrix tbody th { text-align: left; }
+.matrix td { width: 84px; text-align: center; padding: 10px; border: 1px solid var(--divider); background: var(--white); }
+.matrix td.diag { background: #d9f2de; font-weight: 700; }
+.matrix td.off { background: #fde4e1; font-weight: 700; color: #b42318; }
+.matrix td.zero { color: #bbb; }

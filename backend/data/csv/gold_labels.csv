@@ -1,0 +1,301 @@
+account_id,expert_label,rationale,is_ambiguous,split
+00500003906,cant_pay,"Salary fell by about 69% over the last months, balance is low, customer states an income cut. 2 promises, 1 kept.",0,public
+00500003911,disputed,"Statement shows the EMI debited twice on 2026-06-28, reversal came later. Misses started right after the double debit.",0,public
+00500003912,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500003914,cant_pay,"Salary fell by about 61% over the last months, balance is low, customer states an income cut. 2 promises, 0 kept.",0,public
+00500003920,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500003923,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500003929,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500003933,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500003939,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500003943,disputed,"Statement shows the EMI debited twice on 2026-08-11, reversal came later. Misses started right after the double debit.",0,public
+00500003945,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500003951,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500003957,cant_pay,"Salary fell by about 62% over the last months, balance is low, customer states an income cut. 3 promises, 1 kept.",0,public
+00500003959,disputed,"Statement shows the EMI debited twice on 2026-07-14, reversal came later. Misses started right after the double debit.",0,public
+00500003963,disputed,"Statement shows the EMI debited twice on 2026-07-15, reversal came later. Misses started right after the double debit.",0,public
+00500003968,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500003969,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500003970,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500003973,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500003978,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 0 kept.",0,public
+00500003980,disputed,"Fresh statement shows the EMI debited twice on 2026-07-10, reversal later. First pull was too thin to see it.",0,public
+00500003984,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500003987,disputed,"Statement shows the EMI debited twice on 2026-08-02, reversal came later. Misses started right after the double debit.",0,public
+00500003989,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500003992,wont_pay,"Customer says income is gone, but a salary of Rs 27000 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500003995,wont_pay,"Customer says income is gone, but a salary of Rs 39500 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500003996,disputed,"Fresh statement shows the EMI debited twice on 2026-06-27, reversal later. First pull was too thin to see it.",0,public
+00500004001,disputed,"Statement shows the EMI debited twice on 2026-07-27, reversal came later. Misses started right after the double debit.",0,public
+00500004006,cant_pay,"Salary fell by about 61% over the last months, balance is low, customer states an income cut. 2 promises, 1 kept.",0,public
+00500004009,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004013,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004015,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004017,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004023,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004025,disputed,"Statement shows the EMI debited twice on 2026-08-12, reversal came later. Misses started right after the double debit.",0,public
+00500004029,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004033,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004037,cant_pay,"Salary fell by about 66% over the last months, balance is low, customer states an income cut. 2 promises, 1 kept.",0,public
+00500004039,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004042,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004048,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004049,disputed,"Fresh statement shows the EMI debited twice on 2026-07-10, reversal later. First pull was too thin to see it.",0,public
+00500004050,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004052,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 1 kept.",0,public
+00500004058,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004062,cant_pay,"Salary fell by about 68% over the last months, balance is low, customer states an income cut. 2 promises, 1 kept.",0,public
+00500004065,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004068,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 1 kept.",0,public
+00500004074,disputed,"Statement shows the EMI debited twice on 2026-08-13, reversal came later. Misses started right after the double debit.",0,public
+00500004077,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004078,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004080,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004085,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004089,disputed,"Statement shows the EMI debited twice on 2026-07-28, reversal came later. Misses started right after the double debit.",0,public
+00500004092,cant_pay,"Salary fell by about 68% over the last months, balance is low, customer states an income cut. 3 promises, 1 kept.",0,public
+00500004094,wont_pay,"Customer says income is gone, but a salary of Rs 77500 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004098,wont_pay,"Customer says income is gone, but a salary of Rs 74500 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004100,cant_pay,"Salary fell by about 65% over the last months, balance is low, customer states an income cut. 2 promises, 0 kept.",0,public
+00500004106,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004112,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004117,disputed,"Statement shows the EMI debited twice on 2026-06-29, reversal came later. Misses started right after the double debit.",0,public
+00500004120,disputed,"Fresh statement shows the EMI debited twice on 2026-07-01, reversal later. First pull was too thin to see it.",0,public
+00500004121,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004126,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004131,disputed,"Statement shows the EMI debited twice on 2026-07-02, reversal came later. Misses started right after the double debit.",0,public
+00500004132,disputed,"Statement shows the EMI debited twice on 2026-08-06, reversal came later. Misses started right after the double debit.",0,public
+00500004133,disputed,"Statement shows the EMI debited twice on 2026-06-29, reversal came later. Misses started right after the double debit.",0,public
+00500004134,wont_pay,"Customer says income is gone, but a salary of Rs 35000 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004135,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004136,disputed,"Statement shows the EMI debited twice on 2026-07-05, reversal came later. Misses started right after the double debit.",0,public
+00500004139,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004143,wont_pay,"Customer says income is gone, but a salary of Rs 35000 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004146,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004147,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004148,disputed,"Statement shows the EMI debited twice on 2026-07-15, reversal came later. Misses started right after the double debit.",0,public
+00500004153,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004156,wont_pay,"Customer says income is gone, but a salary of Rs 26500 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004162,cant_pay,"Salary fell by about 56% over the last months, balance is low, customer states an income cut. 3 promises, 0 kept.",0,public
+00500004163,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004166,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 1 kept.",0,public
+00500004172,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004176,wont_pay,"Customer says income is gone, but a salary of Rs 36500 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004180,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 0 kept.",0,public
+00500004181,disputed,"Statement shows the EMI debited twice on 2026-07-27, reversal came later. Misses started right after the double debit.",0,public
+00500004182,wont_pay,"Customer says income is gone, but a salary of Rs 36500 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004188,disputed,"Statement shows the EMI debited twice on 2026-07-28, reversal came later. Misses started right after the double debit.",0,public
+00500004189,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004193,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004199,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004202,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 3 promises, 0 kept.",0,public
+00500004203,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004209,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004215,disputed,"Statement shows the EMI debited twice on 2026-06-26, reversal came later. Misses started right after the double debit.",0,public
+00500004218,cant_pay,"Salary fell by about 62% over the last months, balance is low, customer states an income cut. 2 promises, 1 kept.",0,public
+00500004224,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004230,wont_pay,"Customer says income is gone, but a salary of Rs 31000 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004236,cant_pay,"Salary fell by about 65% over the last months, balance is low, customer states an income cut. 3 promises, 1 kept.",0,public
+00500004240,disputed,"Fresh statement shows the EMI debited twice on 2026-08-12, reversal later. First pull was too thin to see it.",0,public
+00500004244,cant_pay,"Salary fell by about 69% over the last months, balance is low, customer states an income cut. 2 promises, 0 kept.",0,public
+00500004250,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 0 kept.",0,public
+00500004256,cant_pay,"Salary fell by about 63% over the last months, balance is low, customer states an income cut. 3 promises, 0 kept.",0,public
+00500004261,disputed,"Statement shows the EMI debited twice on 2026-08-13, reversal came later. Misses started right after the double debit.",0,public
+00500004264,disputed,"Statement shows the EMI debited twice on 2026-07-04, reversal came later. Misses started right after the double debit.",0,public
+00500004265,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004271,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004272,wont_pay,"Customer says income is gone, but a salary of Rs 46500 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004273,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004277,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004283,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 3 promises, 0 kept.",0,public
+00500004285,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 3 promises, 1 kept.",0,public
+00500004288,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 3 promises, 1 kept.",0,public
+00500004291,cant_pay,"Salary stopped about 3 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004296,disputed,"Statement shows the EMI debited twice on 2026-07-15, reversal came later. Misses started right after the double debit.",0,public
+00500004299,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004300,wont_pay,"Customer says income is gone, but a salary of Rs 49500 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004306,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004308,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004312,cant_pay,"Salary fell by about 67% over the last months, balance is low, customer states an income cut. 3 promises, 1 kept.",0,public
+00500004313,disputed,"Statement shows the EMI debited twice on 2026-07-13, reversal came later. Misses started right after the double debit.",0,public
+00500004315,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004319,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004324,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004329,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004334,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004340,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004344,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004346,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004350,cant_pay,"Salary credits stopped about 4 months ago, balance is low, customer states income loss. 3 promises, 0 kept.",0,public
+00500004352,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004356,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 1 kept.",0,public
+00500004357,disputed,"Statement shows the EMI debited twice on 2026-07-03, reversal came later. Misses started right after the double debit.",0,public
+00500004358,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004364,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004367,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 2 promises, 1 kept.",0,public
+00500004372,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004373,disputed,"Fresh statement shows the EMI debited twice on 2026-07-27, reversal later. First pull was too thin to see it.",0,public
+00500004378,disputed,"Fresh statement shows the EMI debited twice on 2026-08-14, reversal later. First pull was too thin to see it.",0,public
+00500004383,cant_pay,"Salary fell by about 60% over the last months, balance is low, customer states an income cut. 2 promises, 0 kept.",0,public
+00500004384,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 1 kept.",0,public
+00500004387,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004388,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004391,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 3 promises, 0 kept.",0,public
+00500004397,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004399,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004400,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004404,cant_pay,"Salary stopped about 3 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004405,disputed,"Fresh statement shows the EMI debited twice on 2026-07-13, reversal later. First pull was too thin to see it.",0,public
+00500004410,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004412,disputed,"Statement shows the EMI debited twice on 2026-07-04, reversal came later. Misses started right after the double debit.",0,public
+00500004415,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 1 kept.",0,public
+00500004419,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004425,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004429,disputed,"Statement shows the EMI debited twice on 2026-08-10, reversal came later. Misses started right after the double debit.",0,public
+00500004432,cant_pay,"Salary fell by about 69% over the last months, balance is low, customer states an income cut. 3 promises, 0 kept.",0,public
+00500004436,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004437,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004441,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004446,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004450,wont_pay,"Customer says income is gone, but a salary of Rs 46500 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004454,cant_pay,"Salary credits stopped about 4 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004455,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004459,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004460,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004465,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004467,cant_pay,"Salary fell by about 64% over the last months, balance is low, customer states an income cut. 3 promises, 1 kept.",0,public
+00500004469,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004470,wont_pay,"Customer says income is gone, but a salary of Rs 29000 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004471,cant_pay,"Salary fell by about 63% over the last months, balance is low, customer states an income cut. 2 promises, 1 kept.",0,public
+00500004473,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004479,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004482,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004487,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004493,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004494,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004496,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004497,wont_pay,"Customer says income is gone, but a salary of Rs 74500 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004498,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004501,disputed,"Statement shows the EMI debited twice on 2026-07-05, reversal came later. Misses started right after the double debit.",0,public
+00500004506,cant_pay,"Salary fell by about 59% over the last months, balance is low, customer states an income cut. 3 promises, 1 kept.",0,public
+00500004510,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004516,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 0 kept.",0,public
+00500004520,cant_pay,"Salary fell by about 57% over the last months, balance is low, customer states an income cut. 2 promises, 1 kept.",0,public
+00500004526,wont_pay,"Customer says income is gone, but a salary of Rs 46000 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004527,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004530,wont_pay,"Customer says income is gone, but a salary of Rs 63500 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004531,wont_pay,"Customer says income is gone, but a salary of Rs 48500 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004537,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004541,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004546,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 2 promises, 1 kept.",0,public
+00500004548,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004554,cant_pay,"Salary stopped about 3 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004559,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004563,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004567,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004573,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 1 kept.",0,public
+00500004574,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004575,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004578,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004579,wont_pay,"Customer says income is gone, but a salary of Rs 59000 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004581,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004586,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004591,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004596,cant_pay,"Salary fell by about 57% over the last months, balance is low, customer states an income cut. 3 promises, 0 kept.",0,public
+00500004599,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 3 promises, 0 kept.",0,public
+00500004605,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004606,disputed,"Fresh statement shows the EMI debited twice on 2026-08-06, reversal later. First pull was too thin to see it.",0,public
+00500004610,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004613,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004616,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004617,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004623,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004624,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 3 promises, 0 kept.",0,public
+00500004627,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004630,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004636,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004641,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 3 promises, 0 kept.",0,public
+00500004642,disputed,"Fresh statement shows the EMI debited twice on 2026-07-26, reversal later. First pull was too thin to see it.",0,public
+00500004646,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004652,disputed,"Statement shows the EMI debited twice on 2026-08-16, reversal came later. Misses started right after the double debit.",0,public
+00500004655,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004658,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004662,wont_pay,"Customer says income is gone, but a salary of Rs 64500 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004667,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004672,disputed,"Statement shows the EMI debited twice on 2026-08-03, reversal came later. Misses started right after the double debit.",0,public
+00500004673,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004675,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004676,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 0 kept.",0,public
+00500004681,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004685,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004687,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004693,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 0 kept.",0,public
+00500004695,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004699,cant_pay,"Salary fell by about 58% over the last months, balance is low, customer states an income cut. 2 promises, 0 kept.",0,public
+00500004700,cant_pay,"Salary fell by about 64% over the last months, balance is low, customer states an income cut. 3 promises, 0 kept.",0,public
+00500004703,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004707,cant_pay,"Salary fell by about 62% over the last months, balance is low, customer states an income cut. 3 promises, 0 kept.",0,public
+00500004710,disputed,"Statement shows the EMI debited twice on 2026-08-07, reversal came later. Misses started right after the double debit.",0,public
+00500004715,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004720,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004721,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004725,cant_pay,"Salary fell by about 65% over the last months, balance is low, customer states an income cut. 2 promises, 0 kept.",0,public
+00500004730,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004733,disputed,"Statement shows the EMI debited twice on 2026-07-12, reversal came later. Misses started right after the double debit.",0,public
+00500004738,cant_pay,"Salary credits stopped about 2 months ago, balance is low, customer states income loss. 2 promises, 1 kept.",0,public
+00500004742,disputed,"Statement shows the EMI debited twice on 2026-08-01, reversal came later. Misses started right after the double debit.",0,public
+00500004743,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004749,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 3 promises, 1 kept.",0,public
+00500004753,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004754,cant_pay,"Salary credits stopped about 4 months ago, balance is low, customer states income loss. 2 promises, 1 kept.",0,public
+00500004756,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004758,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004762,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004768,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004772,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004776,wont_pay,"Customer says income is gone, but a salary of Rs 53000 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004778,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004783,wont_pay,"Customer says income is gone, but a salary of Rs 83000 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004787,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004792,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004793,cant_pay,"Salary credits stopped about 4 months ago, balance is low, customer states income loss. 3 promises, 1 kept.",0,public
+00500004794,disputed,"Statement shows the EMI debited twice on 2026-07-15, reversal came later. Misses started right after the double debit.",0,public
+00500004798,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004804,wont_pay,"Customer says income is gone, but a salary of Rs 50000 is still credited and balance covers the EMI. 4 promises, 0 kept.",0,public
+00500004806,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 0 kept.",0,public
+00500004808,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004814,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004818,wont_pay,Customer claims a dispute but the statement shows no double debit or reversal. Salary and balance are fine.,0,public
+00500004822,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004827,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004832,wont_pay,"Salary still credited, large discretionary spends, no reason given, 4 promises, 0 kept.",0,public
+00500004837,cant_pay,"Salary fell by about 56% over the last months, balance is low, customer states an income cut. 2 promises, 0 kept.",0,public
+00500004843,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 3 promises, 1 kept.",0,public
+00500004844,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004850,wont_pay,"Salary still credited, large discretionary spends, no reason given, 3 promises, 0 kept.",0,public
+00500004852,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004855,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 2 promises, 0 kept.",0,public
+00500004861,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004867,wont_pay,"Customer says income is gone, but a salary of Rs 38000 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004871,disputed,"Statement shows the EMI debited twice on 2026-07-14, reversal came later. Misses started right after the double debit.",0,public
+00500004877,cant_pay,"Salary fell by about 66% over the last months, balance is low, customer states an income cut. 3 promises, 0 kept.",0,public
+00500004882,disputed,"Statement shows the EMI debited twice on 2026-08-12, reversal came later. Misses started right after the double debit.",0,public
+00500004884,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004887,cant_pay,"Salary fell by about 58% over the last months, balance is low, customer states an income cut. 3 promises, 0 kept.",0,public
+00500004892,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004895,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004896,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004900,cant_pay,"Salary fell by about 61% over the last months, balance is low, customer states an income cut. 2 promises, 1 kept.",0,public
+00500004902,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004905,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004911,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004916,disputed,"Statement shows the EMI debited twice on 2026-07-14, reversal came later. Misses started right after the double debit.",0,public
+00500004917,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004920,insufficient,"Irregular freelance income, mixed promise history, no clear reason stated. Evidence stays inconclusive even with a fresh statement.",1,public
+00500004926,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004930,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 3 promises, 1 kept.",0,public
+00500004933,cant_pay,"Salary fell by about 65% over the last months, balance is low, customer states an income cut. 3 promises, 1 kept.",0,public
+00500004936,cant_pay,"Salary stopped about 2 months ago (visible only in the fresh statement), balance low, customer states job loss.",0,public
+00500004938,wont_pay,"Customer says income is gone, but a salary of Rs 72000 is still credited and balance covers the EMI. 3 promises, 0 kept.",0,public
+00500004942,forgot,First miss after 5 of 5 earlier EMIs on time. Salary still credited and balance covered the EMI. Customer said they forgot.,0,public
+00500004946,cant_pay,"Salary credits stopped about 3 months ago, balance is low, customer states income loss. 3 promises, 1 kept.",0,public
