@@ -1,0 +1,655 @@
+{
+  "cv": {
+    "chosen": {
+      "kind": "hgb",
+      "params": {
+        "max_depth": 2,
+        "max_iter": 150
+      }
+    },
+    "configs": [
+      {
+        "kind": "logreg",
+        "params": {
+          "C": 0.05
+        },
+        "replay": {
+          "flagged": 299,
+          "flagged_share": 0.05,
+          "missers": 160,
+          "base_rate": 0.026755852842809364,
+          "caught": 137,
+          "recall": 0.85625,
+          "precision": 0.45819397993311034,
+          "lift": 17.125,
+          "median_lead_days": 28.0,
+          "p25_lead_days": 14.0,
+          "tau": 0.2317226808122997
+        },
+        "snapshots": [
+          {
+            "day": 31,
+            "n": 5980,
+            "positives": 160,
+            "base_rate": 0.026755852842809364,
+            "precision_top": 0.20066889632107024,
+            "lift": 7.5,
+            "caught": 60
+          },
+          {
+            "day": 45,
+            "n": 5960,
+            "positives": 140,
+            "base_rate": 0.02348993288590604,
+            "precision_top": 0.34563758389261745,
+            "lift": 14.714285714285714,
+            "caught": 103
+          },
+          {
+            "day": 60,
+            "n": 5891,
+            "positives": 71,
+            "base_rate": 0.012052283143778646,
+            "precision_top": 0.17627118644067796,
+            "lift": 14.625543089042731,
+            "caught": 52
+          }
+        ]
+      },
+      {
+        "kind": "logreg",
+        "params": {
+          "C": 0.3
+        },
+        "replay": {
+          "flagged": 299,
+          "flagged_share": 0.05,
+          "missers": 160,
+          "base_rate": 0.026755852842809364,
+          "caught": 136,
+          "recall": 0.85,
+          "precision": 0.45484949832775917,
+          "lift": 17.0,
+          "median_lead_days": 27.5,
+          "p25_lead_days": 14.0,
+          "tau": 0.21933312785640272
+        },
+        "snapshots": [
+          {
+            "day": 31,
+            "n": 5980,
+            "positives": 160,
+            "base_rate": 0.026755852842809364,
+            "precision_top": 0.19732441471571907,
+            "lift": 7.375,
+            "caught": 59
+          },
+          {
+            "day": 45,
+            "n": 5960,
+            "positives": 140,
+            "base_rate": 0.02348993288590604,
+            "precision_top": 0.34563758389261745,
+            "lift": 14.714285714285714,
+            "caught": 103
+          },
+          {
+            "day": 60,
+            "n": 5891,
+            "positives": 71,
+            "base_rate": 0.012052283143778646,
+            "precision_top": 0.17627118644067796,
+            "lift": 14.625543089042731,
+            "caught": 52
+          }
+        ]
+      },
+      {
+        "kind": "logreg",
+        "params": {
+          "C": 1.0
+        },
+        "replay": {
+          "flagged": 299,
+          "flagged_share": 0.05,
+          "missers": 160,
+          "base_rate": 0.026755852842809364,
+          "caught": 136,
+          "recall": 0.85,
+          "precision": 0.45484949832775917,
+          "lift": 17.0,
+          "median_lead_days": 28.0,
+          "p25_lead_days": 14.0,
+          "tau": 0.21716030188459612
+        },
+        "snapshots": [
+          {
+            "day": 31,
+            "n": 5980,
+            "positives": 160,
+            "base_rate": 0.026755852842809364,
+            "precision_top": 0.1939799331103679,
+            "lift": 7.250000000000001,
+            "caught": 58
+          },
+          {
+            "day": 45,
+            "n": 5960,
+            "positives": 140,
+            "base_rate": 0.02348993288590604,
+            "precision_top": 0.3422818791946309,
+            "lift": 14.571428571428571,
+            "caught": 102
+          },
+          {
+            "day": 60,
+            "n": 5891,
+            "positives": 71,
+            "base_rate": 0.012052283143778646,
+            "precision_top": 0.17627118644067796,
+            "lift": 14.625543089042731,
+            "caught": 52
+          }
+        ]
+      },
+      {
+        "kind": "hgb",
+        "params": {
+          "max_depth": 2,
+          "max_iter": 150
+        },
+        "replay": {
+          "flagged": 299,
+          "flagged_share": 0.05,
+          "missers": 160,
+          "base_rate": 0.026755852842809364,
+          "caught": 141,
+          "recall": 0.88125,
+          "precision": 0.47157190635451507,
+          "lift": 17.625,
+          "median_lead_days": 30.0,
+          "p25_lead_days": 16.0,
+          "tau": 0.18005346467187344
+        },
+        "snapshots": [
+          {
+            "day": 31,
+            "n": 5980,
+            "positives": 160,
+            "base_rate": 0.026755852842809364,
+            "precision_top": 0.21070234113712374,
+            "lift": 7.875,
+            "caught": 63
+          },
+          {
+            "day": 45,
+            "n": 5960,
+            "positives": 140,
+            "base_rate": 0.02348993288590604,
+            "precision_top": 0.3523489932885906,
+            "lift": 15.0,
+            "caught": 105
+          },
+          {
+            "day": 60,
+            "n": 5891,
+            "positives": 71,
+            "base_rate": 0.012052283143778646,
+            "precision_top": 0.1864406779661017,
+            "lift": 15.469324421102888,
+            "caught": 55
+          }
+        ]
+      },
+      {
+        "kind": "hgb",
+        "params": {
+          "max_depth": 3,
+          "max_iter": 200
+        },
+        "replay": {
+          "flagged": 299,
+          "flagged_share": 0.05,
+          "missers": 160,
+          "base_rate": 0.026755852842809364,
+          "caught": 137,
+          "recall": 0.85625,
+          "precision": 0.45819397993311034,
+          "lift": 17.125,
+          "median_lead_days": 29.0,
+          "p25_lead_days": 16.0,
+          "tau": 0.24786565662008747
+        },
+        "snapshots": [
+          {
+            "day": 31,
+            "n": 5980,
+            "positives": 160,
+            "base_rate": 0.026755852842809364,
+            "precision_top": 0.19063545150501673,
+            "lift": 7.125000000000001,
+            "caught": 57
+          },
+          {
+            "day": 45,
+            "n": 5960,
+            "positives": 140,
+            "base_rate": 0.02348993288590604,
+            "precision_top": 0.35570469798657717,
+            "lift": 15.142857142857142,
+            "caught": 106
+          },
+          {
+            "day": 60,
+            "n": 5891,
+            "positives": 71,
+            "base_rate": 0.012052283143778646,
+            "precision_top": 0.1864406779661017,
+            "lift": 15.469324421102888,
+            "caught": 55
+          }
+        ]
+      },
+      {
+        "kind": "hgb",
+        "params": {
+          "max_depth": 3,
+          "max_iter": 350
+        },
+        "replay": {
+          "flagged": 299,
+          "flagged_share": 0.05,
+          "missers": 160,
+          "base_rate": 0.026755852842809364,
+          "caught": 135,
+          "recall": 0.84375,
+          "precision": 0.451505016722408,
+          "lift": 16.875,
+          "median_lead_days": 29.0,
+          "p25_lead_days": 16.0,
+          "tau": 0.2851006664506571
+        },
+        "snapshots": [
+          {
+            "day": 31,
+            "n": 5980,
+            "positives": 160,
+            "base_rate": 0.026755852842809364,
+            "precision_top": 0.1939799331103679,
+            "lift": 7.250000000000001,
+            "caught": 58
+          },
+          {
+            "day": 45,
+            "n": 5960,
+            "positives": 140,
+            "base_rate": 0.02348993288590604,
+            "precision_top": 0.3523489932885906,
+            "lift": 15.0,
+            "caught": 105
+          },
+          {
+            "day": 60,
+            "n": 5891,
+            "positives": 71,
+            "base_rate": 0.012052283143778646,
+            "precision_top": 0.17966101694915254,
+            "lift": 14.906803533062783,
+            "caught": 53
+          }
+        ]
+      }
+    ],
+    "baselines": {
+      "hand-written rule (no learning)": {
+        "replay": {
+          "flagged": 299,
+          "flagged_share": 0.05,
+          "missers": 160,
+          "base_rate": 0.026755852842809364,
+          "caught": 78,
+          "recall": 0.4875,
+          "precision": 0.2608695652173913,
+          "lift": 9.75,
+          "median_lead_days": 27.0,
+          "p25_lead_days": 13.25,
+          "tau": 1.00009199035
+        },
+        "snapshots": [
+          {
+            "day": 31,
+            "n": 5980,
+            "positives": 160,
+            "base_rate": 0.026755852842809364,
+            "precision_top": 0.14046822742474915,
+            "lift": 5.25,
+            "caught": 42
+          },
+          {
+            "day": 45,
+            "n": 5960,
+            "positives": 140,
+            "base_rate": 0.02348993288590604,
+            "precision_top": 0.18791946308724833,
+            "lift": 8.0,
+            "caught": 56
+          },
+          {
+            "day": 60,
+            "n": 5891,
+            "positives": 71,
+            "base_rate": 0.012052283143778646,
+            "precision_top": 0.10508474576271186,
+            "lift": 8.719073764621628,
+            "caught": 31
+          }
+        ]
+      },
+      "random flagging": {
+        "replay": {
+          "flagged": 303,
+          "flagged_share": 0.05066889632107023,
+          "missers": 160,
+          "base_rate": 0.026755852842809364,
+          "caught": 6,
+          "recall": 0.0375,
+          "precision": 0.019801980198019802,
+          "lift": 0.7400990099009901,
+          "median_lead_days": 29.5,
+          "p25_lead_days": 14.5,
+          "tau": 0.5
+        },
+        "snapshots": [
+          {
+            "day": 31,
+            "n": 5980,
+            "positives": 160,
+            "base_rate": 0.026755852842809364,
+            "precision_top": 0.033444816053511704,
+            "lift": 1.25,
+            "caught": 10
+          },
+          {
+            "day": 45,
+            "n": 5960,
+            "positives": 140,
+            "base_rate": 0.02348993288590604,
+            "precision_top": 0.02348993288590604,
+            "lift": 1.0,
+            "caught": 7
+          },
+          {
+            "day": 60,
+            "n": 5891,
+            "positives": 71,
+            "base_rate": 0.012052283143778646,
+            "precision_top": 0.003389830508474576,
+            "lift": 0.2812604440200525,
+            "caught": 1
+          }
+        ]
+      }
+    },
+    "note": "public labels only; 5-fold CV split by account; rehearsal of the daily alert process on public days 31-90"
+  },
+  "hidden": {
+    "model": "bi03-v1",
+    "sha": "a292dfe3df13",
+    "looks_at_hidden_set": 1,
+    "model_result": {
+      "replay": {
+        "flagged": 287,
+        "flagged_share": 0.0493127147766323,
+        "missers": 154,
+        "base_rate": 0.026460481099656357,
+        "caught": 128,
+        "recall": 0.8311688311688312,
+        "precision": 0.445993031358885,
+        "lift": 16.85506131499163,
+        "median_lead_days": 29.0,
+        "p25_lead_days": 12.0,
+        "tau": 0.20260544674987602
+      },
+      "snapshots": [
+        {
+          "day": 91,
+          "n": 5820,
+          "positives": 154,
+          "base_rate": 0.026460481099656357,
+          "precision_top": 0.2027491408934708,
+          "lift": 7.662337662337663,
+          "caught": 59
+        },
+        {
+          "day": 105,
+          "n": 5801,
+          "positives": 135,
+          "base_rate": 0.023271849681089467,
+          "precision_top": 0.3,
+          "lift": 12.89111111111111,
+          "caught": 87
+        },
+        {
+          "day": 120,
+          "n": 5742,
+          "positives": 76,
+          "base_rate": 0.013235806339254615,
+          "precision_top": 0.156794425087108,
+          "lift": 11.846231432239133,
+          "caught": 45
+        }
+      ]
+    },
+    "rule_baseline": {
+      "replay": {
+        "flagged": 372,
+        "flagged_share": 0.06391752577319587,
+        "missers": 154,
+        "base_rate": 0.026460481099656357,
+        "caught": 60,
+        "recall": 0.38961038961038963,
+        "precision": 0.16129032258064516,
+        "lift": 6.095517385839966,
+        "median_lead_days": 17.0,
+        "p25_lead_days": 8.75,
+        "tau": 1.00009199035
+      },
+      "snapshots": [
+        {
+          "day": 91,
+          "n": 5820,
+          "positives": 154,
+          "base_rate": 0.026460481099656357,
+          "precision_top": 0.08247422680412371,
+          "lift": 3.116883116883117,
+          "caught": 24
+        },
+        {
+          "day": 105,
+          "n": 5801,
+          "positives": 135,
+          "base_rate": 0.023271849681089467,
+          "precision_top": 0.1413793103448276,
+          "lift": 6.0751213282247765,
+          "caught": 41
+        },
+        {
+          "day": 120,
+          "n": 5742,
+          "positives": 76,
+          "base_rate": 0.013235806339254615,
+          "precision_top": 0.08013937282229965,
+          "lift": 6.054740509811113,
+          "caught": 23
+        }
+      ]
+    },
+    "random_baseline": {
+      "replay": {
+        "flagged": 307,
+        "flagged_share": 0.05274914089347079,
+        "missers": 154,
+        "base_rate": 0.026460481099656357,
+        "caught": 9,
+        "recall": 0.05844155844155844,
+        "precision": 0.029315960912052116,
+        "lift": 1.1079148864165151,
+        "median_lead_days": 12.0,
+        "p25_lead_days": 4.0,
+        "tau": 0.5
+      },
+      "snapshots": [
+        {
+          "day": 91,
+          "n": 5820,
+          "positives": 154,
+          "base_rate": 0.026460481099656357,
+          "precision_top": 0.020618556701030927,
+          "lift": 0.7792207792207793,
+          "caught": 6
+        },
+        {
+          "day": 105,
+          "n": 5801,
+          "positives": 135,
+          "base_rate": 0.023271849681089467,
+          "precision_top": 0.013793103448275862,
+          "lift": 0.5926947637292465,
+          "caught": 4
+        },
+        {
+          "day": 120,
+          "n": 5742,
+          "positives": 76,
+          "base_rate": 0.013235806339254615,
+          "precision_top": 0.024390243902439025,
+          "lift": 1.8427471116816432,
+          "caught": 7
+        }
+      ]
+    },
+    "bootstrap": {
+      "lift_ci95": [
+        14.99756050167815,
+        18.947392401209193
+      ],
+      "lead_ci95": [
+        24.0,
+        32.0
+      ]
+    },
+    "snapshot_ci95": [
+      [
+        6.326352853965901,
+        9.241611234294162
+      ],
+      [
+        11.37027088437894,
+        14.377845080392355
+      ],
+      [
+        9.73255662020906,
+        14.06338660361145
+      ]
+    ],
+    "pass_lift": true,
+    "pass_lead": true
+  },
+  "confirm_public_ab": {
+    "without": {
+      "replay": {
+        "flagged": 299,
+        "flagged_share": 0.05,
+        "missers": 160,
+        "base_rate": 0.026755852842809364,
+        "caught": 141,
+        "recall": 0.88125,
+        "precision": 0.47157190635451507,
+        "lift": 17.625,
+        "median_lead_days": 30.0,
+        "p25_lead_days": 16.0,
+        "tau": 0.18005346467187344
+      },
+      "snapshots": [
+        {
+          "day": 31,
+          "n": 5980,
+          "positives": 160,
+          "base_rate": 0.026755852842809364,
+          "precision_top": 0.21070234113712374,
+          "lift": 7.875,
+          "caught": 63
+        },
+        {
+          "day": 45,
+          "n": 5960,
+          "positives": 140,
+          "base_rate": 0.02348993288590604,
+          "precision_top": 0.3523489932885906,
+          "lift": 15.0,
+          "caught": 105
+        },
+        {
+          "day": 60,
+          "n": 5891,
+          "positives": 71,
+          "base_rate": 0.012052283143778646,
+          "precision_top": 0.1864406779661017,
+          "lift": 15.469324421102888,
+          "caught": 55
+        }
+      ]
+    },
+    "with": {
+      "replay": {
+        "flagged": 299,
+        "flagged_share": 0.05,
+        "missers": 160,
+        "base_rate": 0.026755852842809364,
+        "caught": 142,
+        "recall": 0.8875,
+        "precision": 0.47491638795986624,
+        "lift": 17.75,
+        "median_lead_days": 30.0,
+        "p25_lead_days": 16.0,
+        "tau": 0.1810825012801068
+      },
+      "snapshots": [
+        {
+          "day": 31,
+          "n": 5980,
+          "positives": 160,
+          "base_rate": 0.026755852842809364,
+          "precision_top": 0.21070234113712374,
+          "lift": 7.875,
+          "caught": 63
+        },
+        {
+          "day": 45,
+          "n": 5960,
+          "positives": 140,
+          "base_rate": 0.02348993288590604,
+          "precision_top": 0.3523489932885906,
+          "lift": 15.0,
+          "caught": 105
+        },
+        {
+          "day": 60,
+          "n": 5891,
+          "positives": 71,
+          "base_rate": 0.012052283143778646,
+          "precision_top": 0.1864406779661017,
+          "lift": 15.469324421102888,
+          "caught": 55
+        }
+      ]
+    },
+    "decisions": {
+      "still_below": 1856,
+      "confirmed": 925,
+      "promoted": 116,
+      "withdrawn": 33
+    },
+    "avg_pulled_accounts_per_day": 32.55555555555556
+  }
+}

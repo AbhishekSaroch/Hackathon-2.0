@@ -1,14 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// The frontend calls /bi02/... and /health on its own origin; Vite forwards them to FastAPI.
+// The frontend calls /bi02/..., /bi03/... and /health on its own origin; Vite forwards them to FastAPI.
+// (API_PORT / WEB_PORT are only for running a second copy side by side; normally the defaults apply.)
+const API = `http://127.0.0.1:${process.env.API_PORT || 8000}`
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 5173,
+    port: Number(process.env.WEB_PORT || 5173),
     proxy: {
-      '/bi02': 'http://127.0.0.1:8000',
-      '/health': 'http://127.0.0.1:8000',
+      '/bi02': API,
+      '/bi03': { target: API, timeout: 600000, proxyTimeout: 600000 },   // "advance one day" can take a while
+      '/health': API,
     },
   },
 })

@@ -25,6 +25,13 @@ app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http
                    allow_methods=["*"], allow_headers=["*"])
 app.include_router(bi02.router)
 
+# BI-03 is optional: if it cannot be imported, BI-02 keeps working and the problem is only logged.
+try:
+    from routers import bi03  # noqa: E402
+    app.include_router(bi03.router)
+except Exception as e:  # pragma: no cover
+    print(f"[main] BI-03 router not loaded: {e!r}")
+
 
 @app.get("/health")
 def health():

@@ -22,3 +22,9 @@ dist/
 # OS / editor
 .DS_Store
 Thumbs.db
+
+# Generated BI-03 synthetic data (52 MB, rebuild with: python backend/data/generate_bi03.py)
+backend/data/csv_bi03/
+
+# BI-03 cached daily features (rebuilt automatically)
+backend/data/bi03_cache/

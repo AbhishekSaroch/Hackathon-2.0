@@ -17,3 +17,5 @@ export async function api(path, { method = 'GET', body } = {}) {
 
 // Tell the sidebar badge to refresh (after approve / skip / new assessments)
 export const notifyRecsChanged = () => window.dispatchEvent(new Event('recs-changed'))
+// Same for the BI-03 nudge queue badge (after approve / skip / replay changes)
+export const notifyNudgesChanged = () => window.dispatchEvent(new Event('nudges-changed'))

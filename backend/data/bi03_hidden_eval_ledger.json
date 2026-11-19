@@ -1,0 +1,10 @@
+[
+  {
+    "at": "2026-11-19T19:07:33",
+    "model": "bi03-v1",
+    "model_sha": "a292dfe3df13",
+    "lift": 16.86,
+    "median_lead_days": 29.0,
+    "looks_at_hidden_set": 1
+  }
+]

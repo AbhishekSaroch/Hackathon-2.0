@@ -20,6 +20,24 @@ export const CHANNELS = {
   human: 'Human review',
 }
 
+// ---- BI-03 (early warning) ----
+export const SIGNALS = {
+  salary_delay: 'Salary arriving late',
+  late_emi_payments: 'EMIs paid late',
+  other_loan_bounce: 'Other loan bounced',
+  new_enquiries: 'New credit enquiries',
+  card_utilisation: 'Card use rising',
+  bureau_score: 'Bureau score falling',
+  low_balance: 'Low balance',
+  emi_burden: 'EMI burden high',
+}
+export const NUDGE_TYPES = {
+  emi_date_change: 'EMI date change offer',
+  autopay_setup: 'Auto-pay setup',
+  reminder: 'Friendly reminder',
+}
+export const signalText = (s) => (s ? SIGNALS[s] || s : 'No single signal')
+
 // Friendly one-line description of each agent step (for the timeline)
 export function stepText(s) {
   const o = s.output || {}

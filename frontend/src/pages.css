@@ -69,3 +69,56 @@ table.mini { width: 100%; border-collapse: collapse; }
 .matrix td.diag { background: #d9f2de; font-weight: 700; }
 .matrix td.off { background: #fde4e1; font-weight: 700; color: #b42318; }
 .matrix td.zero { color: #bbb; }
+
+/* ================= BI-03 (early warning) ================= */
+.small { font-size: 12px; }
+.nav-sep { display: block; height: 1px; margin: 8px 14px; background: rgba(255, 255, 255, .25); }
+
+/* signal badges */
+.badge.sig { background: #e8eef0; color: var(--teal); }
+.sig-salary_delay { background: #fff1d6; color: #8a5a00; }
+.sig-other_loan_bounce { background: #fde4e1; color: #b42318; }
+.sig-late_emi_payments { background: #ece6fb; color: #5b3fb5; }
+.sig-new_enquiries { background: #e1f1fb; color: #0a6ca8; }
+.sig-card_utilisation { background: #e1f5e6; color: #1e7a31; }
+.sig-low_balance, .sig-emi_burden { background: #eeeeee; color: #444; }
+.sig-btn { border: 0; padding: 5px 12px; border-radius: 999px; font: inherit; font-weight: 600; cursor: pointer; background: #e8eef0; color: var(--teal); }
+.sig-btn b { margin-left: 6px; }
+.sig-btn:hover { filter: brightness(.95); }
+
+/* replay panel */
+.replay .big-date { font-size: 22px; font-weight: 700; }
+.replay .big-date small { font-size: 13px; color: var(--muted); font-weight: 600; margin-left: 6px; }
+.replay .sep { width: 1px; height: 28px; background: var(--divider); margin: 0 6px; }
+.day-input { width: 80px; height: 28px; margin-left: 8px; padding: 0 8px; }
+
+/* risk bar with threshold tick */
+.risk-bar { position: relative; overflow: visible; }
+.conf-fill.risk { background: #034e63; border-radius: 4px; }
+.tau-tick { position: absolute; top: -3px; width: 2px; height: 14px; background: #e5484d; }
+
+/* nudge message + gate */
+.msg { margin: 8px 0; padding: 10px 14px; background: var(--white); border-left: 4px solid var(--green); line-height: 1.55; font-size: 14px; }
+.gate summary { cursor: pointer; font-weight: 600; margin: 6px 0; }
+.gate-list { list-style: none; margin: 6px 0; padding: 0; }
+.gate-list li { display: flex; gap: 8px; align-items: baseline; padding: 3px 0; border-top: 1px solid var(--divider); }
+.gate-list li:first-child { border-top: 0; }
+.gate-list .mark { width: 16px; font-weight: 700; }
+.gate-list li.ok .mark { color: #2e9e47; }
+.gate-list li.bad .mark, .gate-list li.bad b { color: #b42318; }
+.gate-list b { text-transform: capitalize; min-width: 170px; }
+.gate-text { width: 100%; height: auto; padding: 10px 12px; margin: 8px 0; resize: vertical; box-sizing: border-box; }
+.gate-result { margin-top: 12px; padding: 12px 16px; background: var(--white); border-left: 4px solid #2e9e47; }
+.gate-result.fail { border-left-color: #e5484d; }
+.gate-result h3 { margin-top: 0; }
+
+/* chart */
+.tl-chart { width: 100%; height: auto; display: block; background: var(--white); }
+.chart-note { margin: 8px 0 0; font-size: 12px; }
+
+/* signal bars on the flag page */
+.sigbar { display: grid; grid-template-columns: 150px 1fr; gap: 10px; align-items: center; padding: 3px 0; font-size: 13px; }
+
+/* evaluation */
+.rec-row td { background: #e9f7ec; font-weight: 600; }
+.honest { margin: 0; padding-left: 20px; line-height: 1.6; }
