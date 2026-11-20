@@ -13,6 +13,7 @@ import lc01_answer as W
 import lc01_compiler as C
 import lc01_intent as I
 import lc01_registry as R
+import lc01_sources as X
 
 AUDITED = {"cross_tenant", "write_attempt", "raw_sql", "injection"}
 
@@ -34,6 +35,31 @@ def ask(user_id: str, question: str, hint_metric: str | None = None, llm=None, u
     if len(question) > 600:
         out.update(status="error", headline="That question is too long; please keep it under 600 characters.")
         return out
+    # Questions about the other modules' data (BI-02 reasons, BI-03 early warning, LC-04 command center) are answered from ask_all.db by
+    # lc01_sources; anything else, and every user of the lender warehouse, continues in the flow below exactly as before.
+    xs = None
+    try:
+        xs = X.try_answer(p, question)
+    except A.AccessError as e:
+        xs = dict(status="refused", refusal=dict(category="cross_tenant", reason=str(e)), headline=f"Refused: {e}.", source="xsource")
+        A.audit(p, "cross_tenant", str(e), question)
+    except Exception as e:                                  # the extra sources must never break the lender flow
+        out["notes"].append(f"The other-module data could not be read ({type(e).__name__}); answering from the lender warehouse only.")
+        if not X.has_lender_warehouse(p):
+            xs = dict(status="error", headline="The other-module data could not be read right now.", source="xsource")
+    if xs is None and not X.has_lender_warehouse(p):               # a user whose data lives only in the other modules (no lender-warehouse rows)
+        try:
+            I.precheck(p, question)                                 # the same code-level walls run first: typed SQL, writes, injection, other lenders
+            ex = "; ".join(e["text"] for e in X.examples(p)[:3])
+            xs = dict(status="unsupported", source="xsource", headline="I could not match that to a BI-02, BI-03 or LC-04 measure for your user." + (f" Try: {ex}" if ex else ""))
+        except I.Refusal as r:
+            xs = dict(status="refused", source="precheck", refusal=dict(category=r.category, reason=r.reason), headline=r.reason)
+            if r.category in AUDITED:
+                A.audit(p, r.category, r.reason, question)
+    if xs is not None:
+        out["steps"] += xs.pop("steps", [])
+        out.update(xs)
+        return _finish(out, p, question, t0)
     try:
         try:
             decision, src = I.interpret(p, question, hint_metric, llm, use_llm)
@@ -66,6 +92,10 @@ def ask(user_id: str, question: str, hint_metric: str | None = None, llm=None, u
                 out.update(status="error", headline=f"I could not give a reliable number: {e}. Nothing was shown.")
     except A.AccessError as e:
         out.update(status="refused", refusal=dict(category="cross_tenant", reason=str(e)), headline=f"Refused: {e}.")
+    return _finish(out, p, question, t0)
+
+
+def _finish(out: dict, p, question: str, t0: float) -> dict:
     out["latency_ms"] = int((time.time() - t0) * 1000)
     sql_text = "\n\n".join(f"-- {s['label']}\n{s['sql']}\n-- params: {s['params']} lenders: {s['lenders']}" for s in out["sql"]) or None
     out["log_id"] = A.log_answer(p, question, out["status"], (out.get("metric") or {}).get("id"), sql_text, out["latency_ms"], {k: v for k, v in out.items() if k != "user"})

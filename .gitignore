@@ -35,3 +35,9 @@ backend/data/csv_lc01/
 
 # BI-03 cached daily features (rebuilt automatically)
 backend/data/bi03_cache/
+
+# Ask your portfolio: read-only copy of BI-02/BI-03/LC-04 tables (rebuild with python backend/data/sync_all.py)
+backend/ask_all.db
+backend/ask_all.db.new
+backend/ask_all.db-wal
+backend/ask_all.db-shm

@@ -19,24 +19,30 @@ const Icon = {
   askeval: <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="M8.5 12.5l2.5 2.5 4.5-5" /></svg>,
 }
 
-// BI-02 group (why late customers are not paying), then BI-03 group (who may miss the next EMI)
-const NAV = [
-  { to: '/', label: 'Accounts', icon: Icon.accounts, end: true },
-  { to: '/approve', label: 'To approve', icon: Icon.approve },
-  { to: '/evaluation', label: 'Evaluation', icon: Icon.evaluation },
-  { sep: true },
-  { to: '/early-warning', label: 'Early warning', icon: Icon.warning },
-  { to: '/nudges', label: 'Nudges', icon: Icon.nudge },
-  { to: '/risk-evaluation', label: 'Risk evaluation', icon: Icon.risk },
-  { sep: true },
-  { to: '/command', label: 'Command center', icon: Icon.command, end: true },
-  { to: '/command/incidents', label: 'Incidents', icon: Icon.incident },
-  { to: '/command/metrics', label: 'Metric catalog', icon: Icon.catalog },
-  { to: '/command/scorecard', label: 'Scorecard', icon: Icon.scorecard },
-  { sep: true },
-  { to: '/ask', label: 'Ask your portfolio', icon: Icon.ask, end: true },
-  { to: '/ask/definitions', label: 'Metric definitions', icon: Icon.defs },
-  { to: '/ask/evaluation', label: 'Ask evaluation', icon: Icon.askeval },
+// The sidebar: one block per module (its name, then its pages). `hidden: true` keeps a page and its route but leaves it out of the menu,
+// so it can be shown again by deleting that one flag.
+const MODULES = [
+  { code: 'BI-02', name: 'Reason finder', items: [
+    { to: '/', label: 'Accounts', icon: Icon.accounts, end: true },
+    { to: '/approve', label: 'To approve', icon: Icon.approve },
+    { to: '/evaluation', label: 'Evaluation', icon: Icon.evaluation, hidden: true },
+  ] },
+  { code: 'BI-03', name: 'Early warning', items: [
+    { to: '/early-warning', label: 'Flagged accounts', icon: Icon.warning },
+    { to: '/nudges', label: 'Nudges', icon: Icon.nudge },
+    { to: '/risk-evaluation', label: 'Risk evaluation', icon: Icon.risk, hidden: true },
+  ] },
+  { code: 'LC-04', name: 'Command center', items: [
+    { to: '/command', label: 'Live view', icon: Icon.command, end: true },
+    { to: '/command/incidents', label: 'Incidents', icon: Icon.incident },
+    { to: '/command/metrics', label: 'Metric catalog', icon: Icon.catalog, hidden: true },
+    { to: '/command/scorecard', label: 'Scorecard', icon: Icon.scorecard, hidden: true },
+  ] },
+  { code: 'LC-01', name: 'Ask your portfolio', items: [
+    { to: '/ask', label: 'Ask a question', icon: Icon.ask, end: true },
+    { to: '/ask/definitions', label: 'Metric definitions', icon: Icon.defs, hidden: true },
+    { to: '/ask/evaluation', label: 'Ask evaluation', icon: Icon.askeval, hidden: true },
+  ] },
 ]
 const BI03_PATHS = ['/early-warning', '/nudges', '/risk-evaluation']
 const LC04_PATH = '/command'
@@ -54,7 +60,14 @@ export default function Layout() {
   const inLc01 = pathname.startsWith(LC01_PATH)
   const [askUsers, setAskUsers] = useState([])
   const [askUser, setAskUserState] = useState(getAskUser())
-  useEffect(() => { if (inLc01 && !askUsers.length) api('/lc01/users').then(setAskUsers).catch(() => {}) }, [inLc01])
+  useEffect(() => {
+    if (inLc01 && !askUsers.length) {
+      api('/lc01/users').then((us) => {
+        setAskUsers(us)
+        if (us.length && !us.some((u) => u.user_id === getAskUser())) { setAskUser(us[0].user_id); setAskUserState(us[0].user_id) }   // a user remembered from before is replaced by the one the app now offers
+      }).catch(() => {})
+    }
+  }, [inLc01])
 
   // sidebar badge = recommendations waiting for approval
   useEffect(() => {
@@ -76,13 +89,19 @@ export default function Layout() {
     <div className="app">
       <aside className="sidebar">
         <nav>
-          {NAV.map((n, i) => n.sep ? <span key={i} className="nav-sep" /> : (
-            <NavLink key={n.to} to={n.to} end={n.end} title={n.label} aria-label={n.label}
-              className={({ isActive }) => 'nav-item' + (isActive ? ' active' : '')}>
-              {n.icon}
-              {n.to === '/approve' && pendingCount > 0 && <span className="nav-badge">{pendingCount}</span>}
-              {n.to === '/nudges' && nudgeCount > 0 && <span className="nav-badge">{nudgeCount > 99 ? '99+' : nudgeCount}</span>}
-            </NavLink>
+          {MODULES.map((m) => (
+            <div key={m.code} className="nav-module">
+              <div className="nav-module-head"><span className="nav-name">{m.name}</span></div>
+              {m.items.filter((n) => !n.hidden).map((n) => (
+                <NavLink key={n.to} to={n.to} end={n.end} title={`${m.name}: ${n.label}`} aria-label={n.label}
+                  className={({ isActive }) => 'nav-item' + (isActive ? ' active' : '')}>
+                  {n.icon}
+                  <span className="nav-label">{n.label}</span>
+                  {n.to === '/approve' && pendingCount > 0 && <span className="nav-badge">{pendingCount}</span>}
+                  {n.to === '/nudges' && nudgeCount > 0 && <span className="nav-badge">{nudgeCount > 99 ? '99+' : nudgeCount}</span>}
+                </NavLink>
+              ))}
+            </div>
           ))}
         </nav>
       </aside>

@@ -1,0 +1,4 @@
+account_id,customer_name,product,branch,loan_amount,emi_amount,due_date,dpd,bucket,outstanding,status
+DEMO-101,Kavita Nair,Personal Loan,Pune,540000,9000,2026-05-07,0,Current,360000,current
+DEMO-102,Arjun Menon,Vehicle Loan,Mumbai,450000,7500,2026-05-15,0,Current,300000,current
+DEMO-103,Divya Sharma,Home Loan,Chennai,720000,12000,2026-05-15,0,Current,480000,current

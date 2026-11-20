@@ -16,7 +16,7 @@
   --subtitle: #afafaf;
   --white: #fff;
 
-  --sidebar-w: 77px;
+  --sidebar-w: 232px;
   --topbar-h: 65px;
   --footer-h: 28px;
 }
@@ -40,18 +40,29 @@ a:hover { text-decoration: underline; }
   grid-template-areas: "side top" "side main" "foot foot";
   height: 100vh;
 }
-.sidebar { grid-area: side; background: var(--teal); display: flex; flex-direction: column; align-items: center; padding-top: 14px; }
-.sidebar nav { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.sidebar { grid-area: side; background: var(--teal); display: flex; flex-direction: column; align-items: stretch; padding-top: 8px; overflow-y: auto; }
+.sidebar nav { display: flex; flex-direction: column; gap: 2px; width: 100%; }
+.nav-module { padding: 6px 0 8px; }
+.nav-module + .nav-module { border-top: 1px solid rgba(255, 255, 255, .2); margin-top: 4px; padding-top: 12px; }
+.nav-module-head { display: flex; align-items: baseline; gap: 8px; padding: 0 16px 6px 19px; }
+.nav-name { font-size: 13px; font-weight: 700; color: #fff; }
 .nav-item {
-  position: relative; display: grid; place-items: center; height: 46px; color: #cfe3e9;
+  position: relative; display: flex; align-items: center; gap: 12px; height: 38px; padding: 0 16px; color: #cfe3e9;
   border-left: 3px solid transparent; text-decoration: none !important;
 }
-.nav-item svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.nav-item svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.nav-label { font-size: 13px; white-space: nowrap; }
 .nav-item:hover { background: rgba(255, 255, 255, .08); color: #fff; }
-.nav-item.active { background: rgba(255, 255, 255, .14); color: #fff; border-left-color: var(--yellow); }
+.nav-item.active { background: rgba(255, 255, 255, .14); color: #fff; border-left-color: var(--yellow); font-weight: 600; }
 .nav-badge {
-  position: absolute; top: 5px; right: 14px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px;
-  background: #e5484d; color: #fff; font-size: 11px; font-weight: 700; line-height: 17px; text-align: center;
+  margin-left: auto; min-width: 19px; height: 18px; padding: 0 5px; border-radius: 9px;
+  background: #e5484d; color: #fff; font-size: 11px; font-weight: 700; line-height: 18px; text-align: center;
+}
+@media (max-width: 900px) {                     /* narrow window: back to icons only */
+  :root { --sidebar-w: 64px; }
+  .nav-module-head, .nav-label { display: none; }
+  .nav-item { justify-content: center; padding: 0; }
+  .nav-badge { position: absolute; top: 3px; right: 10px; margin: 0; }
 }
 
 .topbar { grid-area: top; display: flex; align-items: center; gap: 14px; padding: 0 24px; background: var(--white); }

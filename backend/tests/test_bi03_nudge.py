@@ -88,8 +88,8 @@ for r in good.itertuples():
     rerun_ok &= not res["content_failed"] and r.message == expected
 ok("B every passed nudge is exactly an approved template with its blanks filled, and re-passes every content check", rerun_ok and len(good) > 0, f"{len(good)} nudges")
 ok("B passed nudges wait for approval, nothing is sent on its own", set(good.status) == {"pending_approval"})
-ok("B no placeholder or empty name is left in any message", not good.message.str.contains(r"\{").any() and good.message.str.match(r"^(Hi|Namaste|Hello) [A-Z][a-z]+").all())
-ok("B customer-facing text is Hinglish (Roman letters) by default", good.template_id.str.contains("-H").mean() > 0.95, f"{good.template_id.str.contains('-H').mean():.0%}")
+ok("B no placeholder or empty name is left in any message", not good.message.str.contains(r"\{").any() and good.message.str.match(r"^(Hi|Dear|Namaste|Hello) [A-Z][a-z]+").all())
+ok("B customer-facing text is formal English (Roman letters) by default, and every message ends with a thank-you", good.template_id.str.contains("-E").mean() > 0.95 and good.message.str.contains(r"Thank you\.$|Dhanyavaad\.$").all(), f"{good.template_id.str.contains('-E').mean():.0%}")
 ok("B the message never says which distress signal was seen", not good.message.str.contains(r"bounce|utili[sz]ation|enquir|overdue|dues", case=False, regex=True).any())
 
 cap = q("SELECT COUNT(*) n FROM nudges a JOIN nudges b ON a.account_id=b.account_id AND a.tenant_id=b.tenant_id AND b.nudge_id>a.nudge_id AND a.gate_passed=1 AND b.gate_passed=1 "
@@ -109,7 +109,7 @@ templates = N.load_templates(TEN)
 params = {"name": "Asha", "emi_day": 12, "new_day": 20}
 MORN = datetime(2026, 8, 10, 10, 0)
 hi = N.SIGNAL_TO_NUDGE["salary_delay"]
-bad_first = {k: [dict(v[0], body=v[0]["body"] + " Your account is overdue.")] + v[1:] if k == (hi, "hinglish") else v for k, v in templates.items()}
+bad_first = {k: [dict(v[0], body=v[0]["body"] + " Your account is overdue.")] + v[1:] if k == (hi, N.LANGUAGE) else v for k, v in templates.items()}
 n1 = N.draft_and_gate(bad_first, "ACC-1", "salary_delay", params, MORN, True, 0)
 n2 = N.draft_and_gate(bad_first, "ACC-2", "salary_delay", params, MORN, True, 0)
 tried = [json.loads(n["gate_result"])["attempts"] for n in (n1, n2)]

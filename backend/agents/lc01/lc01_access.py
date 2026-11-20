@@ -30,7 +30,13 @@ USERS = [
     dict(user_id="u_l3", display_name="Meridian Credit · risk manager", role="lender_user", lender_scope=["L3"]),
     dict(user_id="u_csm", display_name="CN client success manager (all 3 lenders)", role="csm", lender_scope=["L1", "L2", "L3"]),
     dict(user_id="u_csm_b", display_name="CN client success manager (L2, L3)", role="csm", lender_scope=["L2", "L3"]),
+    # users of the other modules' data (read from ask_all.db, see lc01_sources.py)
+    dict(user_id="u_abc", display_name="ABC Bank · collections head (BI-02 / BI-03 data)", role="lender_user", lender_scope=["abc_bank"]),
+    dict(user_id="u_cn", display_name="CN leadership (3 lenders + command center)", role="cn_leader", lender_scope=["L1", "L2", "L3"]),
 ]
+USERS.insert(0, dict(user_id="u_neha", display_name="Neha Kapoor · Collections Head", role="collections_head", lender_scope=["L1", "L2", "L3"]))
+UI_USERS = ("u_neha",)             # the only user the app shows and signs in as; the others stay for the access tests, the evaluation and API callers
+EXTRA_TENANTS = ("abc_bank",)     # tenants that exist only in ask_all.db (BI-02 / BI-03); they have no rows in the LC-01 warehouse
 
 
 class AccessError(Exception):
@@ -69,7 +75,7 @@ def login(user_id: str, database: str = DB) -> Principal:
     if not u:
         raise AccessError("unknown user")
     lenders = tuple(sorted(json.loads(u["lender_scope"])))
-    if not lenders or not set(lenders) <= set(R.LENDER_IDS):
+    if not lenders or not set(lenders) <= set(R.LENDER_IDS) | set(EXTRA_TENANTS):
         raise AccessError("user has no valid lender scope")
     if u["role"] == "lender_user" and len(lenders) != 1:
         raise AccessError("a lender user must have exactly one lender")
@@ -100,8 +106,10 @@ _TENANT_EQ = re.compile(r"\btenant_id\s*=\s*:tenant_id\b", re.I)
 _TABLE_REF = re.compile(r"\b(?:from|join)\s+([A-Za-z_][A-Za-z0-9_\.]*)", re.I)
 
 
-def check_sql(sql: str) -> str:
-    """Raise SqlRefused unless `sql` is ONE read-only SELECT over whitelisted tables and filters on :tenant_id."""
+def check_sql(sql: str, allowed=None) -> str:
+    """Raise SqlRefused unless `sql` is ONE read-only SELECT over whitelisted tables and filters on :tenant_id.
+    `allowed` (a set of table names) is for the ask_all.db sources; by default only the LC-01 warehouse tables are allowed."""
+    allowed = R.TABLES_ALLOWED if allowed is None else allowed
     s = sql.strip()
     if not s:
         raise SqlRefused("empty statement")
@@ -124,7 +132,7 @@ def check_sql(sql: str) -> str:
     if not tables:
         raise SqlRefused("no table in statement")
     for t in tables:
-        if t.lower() not in R.TABLES_ALLOWED:
+        if t.lower() not in allowed:
             raise SqlRefused(f"table {t!r} is not part of the governed warehouse")
     return s
 
@@ -170,7 +178,7 @@ def history(p: Principal, limit: int = 30) -> list[dict]:
 
 def principal_json(p: Principal) -> dict:
     return dict(user_id=p.user_id, name=p.display_name, role=p.role, lenders=list(p.lenders),
-                lender_names={l: R.LENDER_NAMES[l] for l in p.lenders}, multi=p.multi)
+                lender_names={l: R.LENDER_NAMES.get(l, "ABC Bank" if l == "abc_bank" else l) for l in p.lenders}, multi=p.multi)
 
 
 if __name__ == "__main__":

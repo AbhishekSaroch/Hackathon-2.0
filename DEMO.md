@@ -1,4 +1,4 @@
-# PortfolioIQ: demo pack
+﻿# PortfolioIQ: demo pack
 
 Everything you need on demo day: the numbers (and what to say about them), the 7-minute script, the setup checklist, and honest answers to the likely questions. All data is synthetic, and the demo says so out loud.
 
@@ -125,3 +125,17 @@ Run them (one at a time, SQLite has a single writer): `cd backend\tests; python 
 - Say "RBI compliant", "reduces defaults", or quote 16.9x without saying the data is synthetic.
 - Run the BI-02 batch live (rate limits).
 - Start several DB-writing scripts at once (`database is locked`).
+
+## Optional: "Try new data" moment (about 1 minute)
+
+Early warning page, box under the replay controls. Three steps, nothing else on screen.
+
+1. **Download template**: a zip with three CSV files already filled with four hand-made accounts. Unzip it.
+2. **Choose** the three CSV files, press **Load into database** ("Loaded 4 accounts, 415 events, 68 bureau snapshots").
+3. **Run analysis** (about 12 s): the agent replays the days so far over the new accounts. Then press **Advance 7 days** above and the flags appear in the table and in the main list.
+
+Backup without files: the link "Load the sample directly". Bulk: "Bulk sample (200 accounts)" is the same three files with 200 generated accounts (flags show up for about 7 of them). **Remove** puts everything back.
+
+Starting state for the demo: replay at day 120 or earlier, demo accounts removed or just loaded.
+Say out loud: these are hand-made demo accounts on synthetic data. The accounts flagged are the ones the model reads as a pattern: DEMO-003 (day 126, other loan bounced), DEMO-001 (day 130, salary delay), DEMO-002 (day 133, late EMI). DEMO-004 never flags (one late salary is not a pattern).
+Rules for edited files: account ids start with `DEMO-`, dates `YYYY-MM-DD`, no date after 2026-09-27, about a year of history per account. A wrong file is refused with a line-by-line message and nothing is loaded.

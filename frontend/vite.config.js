@@ -13,6 +13,7 @@ export default defineConfig({
       '/bi03': { target: API, timeout: 600000, proxyTimeout: 600000 },   // "advance one day" can take a while
       '/lc04': { target: API, timeout: 600000, proxyTimeout: 600000 },   // preparing the replay can take a minute
       '/lc01': { target: API, timeout: 120000, proxyTimeout: 120000 },   // a question can wait for the model's rate limit
+      '/outreach': { target: API, timeout: 180000, proxyTimeout: 180000 }, // a bulk send waits for the providers
       '/health': API,
     },
   },

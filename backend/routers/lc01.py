@@ -34,8 +34,8 @@ def mods():
         for p in (BACKEND / "db", BACKEND / "agents" / "lc01"):
             if str(p) not in sys.path:
                 sys.path.append(str(p))
-        import lc01_access, lc01_agent, lc01_registry  # noqa: E401
-        _M.update(A=lc01_access, G=lc01_agent, R=lc01_registry)
+        import lc01_access, lc01_agent, lc01_registry, lc01_sources  # noqa: E401
+        _M.update(A=lc01_access, G=lc01_agent, R=lc01_registry, X=lc01_sources)
     return _M
 
 
@@ -57,7 +57,7 @@ class AskBody(BaseModel):
 @router.get("/users")
 def users():
     m = mods()
-    return [dict(user_id=u["user_id"], name=u["display_name"], role=u["role"], lenders=u["lender_scope"]) for u in m["A"].USERS]
+    return [dict(user_id=u["user_id"], name=u["display_name"], role=u["role"], lenders=u["lender_scope"]) for u in m["A"].USERS if u["user_id"] in m["A"].UI_USERS]
 
 
 @router.get("/me")
@@ -69,6 +69,35 @@ def me(x_user_id: str | None = Header(None)):
 def metrics(x_user_id: str | None = Header(None)):
     who(x_user_id)
     return mods()["R"].catalog()
+
+
+@router.get("/sources")
+def sources(x_user_id: str | None = Header(None)):
+    """Which other modules' data I can ask about, the extra metrics, and how fresh the copy is (ask_all.db)."""
+    p = who(x_user_id)
+    X = mods()["X"]
+    mine = X.sources_for(p)
+    return dict(sources=[dict(id=s, **X.SOURCES[s]) for s in mine], metrics=[c for c in X.catalog() if c["source"] in mine],
+                copy_exists=X.available(), synced_at=X.synced_at())
+
+
+@router.post("/sync")
+def sync(x_user_id: str | None = Header(None)):
+    """Rebuild ask_all.db from BI-02, BI-03 and LC-04 (read-only on them). Needs access to at least one of those sources."""
+    p = who(x_user_id)
+    m = mods()
+    if not m["X"].sources_for(p):
+        raise HTTPException(403, "your user has no access to BI-02, BI-03 or LC-04 data")
+    sys.path.append(str(DATA)) if str(DATA) not in sys.path else None
+    import sync_all
+    try:
+        res = sync_all.build()
+    except PermissionError as e:
+        raise HTTPException(409, f"the copy is in use right now, try again in a moment ({e})")
+    except SystemExit as e:
+        raise HTTPException(500, str(e))
+    m["X"]._vals.clear()
+    return res
 
 
 @router.post("/ask")
@@ -83,10 +112,14 @@ def ask(body: AskBody, x_user_id: str | None = Header(None)):
 @router.get("/examples")
 def examples(x_user_id: str | None = Header(None)):
     p = who(x_user_id)
+    m = mods()
     f = BACKEND / "agents" / "lc01" / "questions_public.json"
     qs = json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
+    extra = m["X"].examples(p)                                    # questions over BI-02 / BI-03 / LC-04 data, only for users who may read them
+    if not m["X"].has_lender_warehouse(p):
+        return extra
     key = p.user_id if any(q.get("user") == p.user_id for q in qs) else "u_csm"
-    return [dict(id=q["id"], text=q["text"], kind=q["kind"]) for q in qs if q.get("user") == key and q["kind"] != "refuse"]
+    return [dict(id=q["id"], text=q["text"], kind=q["kind"]) for q in qs if q.get("user") == key and q["kind"] != "refuse"] + extra
 
 
 @router.get("/history")

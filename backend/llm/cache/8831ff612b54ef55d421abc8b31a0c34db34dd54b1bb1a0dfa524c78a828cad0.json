@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "par90", "group_by": ["lender"], "filters": {}, "months": {"from": "2026-10", "to": "2026-10"}, "trend": false, "rank": {"which": "highest", "top_n": null}, "explain": false, "candidates": [], "refuse_category": null, "reason": "Ranking lenders by PAR 90 for October"}

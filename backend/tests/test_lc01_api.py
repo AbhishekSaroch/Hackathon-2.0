@@ -36,7 +36,7 @@ ok("unknown user: 401", c.get("/lc01/me", headers=H("u_nobody")).status_code == 
 ok("a lender cannot be chosen by a parameter: ?lender= and a body field are ignored", c.get("/lc01/me?lender=L2", headers=H("u_l1")).json()["lenders"] == ["L1"])
 me = c.get("/lc01/me", headers=H("u_csm_b")).json()
 ok("/me reports the role and lenders from the user record", me["lenders"] == ["L2", "L3"] and me["role"] == "csm" and me["multi"])
-ok("/users lists the 5 demo users", len(c.get("/lc01/users").json()) == 5)
+ok("/users offers only Neha Kapoor (the one demo user); the other users stay for access tests and API callers", [u["user_id"] for u in c.get("/lc01/users").json()] == ["u_neha"] and c.get("/lc01/me", headers=H("u_l1")).status_code == 200)
 cat = c.get("/lc01/metrics", headers=H("u_l1")).json()
 ok("/metrics: 38 governed metrics, overlapping ones marked with who they overlap", len(cat) == 38 and sum(1 for m in cat if m["overlap"]) == 16
    and all(m["overlaps_with"] for m in cat if m["overlap"]))

@@ -28,7 +28,7 @@ from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
-from fastapi import APIRouter, Depends, Header, HTTPException, Query
+from fastapi import APIRouter, Depends, Header, HTTPException, Query, Response
 from pydantic import BaseModel
 
 BACKEND = Path(__file__).resolve().parents[1]
@@ -290,6 +290,90 @@ def replay_advance(body: AdvanceBody | None = None, tenant: str = Depends(get_te
         return RP.advance(tenant, body.days, body.confirm)
     except RP.ReplayError as e:
         raise HTTPException(400, str(e))
+
+
+# ------------------------------------------------------------------ demo data: load a CSV, run the analysis
+def demo_mod():
+    """backend/data/demo_accounts.py (imported on first use). It holds the CSV loader, the validation and the scoring of the loaded accounts."""
+    if str(DATA) not in sys.path:
+        sys.path.append(str(DATA))
+    import demo_accounts
+    return demo_accounts
+
+
+def demo_run(tenant: str, action):
+    """Run one demo-data action while no replay action runs, then drop the cached feature engine so the next 'advance' sees the new rows."""
+    RP, D = mods()["RP"], demo_mod()
+    pointer(tenant)                                                  # 404 if the tenant has no BI-03 data
+    if RP.LOCK.locked():
+        raise HTTPException(409, "a replay action is already running, try again in a moment")
+    with RP.LOCK:
+        try:
+            out = action(D)
+        except D.DemoError as e:
+            raise HTTPException(400, str(e))
+        RP._ENGINES.pop(tenant, None)
+    return out
+
+
+@router.get("/demo")
+def demo_status(tenant: str = Depends(get_tenant)):
+    D = demo_mod()
+    pointer(tenant)
+    return {**D.status(tenant), "csv": D.csv_info()}
+
+
+@router.get("/demo/template")
+def demo_template():
+    """A zip with the three CSV files (the sample accounts) and a README: edit, then upload through POST /demo/load."""
+    return Response(demo_mod().template_zip(), media_type="application/zip",
+                    headers={"Content-Disposition": 'attachment; filename="portfolioiq_bi03_template.zip"'})
+
+
+@router.get("/demo/bulk-sample")
+def demo_bulk_sample(n: int = Query(200, ge=10, le=1000)):
+    """A bulk sample for the same upload: n generated accounts (ids DEMO-B0001...), same three files and README."""
+    return Response(demo_mod().bulk_zip(n), media_type="application/zip",
+                    headers={"Content-Disposition": f'attachment; filename="portfolioiq_bi03_bulk_{n}_accounts.zip"'})
+
+
+class DemoLoadBody(BaseModel):
+    accounts: str | None = None        # text of bp_accounts.csv
+    events: str | None = None          # text of events.csv
+    snapshots: str | None = None       # text of bureau_snapshots.csv
+
+
+@router.post("/demo/load")
+def demo_load(body: DemoLoadBody | None = None, tenant: str = Depends(get_tenant)):
+    """CSV files -> checks -> database. Without a body: the sample files in backend/data/csv_bi03_demo. With a body: the user's three CSV texts.
+    If a check fails nothing stays loaded."""
+    texts = {k: v for k, v in (body.model_dump() if body else {}).items() if v}
+    if texts and len(texts) < 3:
+        raise HTTPException(400, "Choose all three files: bp_accounts.csv, events.csv and bureau_snapshots.csv")
+    if any(len(v) > 20_000_000 for v in texts.values()):
+        raise HTTPException(400, "A file is larger than 20 MB")
+
+    def act(D):
+        res = D.load_uploaded(tenant, texts) if texts else {"rows_loaded": D.load_csvs(tenant), "warnings": []}
+        checks = D.validate(tenant)
+        if not all(c["ok"] for c in checks):
+            D.remove(tenant)
+            raise D.DemoError("Validation failed, nothing was loaded: " + ", ".join(c["name"] for c in checks if not c["ok"]))
+        return {**res, "checks": checks}
+    return {**demo_run(tenant, act), **demo_mod().status(tenant)}
+
+
+@router.post("/demo/analyze")
+def demo_analyze(tenant: str = Depends(get_tenant)):
+    """Run the agent's daily loop over the loaded accounts for every day up to the replay pointer (safe to run again)."""
+    res = demo_run(tenant, lambda D: D.score_and_nudge(tenant))
+    return {"result": res, **demo_mod().status(tenant)}
+
+
+@router.post("/demo/remove")
+def demo_remove(tenant: str = Depends(get_tenant)):
+    removed = demo_run(tenant, lambda D: D.remove(tenant))
+    return {"removed": removed, **demo_mod().status(tenant)}
 
 
 # ------------------------------------------------------------------ agent log and metrics

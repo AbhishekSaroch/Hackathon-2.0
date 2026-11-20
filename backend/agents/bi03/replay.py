@@ -50,8 +50,9 @@ def reset_to_day(tenant: str, day: int) -> dict:
     """Remove everything produced after `day`, reopen flags that were only closed because of later misses, move the pointer."""
     import outcomes as O
     st = status(tenant)
-    if st["first_scored_day"] is None or not (st["first_scored_day"] <= day <= st["stream_end_day"]):
-        raise ReplayError(f"day must be between {st['first_scored_day']} and {st['stream_end_day']}")
+    # upper bound = last day that was actually processed: going "back" to a day nothing was computed for would leave a gap in the scores
+    if st["first_scored_day"] is None or not (st["first_scored_day"] <= day <= st["last_scored_day"]):
+        raise ReplayError(f"day must be between {st['first_scored_day']} and {st['last_scored_day']} (the days already processed)")
     d = (pd.Timestamp(st["stream_start"]) + pd.Timedelta(days=day - 1)).strftime("%Y-%m-%d")
     with LOCK:
         q = lambda sql, **p: db.execute(tenant, sql, p, database=DB)

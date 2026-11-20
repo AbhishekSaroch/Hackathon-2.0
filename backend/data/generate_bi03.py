@@ -62,18 +62,19 @@ MERCHANTS = ["SWIGGY", "ZOMATO", "BIGBASKET", "DMART", "JIO RECHARGE", "IRCTC", 
 
 # D11: approved service templates (no dues words, no amounts, no urgency). Placeholders are filled by code.
 TEMPLATES = [
-    ("T-EDC-H1", "emi_date_change", "hinglish", "Hi {name}, kya aap apni EMI date badalna chahenge? Hum EMI ko {new_date} tareekh pe shift kar sakte hain. Reply YES, hum aapke liye set kar denge.", "name,new_date"),
-    ("T-EDC-H2", "emi_date_change", "hinglish", "Namaste {name}, agar aapko EMI date badalni ho toh hum madad kar sakte hain. {new_date} tareekh theek rahegi? Reply YES.", "name,new_date"),
-    ("T-EDC-E1", "emi_date_change", "english", "Hi {name}, would you like to move your EMI date to the {new_date}? Reply YES and we will set it up for you.", "name,new_date"),
-    ("T-EDC-E2", "emi_date_change", "english", "Hello {name}, we can change your EMI date if that is easier for you. Would the {new_date} suit you? Reply YES.", "name,new_date"),
-    ("T-APY-H1", "autopay_setup", "hinglish", "Hi {name}, EMI date yaad rakhne ki chinta chhodiye! 2 minute me auto-pay set kar lein. Madad chahiye toh HELP likhein.", "name"),
-    ("T-APY-H2", "autopay_setup", "hinglish", "Namaste {name}, auto-pay se aapki EMI apne aap ho jayegi, koi tension nahi. App me ya HELP likh ke set kar sakte hain.", "name"),
-    ("T-APY-E1", "autopay_setup", "english", "Hi {name}, never worry about your EMI date again. Set up auto-pay in 2 minutes. Reply HELP if you would like a hand.", "name"),
-    ("T-APY-E2", "autopay_setup", "english", "Hello {name}, with auto-pay your EMI is taken care of automatically. You can set it up in the app or reply HELP.", "name"),
-    ("T-REM-H1", "reminder", "hinglish", "Hi {name}, ek friendly yaad: aapki agli EMI {emi_day} tareekh ko hai. App se kabhi bhi bhar sakte hain. Madad ke liye HELP likhein.", "name,emi_day"),
-    ("T-REM-H2", "reminder", "hinglish", "Namaste {name}, agli EMI {emi_day} tareekh ko aayegi. Aap app me aasaani se bhar sakte hain. Koi sawaal ho toh HELP likhein.", "name,emi_day"),
-    ("T-REM-E1", "reminder", "english", "Hi {name}, a friendly heads-up: your next EMI date is the {emi_day}. You can pay anytime in the app. Reply HELP if you need anything.", "name,emi_day"),
-    ("T-REM-E2", "reminder", "english", "Hello {name}, your next EMI falls on the {emi_day}. You can pay easily in the app. Reply HELP for any question.", "name,emi_day"),
+    # Formal, courteous wording. English is the default language; the Hinglish set (Roman letters) is the polite fallback.
+    ("T-EDC-H1", "emi_date_change", "hinglish", "Namaste {name} ji, yadi aapko suvidha ho, to hum aapki EMI ki tareekh badal kar mahine ki {new_date} tareekh kar sakte hain. Kripya YES likhein, hum aapke liye vyavastha kar denge. Dhanyavaad.", "name,new_date"),
+    ("T-EDC-H2", "emi_date_change", "hinglish", "Namaste {name} ji, agar aap chahein to hum aapki EMI ki tareekh badal sakte hain. Kya mahine ki {new_date} tareekh aapke liye theek rahegi? Kripya YES likhein. Dhanyavaad.", "name,new_date"),
+    ("T-EDC-E1", "emi_date_change", "english", "Dear {name}, if it would be more convenient for you, we can move your EMI date to the {new_date} of the month. Please reply YES and we will arrange this for you. Thank you.", "name,new_date"),
+    ("T-EDC-E2", "emi_date_change", "english", "Hello {name}, we are happy to change your EMI date if that suits you better. Would the {new_date} of the month be convenient? Please reply YES to confirm. Thank you.", "name,new_date"),
+    ("T-APY-H1", "autopay_setup", "hinglish", "Namaste {name} ji, aap auto-pay set kar sakte hain, jisse aapki EMI apne aap samay par bhar di jaayegi. Ismein lagbhag do minute lagte hain. Sahayata ke liye HELP likhein. Dhanyavaad.", "name"),
+    ("T-APY-H2", "autopay_setup", "hinglish", "Namaste {name} ji, auto-pay se aapki EMI har mahine apne aap bhar di jaayegi. Aap ise app mein set kar sakte hain, ya HELP likh kar hamse sahayata le sakte hain. Dhanyavaad.", "name"),
+    ("T-APY-E1", "autopay_setup", "english", "Dear {name}, you may wish to set up auto-pay so that your EMI is paid automatically on its date. It takes about two minutes in the app. For any assistance, please reply HELP. Thank you.", "name"),
+    ("T-APY-E2", "autopay_setup", "english", "Hello {name}, auto-pay is available for your loan and ensures that your EMI is paid automatically every month. You can set it up in the app, or reply HELP and we will assist you. Thank you.", "name"),
+    ("T-REM-H1", "reminder", "hinglish", "Namaste {name} ji, yeh aapko ek vinamr soochna hai ki aapki agli EMI ki tareekh {emi_day} hai. Aap ise app ke zariye kisi bhi samay bhar sakte hain. Kisi bhi sahayata ke liye HELP likhein. Dhanyavaad.", "name,emi_day"),
+    ("T-REM-H2", "reminder", "hinglish", "Namaste {name} ji, aapko yaad dilana chahenge ki aapki agli EMI {emi_day} tareekh ko hai. Bhugtan app se aasani se kiya ja sakta hai. Sahayata ke liye HELP likhein. Dhanyavaad.", "name,emi_day"),
+    ("T-REM-E1", "reminder", "english", "Dear {name}, this is a courtesy reminder that your next EMI date is the {emi_day}. You may pay at any time through the app. For any assistance, please reply HELP. Thank you.", "name,emi_day"),
+    ("T-REM-E2", "reminder", "english", "Hello {name}, we would like to remind you that your next EMI falls on the {emi_day}. You can make the payment conveniently through the app. If you need any assistance, please reply HELP. Thank you.", "name,emi_day"),
 ]
 
 

@@ -25,6 +25,8 @@ LC04_SCHEMA_PATH = HERE / "schema_lc04.sql"
 LC04_DB_PATH = Path(os.getenv("PORTFOLIOIQ_LC04_DB", HERE.parent / "lc04.db"))
 LC01_SCHEMA_PATH = HERE / "schema_lc01.sql"
 LC01_DB_PATH = Path(os.getenv("PORTFOLIOIQ_LC01_DB", HERE.parent / "lc01.db"))
+ASK_SCHEMA_PATH = HERE / "schema_ask.sql"
+ASK_DB_PATH = Path(os.getenv("PORTFOLIOIQ_ASK_DB", HERE.parent / "ask_all.db"))   # read-only COPY of BI-02, BI-03 and LC-04 tables (made by data/sync_all.py)
 
 
 class TenantError(Exception):
@@ -41,7 +43,9 @@ def _paths(database: str) -> tuple[Path, Path]:
         return LC04_DB_PATH, LC04_SCHEMA_PATH
     if database == "lc01":
         return LC01_DB_PATH, LC01_SCHEMA_PATH
-    raise ValueError(f"unknown database {database!r} (use 'main', 'bi03', 'lc04' or 'lc01')")
+    if database == "ask":
+        return ASK_DB_PATH, ASK_SCHEMA_PATH
+    raise ValueError(f"unknown database {database!r} (use 'main', 'bi03', 'lc04', 'lc01' or 'ask')")
 
 
 def get_conn(database: str = "main") -> sqlite3.Connection:
@@ -50,7 +54,7 @@ def get_conn(database: str = "main") -> sqlite3.Connection:
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     conn.execute("PRAGMA journal_mode = WAL")         # readers and writers do not block each other
-    if database in ("bi03", "lc04", "lc01"):
+    if database in ("bi03", "lc04", "lc01", "ask"):
         conn.execute("PRAGMA synchronous = NORMAL")   # faster bulk loads, still safe with WAL
     return conn
 

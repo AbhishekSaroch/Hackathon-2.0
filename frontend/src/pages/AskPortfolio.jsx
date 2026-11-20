@@ -18,8 +18,14 @@ function Answer({ r, onChoose, busy }) {
         <span className={'badge ' + cls}>{label}</span>
         {r.metric?.name && <span className="sub">Metric: <b>{r.metric.name}</b>{r.metric.overlap && <span className="cbadge ai" style={{ marginLeft: 6 }}>one of several definitions</span>}</span>}
         <span className="grow" />
-        {r.latency_ms != null && <span className="sub">{(r.latency_ms / 1000).toFixed(1)} s · {r.source === 'llm' ? 'language model + governed query' : r.source === 'rules' ? 'rule-based parser (model unavailable)' : 'safety check'}</span>}
+        {r.latency_ms != null && <span className="sub">{(r.latency_ms / 1000).toFixed(1)} s · {r.source === 'llm' ? 'language model + governed query' : r.source === 'rules' ? 'rule-based parser (model unavailable)' : r.source === 'xsource' ? 'routed by code to another module’s data' : 'safety check'}</span>}
       </div>
+      {r.data_source && (
+        <div className="row-flex" style={{ margin: '6px 0 0' }}>
+          <span className="cbadge ai">Data from {r.data_source.module}</span>
+          <span className="sub">{r.data_source.name} · copy made {r.data_source.synced_at || 'at an unknown time'}</span>
+        </div>
+      )}
       <p className="headline ask-headline">{r.headline}</p>
 
       {r.status === 'clarify' && r.clarification && (
@@ -92,6 +98,8 @@ export default function AskPortfolio() {
   const me = useFetch(`/lc01/me?u=${user}`)
   const ex = useFetch(`/lc01/examples?u=${user}`)
   const hist = useFetch(`/lc01/history?u=${user}`)
+  const src = useFetch(`/lc01/sources?u=${user}`)
+  const [syncMsg, setSyncMsg] = useState('')
   const [q, setQ] = useState('')
   const [turns, setTurns] = useState([])
   const [busy, setBusy] = useState(false)
@@ -113,6 +121,14 @@ export default function AskPortfolio() {
       setTimeout(() => end.current?.scrollIntoView({ behavior: 'smooth' }), 50)
     }
   }
+  async function syncCopy() {
+    setSyncMsg('Copying BI-02, BI-03 and LC-04 data (read-only on them)…')
+    try {
+      const r = await api('/lc01/sync', { method: 'POST' })
+      setSyncMsg(`Copy refreshed: ${r.tables} tables, ${Number(r.rows).toLocaleString()} rows in ${r.seconds}s.`)
+      src.reload()
+    } catch (e) { setSyncMsg(`Could not refresh: ${e.message}`) }
+  }
   async function openHistory(id, question) {
     try {
       const resp = await api(`/lc01/history/${id}`)
@@ -128,7 +144,12 @@ export default function AskPortfolio() {
       <div className="detail-grid">
         <div>
           {turns.length === 0 && (
-            <div className="note">Ask about collection efficiency, delinquency, roll rates, agencies, bounces, promises to pay or disputes. If a word has several definitions I will ask which you mean; if a request reaches beyond your lender I will refuse and log it. All data is synthetic.</div>
+            <div className="note">
+              {'Ask about collection efficiency, delinquency, roll rates, agencies, bounces, promises to pay or disputes across your lenders. If a word has several definitions I will ask which you mean. '}
+              {(src.data?.sources || []).some((s) => s.id === 'bi02') && 'You can also ask about ABC Bank accounts that are not paying and why (forgot, cannot pay, will not pay, insufficient balance, disputed), recommended actions, and BI-03 early-warning flags, hit rate and lead time, in English or Hinglish. '}
+              {(src.data?.sources || []).some((s) => s.id === 'lc04') && 'And the command center: anomalies, alerts, accounts and dashboards. '}
+              If a request reaches beyond your access I will refuse and log it. All data is synthetic.
+            </div>
           )}
           {turns.map((t, i) => (
             <div key={i} className="ask-turn">
@@ -150,6 +171,15 @@ export default function AskPortfolio() {
             {(ex.data || []).map((e) => <div key={e.id}><button className="link-btn ask-example" disabled={busy} onClick={() => ask(e.text)}>{e.text}</button></div>)}
             <div className="sub" style={{ marginTop: 8 }}>Safety checks to try: ask about another lender, type SQL, or ask it to delete something.</div>
           </div>
+          {(src.data?.sources || []).length > 0 && (
+            <div className="panel">
+              <h3>Other modules’ data</h3>
+              <div className="sub">You can also ask about: {src.data.sources.map((s) => s.name).join('; ')}.</div>
+              <div className="sub" style={{ marginTop: 6 }}>{src.data.copy_exists ? `Read from a copy made ${src.data.synced_at || 'at an unknown time'}. The modules’ own databases are never changed.` : 'The data copy has not been built yet.'}</div>
+              <button className="btn btn-reset btn-small" style={{ marginTop: 8 }} onClick={syncCopy}>Refresh data copy</button>
+              {syncMsg && <div className="sub" style={{ marginTop: 6 }}>{syncMsg}</div>}
+            </div>
+          )}
           <div className="panel">
             <h3>Your recent questions</h3>
             {(hist.data || []).length === 0 && <div className="sub">Nothing yet.</div>}

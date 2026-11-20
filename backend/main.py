@@ -49,6 +49,14 @@ except Exception as e:  # pragma: no cover
     print(f"[main] LC-01 router not loaded: {e!r}")
 
 
+# Outreach (real email / WhatsApp / SMS after approval, test recipient only) is optional too: it can never stop the modules above.
+try:
+    from routers import outreach  # noqa: E402
+    app.include_router(outreach.router)
+except Exception as e:  # pragma: no cover
+    print(f"[main] Outreach router not loaded: {e!r}")
+
+
 @app.get("/health")
 def health():
     return {"ok": True}

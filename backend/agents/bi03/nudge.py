@@ -8,7 +8,7 @@ BI-03 nudge engine: a flag becomes a helpful service message, or is stopped by t
 What happens for each flag (nothing here uses an LLM: the words come only from the approved D11 templates):
   1 choose   the dominant signal picks the nudge type: late salary -> EMI date change offer, other-loan bounce or late EMI
              payments -> auto-pay setup, anything else -> friendly reminder
-  2 draft    take an approved template (Hinglish by default), fill {name}, {new_date}, {emi_day} from the account's own data
+  2 draft    take an approved template (formal English by default), fill {name}, {new_date}, {emi_day} from the account's own data
   3 gate     compliance gate (gates/compliance.py). If the WORDING is rejected the agent tries the next approved variant, then the
              other language. If the SITUATION is rejected (hours, 7-day cap, account past due) it stops, a different wording cannot help.
   4 record   one row in `nudges` with the full gate result. Passed -> pending_approval. Rejected -> blocked, with the reasons.
@@ -37,7 +37,7 @@ import runner as R  # noqa: E402
 
 DB = "bi03"
 SEND_HOUR = 10                       # nudges are scheduled for 10:00 on the day of the flag
-LANGUAGE = "hinglish"                # customer-facing text: Hinglish in Roman letters (English is the fallback)
+LANGUAGE = "english"                 # customer-facing text: formal English (polite Hinglish in Roman letters is the fallback)
 SIGNAL_TO_NUDGE = {"salary_delay": "emi_date_change", "other_loan_bounce": "autopay_setup", "late_emi_payments": "autopay_setup"}
 DEFAULT_NUDGE = "reminder"
 

@@ -1,0 +1,1 @@
+{"title": "Payment Gateway Failure Overview", "window": "last_7d", "notes": "Using payments_failed metric to identify failing gateways for lenders L1-L5.", "panels": [{"type": "breakdown", "metric_id": "payments_failed", "group_by": ["gateway"], "filters": {"lender": "L1,L2,L3,L4,L5"}, "title": "Failed Payments by Gateway"}]}

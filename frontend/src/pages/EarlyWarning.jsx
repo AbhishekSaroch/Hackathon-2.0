@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { api, notifyNudgesChanged } from '../api.js'
-import { FlagStatus, NudgeStatus, OutcomeText, RiskBar, SignalBadge, nudgeTypeText } from '../components/EarlyWarningBits.jsx'
+import { FlagStatus, NudgeStatus, RiskBar, SignalBadge, nudgeTypeText } from '../components/EarlyWarningBits.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import Pager from '../components/Pager.jsx'
 import { SIGNALS, fmtDate } from '../utils.js'
@@ -152,7 +152,7 @@ export default function EarlyWarning() {
       <div className="table-wrap">
         <table className="grid">
           <thead>
-            <tr><th>Account</th><th>Customer</th><th>Flagged on</th><th>Risk score</th><th>Main signal</th><th>Nudge</th><th>What happened next</th></tr>
+            <tr><th>Account</th><th>Customer</th><th>Flagged on</th><th>Risk score</th><th>Main signal</th><th>Nudge</th></tr>
           </thead>
           <tbody>
             {data?.items.map((f) => (
@@ -163,16 +163,14 @@ export default function EarlyWarning() {
                 <td><RiskBar score={f.score} tau={tau} /></td>
                 <td><SignalBadge signal={f.dominant_signal} /></td>
                 <td>{f.nudge_type ? <>{nudgeTypeText(f.nudge_type)}<div className="sub"><NudgeStatus status={f.nudge_status} /></div></> : <NudgeStatus />}</td>
-                <td><OutcomeText went={f.went_dpd1} lead={f.lead_time_days} /></td>
               </tr>
             ))}
-            {data && !data.items.length && <tr><td colSpan="7" className="empty">No flags match.</td></tr>}
-            {!data && !error && <tr><td colSpan="7" className="empty">Loading…</td></tr>}
+            {data && !data.items.length && <tr><td colSpan="6" className="empty">No flags match.</td></tr>}
+            {!data && !error && <tr><td colSpan="6" className="empty">Loading…</td></tr>}
           </tbody>
         </table>
       </div>
       {data && <Pager page={page} total={data.total} pageSize={PAGE_SIZE} onPage={setPage} />}
-      <p className="muted small">"What happened next" is filled in as time passes (an EMI missed within 60 days of the flag counts as a hit). Until then it says "Not known yet", never "no".</p>
     </>
   )
 }

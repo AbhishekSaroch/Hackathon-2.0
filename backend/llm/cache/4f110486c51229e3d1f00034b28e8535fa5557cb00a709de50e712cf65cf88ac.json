@@ -1,0 +1,1 @@
+{"action": "clarify", "metric": null, "group_by": [], "filters": {}, "months": null, "trend": false, "rank": null, "explain": false, "candidates": ["overdue_loans"], "refuse_category": null, "reason": "Need clarification on the metric you want."}

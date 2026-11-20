@@ -4,7 +4,7 @@ export const setLcUser = (u) => { try { localStorage.setItem('lc04_user', u) } c
 export const notifyLcClockChanged = () => window.dispatchEvent(new Event('lc04-clock-changed'))
 
 // LC-01 (ask your portfolio) calls are made AS a demo lender user too; the backend reads the lender scope from that user's record.
-export const getAskUser = () => { try { return localStorage.getItem('lc01_user') || 'u_l1' } catch { return 'u_l1' } }
+export const getAskUser = () => { try { return localStorage.getItem('lc01_user') || 'u_neha' } catch { return 'u_neha' } }
 export const setAskUser = (u) => { try { localStorage.setItem('lc01_user', u) } catch { /* private mode */ } window.dispatchEvent(new Event('lc01-user-changed')) }
 
 // All backend calls go through here. Vite proxies /bi02, /bi03, /lc04 and /lc01 to FastAPI (port 8000).

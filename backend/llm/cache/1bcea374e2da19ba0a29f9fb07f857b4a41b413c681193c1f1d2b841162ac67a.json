@@ -1,0 +1,1 @@
+{"action": "clarify", "metric": null, "group_by": [], "filters": {}, "months": null, "trend": false, "rank": null, "explain": false, "candidates": ["delinquency_rate", "par30", "par90", "npa_rate"], "refuse_category": null, "reason": "Specify count or rate of delinquent accounts"}

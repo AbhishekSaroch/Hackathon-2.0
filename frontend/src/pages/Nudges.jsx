@@ -9,6 +9,7 @@ import { fmtDate } from '../utils.js'
 
 const PAGE_SIZE = 10
 const TABS = [['pending_approval', 'Waiting for you'], ['sent', 'Sent'], ['skipped', 'Skipped'], ['blocked', 'Blocked by the gate'], ['gate', 'Test the gate']]
+const HIDDEN_TABS = ['blocked', 'gate']       // kept in the code, left out of the tab bar (delete a name here to show the tab again)
 const PUSHY = 'Asha, turant Rs 5000 bharo warna legal action hoga. Aapka salary late hai, aap default karne wale ho.'
 
 // Type any message and see whether the compliance gate would let it out.
@@ -84,14 +85,14 @@ export default function Nudges() {
   return (
     <>
       <PageHeader title="Nudges" subtitle="Helpful messages for customers the agent flagged"
-        info="Messages come only from approved templates, in Hinglish. A person approves. Nothing reaches a real customer" />
+        info="Messages come only from approved templates, in formal English. A person approves. Nothing reaches a real customer" />
       <div className="note">
         <b>Nothing here reaches a real customer.</b> Approving sends to a test number only (mock). The wording is never written freely by an AI:
         it is an approved template filled with the customer's own details, and it must pass the compliance gate first.
       </div>
 
       <div className="tabs">
-        {TABS.map(([k, v]) => <button key={k} className={'tab' + (tab === k ? ' active' : '')} onClick={() => pick(k)}>{v}</button>)}
+        {TABS.filter(([k]) => !HIDDEN_TABS.includes(k)).map(([k, v]) => <button key={k} className={'tab' + (tab === k ? ' active' : '')} onClick={() => pick(k)}>{v}</button>)}
       </div>
 
       {isGate ? <GateTester /> : (

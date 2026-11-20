@@ -65,3 +65,15 @@ cd frontend; npm run dev        # if npm fails: & "$env:APPDATA\nvm\v22.4.0\node
 * **Why trust a root cause?** It is arithmetic: for each dimension and segment, "how much of the change disappears if this segment had stayed as last month". The top segment, a second level inside it, and related metrics (connect rate, promises kept, NACH bounces) for that segment are shown. The text is a template. It can name a segment that explains most of a *tiny* change, so a change under 0.2 points is reported as noise.
 * **Why only 38 metrics and 11 tables?** Time. The design (registry, compiler, scope) does not depend on the count; more tables mean more registry entries.
 * **Real data?** A lender would connect its warehouse and its metric definitions. Groq is a third-party cloud, so real customer data needs an approved or self-hosted model; only aggregates and metric ids go to the model here, never rows.
+
+## 6. Ask over BI-02, BI-03 and LC-04 data (added after the hidden run; not part of the 45/50)
+
+Setup: `python backend/data/sync_all.py` once (about 15 s, makes `backend/ask_all.db`), restart the backend. The app now offers ONE user, **Neha Kapoor · Collections Head**, who sees everything integrated: the three lenders of the lender warehouse, BI-02 and BI-03 (ABC Bank) and the LC-04 command center. (The other users stay in the code for the access tests and the evaluation, but are not offered in the app.)
+
+1. As Neha click "How many accounts have not paid because they forgot?": **13**, the same 13 as the BI-02 Approve screen. Then type the Hinglish version: "kitne accounts paise nahi de rahe aur forgot ke andar hain?": same 13. Open "The query behind this answer": one SELECT on `bi02_assessments`, latest assessment per account, tenant `abc_bank`.
+2. "Kitne accounts paise nahi de rahe, reason ke hisaab se?": bar chart by reason (60 assessed accounts, each once).
+3. "How many early-warning flags do we have, by signal?" (BI-03), "What is the flag hit rate?" (24.8%, 51 of 206).
+4. "How many anomalies has the command center detected, by metric?" (LC-04). Words both datasets define ("promise kept rate", "outstanding") stay with the lender warehouse unless she says BI-02.
+5. Say: the data is a read-only copy, with a "Refresh data copy" button; the three modules' own databases are never changed; answer keys and contact logs are not in the copy.
+
+Honest limits: snapshot until refreshed; only assessed accounts have a reason (60 of 300); command-center lender ids L1 to L5 are a different dataset from the three lenders of the lender warehouse; these 14 extra metrics are routed by rules (no model) and checked against independent calculations, but they have no hidden-set score.
