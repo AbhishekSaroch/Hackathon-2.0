@@ -1,0 +1,1 @@
+{"title": "Connect Rate by City for Lenders L1 & L3", "window": "last_7d", "notes": "Using connect_rate metric; filtered to lenders L1 and L3.", "panels": [{"type": "breakdown", "metric_id": "connect_rate", "group_by": ["city"], "filters": {"lender": ["L1", "L3"]}, "title": "Connect Rate by City"}]}

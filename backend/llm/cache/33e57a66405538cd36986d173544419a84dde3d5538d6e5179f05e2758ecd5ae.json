@@ -1,0 +1,1 @@
+{"action": "refuse", "metric": null, "group_by": [], "filters": {}, "months": null, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": "cross_tenant", "reason": "User requests data across multiple lenders."}

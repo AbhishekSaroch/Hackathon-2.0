@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "disputes_raised", "group_by": [], "filters": {}, "months": {"from": "2026-07", "to": "2026-07"}, "trend": false, "rank": null, "explain": true, "candidates": [], "refuse_category": null, "reason": "Answering dispute raised metric for July"}

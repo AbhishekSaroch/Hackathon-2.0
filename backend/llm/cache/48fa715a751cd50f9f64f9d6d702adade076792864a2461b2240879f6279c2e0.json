@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "par30", "group_by": [], "filters": {}, "months": {"from": "2026-01", "to": "2026-10"}, "trend": true, "rank": null, "explain": true, "candidates": [], "refuse_category": null, "reason": "Explain PAR 30 trend"}

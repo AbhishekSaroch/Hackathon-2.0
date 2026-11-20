@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "disputes_raised", "group_by": [], "filters": {}, "months": {"from": "2026-04", "to": "2026-09"}, "trend": true, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "Metric found"}

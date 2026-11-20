@@ -1,0 +1,1 @@
+{"title": "Payment Performance", "window": "today", "notes": "", "panels": [{"type": "kpi", "metric_id": "pay_success_rate", "title": "Payment Success Rate"}, {"type": "kpi", "metric_id": "payments_failed", "title": "Payments Failed"}]}

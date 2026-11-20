@@ -1,0 +1,1 @@
+{"title": "Weakest Connect Rate by City (Last 7 Days)", "window": "last_7d", "notes": "", "panels": [{"type": "table", "metric_id": "connect_rate", "group_by": ["city"], "filters": {"lender": ["L1", "L2", "L3", "L4", "L5"]}, "title": "Connect Rate per City"}]}

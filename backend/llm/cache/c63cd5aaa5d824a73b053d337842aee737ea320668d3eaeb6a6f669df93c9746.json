@@ -1,0 +1,1 @@
+{"title": "Agency PTP Capture Rate Comparison", "window": "last_7d", "notes": "Using ptp_capture_rate to compare agencies' promise capture performance.", "panels": [{"type": "breakdown", "metric_id": "ptp_capture_rate", "group_by": ["agency"], "title": "PTP Capture Rate by Agency", "filters": {"lender": ["L1", "L2", "L3", "L4", "L5"]}}]}

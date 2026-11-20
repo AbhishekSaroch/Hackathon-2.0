@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "delinquency_rate", "group_by": ["city"], "filters": {}, "months": null, "trend": true, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "Query for delinquency trend by city"}

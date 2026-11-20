@@ -1,0 +1,1 @@
+{"title": "Contact Attempts by Dialer", "window": "last_24h", "notes": "Dialer dimension not available; using gateway as proxy for dialer.", "panels": [{"type": "breakdown", "metric_id": "events_total", "group_by": ["gateway"], "title": "Contact Attempts by Dialer (Gateway)"}]}

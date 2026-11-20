@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "npa_rate", "group_by": ["city"], "filters": {"city": ["Chennai"]}, "months": {"from": "2026-10", "to": "2026-10"}, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "Metric found"}

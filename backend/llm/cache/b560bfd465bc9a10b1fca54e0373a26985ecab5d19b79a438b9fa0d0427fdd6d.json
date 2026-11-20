@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "ptp_count", "group_by": ["agency"], "filters": {}, "months": {"from": "2026-04", "to": "2026-06"}, "trend": false, "rank": {"which": "highest", "top_n": null}, "explain": false, "candidates": [], "refuse_category": null, "reason": "Answering request"}

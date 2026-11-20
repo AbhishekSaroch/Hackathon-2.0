@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "connect_rate", "group_by": [], "filters": {}, "months": {"from": "2026-08", "to": "2026-08"}, "trend": false, "rank": null, "explain": true, "candidates": [], "refuse_category": null, "reason": "Providing connect rate for August 2026"}

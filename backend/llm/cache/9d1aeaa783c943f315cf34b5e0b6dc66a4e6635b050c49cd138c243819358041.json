@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "nach_bounce_rate", "group_by": ["city"], "filters": {}, "months": {"from": "2026-09", "to": "2026-09"}, "trend": false, "rank": {"which": "highest", "top_n": 3}, "explain": false, "candidates": [], "refuse_category": null, "reason": "Query answered"}

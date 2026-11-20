@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "collection_rate_count", "group_by": ["agency"], "filters": {}, "months": null, "trend": false, "rank": {"which": "highest", "top_n": null}, "explain": false, "candidates": [], "refuse_category": null, "reason": "Provide best agency by collection rate count"}

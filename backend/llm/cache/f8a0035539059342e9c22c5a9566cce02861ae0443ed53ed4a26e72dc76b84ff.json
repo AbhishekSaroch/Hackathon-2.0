@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "roll_rate", "group_by": [], "filters": {}, "months": {"from": "2026-10", "to": "2026-10"}, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "Provided roll rate for requested month"}

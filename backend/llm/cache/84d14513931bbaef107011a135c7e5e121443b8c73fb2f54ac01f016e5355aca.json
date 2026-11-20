@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "par90", "group_by": [], "filters": {}, "months": {"from": "2026-05", "to": "2026-10"}, "trend": true, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "PAR 90 trend for last 6 months"}

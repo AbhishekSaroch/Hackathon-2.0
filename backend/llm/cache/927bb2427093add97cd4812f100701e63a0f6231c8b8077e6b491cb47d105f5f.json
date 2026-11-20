@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "ptp_kept_rate_amount", "group_by": [], "filters": {}, "months": {"from": "2026-08", "to": "2026-08"}, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "Provided metric and month"}

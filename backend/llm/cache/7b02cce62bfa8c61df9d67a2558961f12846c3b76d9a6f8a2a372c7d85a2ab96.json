@@ -1,0 +1,1 @@
+{"action": "clarify", "metric": null, "group_by": [], "filters": {}, "months": null, "trend": false, "rank": {"which": "worst", "top_n": null}, "explain": false, "candidates": ["current_collection_efficiency", "delinquency_rate", "roll_rate", "contact_rate"], "refuse_category": null, "reason": "Need metric to identify underperformance"}

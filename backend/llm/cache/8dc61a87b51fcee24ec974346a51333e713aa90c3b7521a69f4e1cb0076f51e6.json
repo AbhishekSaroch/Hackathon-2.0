@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "total_collection_efficiency", "group_by": [], "filters": {}, "months": {"from": "2026-09", "to": "2026-09"}, "trend": false, "rank": null, "explain": true, "candidates": [], "refuse_category": null, "reason": "Explain drop in September"}

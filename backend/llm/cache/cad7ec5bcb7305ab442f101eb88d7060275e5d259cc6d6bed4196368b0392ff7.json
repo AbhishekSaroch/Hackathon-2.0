@@ -1,0 +1,1 @@
+{"title": "Payment Success by Agency", "window": "last_7d", "notes": "No direct payment success metric available; using payment_share_of_events as proxy.", "panels": [{"type": "breakdown", "metric_id": "payment_share_of_events", "group_by": ["agency"], "title": "Payment Share of Events by Agency"}]}

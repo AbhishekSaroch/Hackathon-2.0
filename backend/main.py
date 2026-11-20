@@ -33,6 +33,22 @@ except Exception as e:  # pragma: no cover
     print(f"[main] BI-03 router not loaded: {e!r}")
 
 
+# LC-04 is optional too: a problem in it can never stop BI-02 or BI-03.
+try:
+    from routers import lc04  # noqa: E402
+    app.include_router(lc04.router)
+except Exception as e:  # pragma: no cover
+    print(f"[main] LC-04 router not loaded: {e!r}")
+
+
+# LC-01 (ask-your-portfolio) is optional as well: a problem in it can never stop BI-02, BI-03 or LC-04.
+try:
+    from routers import lc01  # noqa: E402
+    app.include_router(lc01.router)
+except Exception as e:  # pragma: no cover
+    print(f"[main] LC-01 router not loaded: {e!r}")
+
+
 @app.get("/health")
 def health():
     return {"ok": True}

@@ -1,0 +1,1 @@
+{"action": "clarify", "metric": null, "group_by": [], "filters": {}, "months": null, "trend": false, "rank": null, "explain": false, "candidates": ["total_collection_efficiency", "current_collection_efficiency"], "refuse_category": null, "reason": "Specify count or amount"}

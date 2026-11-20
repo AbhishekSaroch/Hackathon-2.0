@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "outstanding_principal", "group_by": [], "filters": {"product": ["two_wheeler"]}, "months": {"from": "2026-10", "to": "2026-10"}, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "metric found"}

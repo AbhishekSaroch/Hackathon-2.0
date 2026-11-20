@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { api } from '../api.js'
+import { api, getAskUser, getLcUser, setAskUser, setLcUser } from '../api.js'
 
 // Simple line icons (no icon library needed)
 const Icon = {
@@ -10,6 +10,13 @@ const Icon = {
   warning: <svg viewBox="0 0 24 24"><path d="M12 3l9.5 17h-19L12 3z" /><path d="M12 10v5M12 17.5v.5" /></svg>,
   nudge: <svg viewBox="0 0 24 24"><path d="M21 4L3 11l7 3 3 7 8-17z" /><path d="M10 14l4-4" /></svg>,
   risk: <svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 3 8-9" /><path d="M15 5h5v5" /></svg>,
+  command: <svg viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7" rx="1" /><rect x="13" y="4" width="8" height="4" rx="1" /><rect x="3" y="13" width="8" height="4" rx="1" /><rect x="13" y="10" width="8" height="10" rx="1" /></svg>,
+  incident: <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="M12 7v6M12 16v.5" /></svg>,
+  catalog: <svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3V4z" /><path d="M9 9h6M9 13h6" /></svg>,
+  scorecard: <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z" /></svg>,
+  ask: <svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z" /><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1-1.5 2M12 15.5v.5" /></svg>,
+  defs: <svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3V4z" /><path d="M9 9h6M9 13h4" /></svg>,
+  askeval: <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="M8.5 12.5l2.5 2.5 4.5-5" /></svg>,
 }
 
 // BI-02 group (why late customers are not paying), then BI-03 group (who may miss the next EMI)
@@ -21,14 +28,33 @@ const NAV = [
   { to: '/early-warning', label: 'Early warning', icon: Icon.warning },
   { to: '/nudges', label: 'Nudges', icon: Icon.nudge },
   { to: '/risk-evaluation', label: 'Risk evaluation', icon: Icon.risk },
+  { sep: true },
+  { to: '/command', label: 'Command center', icon: Icon.command, end: true },
+  { to: '/command/incidents', label: 'Incidents', icon: Icon.incident },
+  { to: '/command/metrics', label: 'Metric catalog', icon: Icon.catalog },
+  { to: '/command/scorecard', label: 'Scorecard', icon: Icon.scorecard },
+  { sep: true },
+  { to: '/ask', label: 'Ask your portfolio', icon: Icon.ask, end: true },
+  { to: '/ask/definitions', label: 'Metric definitions', icon: Icon.defs },
+  { to: '/ask/evaluation', label: 'Ask evaluation', icon: Icon.askeval },
 ]
 const BI03_PATHS = ['/early-warning', '/nudges', '/risk-evaluation']
+const LC04_PATH = '/command'
+const LC01_PATH = '/ask'
 
 export default function Layout() {
   const [pendingCount, setPendingCount] = useState(0)
   const [nudgeCount, setNudgeCount] = useState(0)
   const { pathname } = useLocation()
   const inBi03 = BI03_PATHS.some((p) => pathname.startsWith(p))
+  const inLc04 = pathname.startsWith(LC04_PATH)
+  const [lcUsers, setLcUsers] = useState([])
+  const [lcUser, setLcUserState] = useState(getLcUser())
+  useEffect(() => { if (inLc04 && !lcUsers.length) api('/lc04/users').then(setLcUsers).catch(() => {}) }, [inLc04])
+  const inLc01 = pathname.startsWith(LC01_PATH)
+  const [askUsers, setAskUsers] = useState([])
+  const [askUser, setAskUserState] = useState(getAskUser())
+  useEffect(() => { if (inLc01 && !askUsers.length) api('/lc01/users').then(setAskUsers).catch(() => {}) }, [inLc01])
 
   // sidebar badge = recommendations waiting for approval
   useEffect(() => {
@@ -62,10 +88,22 @@ export default function Layout() {
       </aside>
 
       <header className="topbar">
-        <div className="logo">Portfolio<b>IQ</b><small>{inBi03 ? 'Who may miss the next EMI' : 'Why customers are not paying'}</small></div>
+        <div className="logo">Portfolio<b>IQ</b><small>{inLc01 ? 'Ask your portfolio' : inLc04 ? 'Operations command center' : inBi03 ? 'Who may miss the next EMI' : 'Why customers are not paying'}</small></div>
         <span className="spacer" />
-        <span className="who">Neha Kapoor · Collections Head</span>
-        <div className="avatar">N</div>
+        {inLc01 ? (
+          <label className="who">Signed in as{' '}
+            <select className="select" value={askUser} onChange={(e) => { setAskUser(e.target.value); setAskUserState(e.target.value) }}>
+              {askUsers.map((u) => <option key={u.user_id} value={u.user_id}>{u.name}</option>)}
+            </select>
+          </label>
+        ) : inLc04 ? (
+          <label className="who">Viewing as{' '}
+            <select className="select" value={lcUser} onChange={(e) => { setLcUser(e.target.value); setLcUserState(e.target.value) }}>
+              {lcUsers.map((u) => <option key={u.user_id} value={u.user_id}>{u.name}</option>)}
+            </select>
+          </label>
+        ) : <span className="who">Neha Kapoor · Collections Head</span>}
+        <div className="avatar">{inLc01 ? (askUsers.find((u) => u.user_id === askUser)?.name || 'A')[0] : inLc04 ? (lcUsers.find((u) => u.user_id === lcUser)?.name || 'A')[0] : 'N'}</div>
       </header>
 
       <main className="content"><Outlet /></main>

@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "cure_rate", "group_by": ["agency"], "filters": {}, "months": {"from": "2026-01", "to": "2026-10"}, "trend": false, "rank": {"which": "highest", "top_n": 3}, "explain": false, "candidates": [], "refuse_category": null, "reason": "Provided answer"}

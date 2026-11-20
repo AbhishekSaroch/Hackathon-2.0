@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "total_demand", "group_by": ["city"], "filters": {}, "months": {"from": "2026-10", "to": "2026-10"}, "trend": false, "rank": {"which": "highest", "top_n": null}, "explain": false, "candidates": [], "refuse_category": null, "reason": "valid request"}

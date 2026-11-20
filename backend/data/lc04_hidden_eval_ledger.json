@@ -1,0 +1,170 @@
+[
+  {
+    "event": "hidden_evaluation_started",
+    "at": "2026-11-20T02:55:46",
+    "code_fingerprint": "140b7a43ba23a445",
+    "params": {
+      "phi": {
+        "contacts_attempted": 1.31,
+        "connect_rate": 1.03,
+        "ptp_capture_rate": 1.3,
+        "ptp_kept": 1.11,
+        "pay_success_rate": 1.48,
+        "events_total": 1.69
+      },
+      "phi_default": 1.0,
+      "alpha": 1.0,
+      "T": {
+        "2": 7.0,
+        "4": 6.0,
+        "8": 5.5,
+        "16": 5.5
+      },
+      "min_n": {
+        "2": 6.0,
+        "4": 8.0,
+        "8": 12.0,
+        "16": 16.0
+      },
+      "min_d": {
+        "2": 5.0,
+        "4": 8.0,
+        "8": 14.0,
+        "16": 24.0
+      }
+    },
+    "note": "detector, drill-down, alert code and tuned parameters fingerprinted BEFORE the hidden days are loaded"
+  },
+  {
+    "event": "hidden_data_loaded",
+    "at": "2026-11-20T02:56:40",
+    "events": 260166,
+    "cube_rows": 192033,
+    "note": "hidden days 31-40 and answer key added to lc04.db"
+  },
+  {
+    "event": "hidden_requests_loaded",
+    "at": "2026-11-20T02:56:40",
+    "requests": 10
+  },
+  {
+    "event": "hidden_evaluation_run",
+    "at": "2026-11-20T03:03:13",
+    "code_fingerprint": "140b7a43ba23a445",
+    "code_changed_since_start": false,
+    "summary": {
+      "n": 6,
+      "detected": 3,
+      "within_hour": 3,
+      "right_driver": 3,
+      "within_hour_and_right": 3,
+      "fa": {
+        "total": 1,
+        "days": 10,
+        "per_day_max": 1,
+        "per_day_mean": 0.1,
+        "incidents": [
+          "INC-1028-1830"
+        ]
+      }
+    }
+  },
+  {
+    "event": "post_run_diagnosis",
+    "at": "2026-11-20T03:08:20",
+    "note": "After the hidden run (3 of 6), a post-run look found a BUG in the drill-down, not a tuning problem: it left out of the history every day on which ANY series had an alert, and when fewer than 5 days were left it raised an error that the timeline swallowed, silently dropping the incident. The detector had raised alerts for the 3 missed anomalies (5, 4 and 9 alerts on their days), but the drill-down never confirmed them. Fix (no thresholds touched): a day is left out only for segments that overlap the alerted segment, if too few days remain they are put back instead of giving up, and dropped incidents are counted. The same hidden data was then re-scored. That number is NOT a clean hold-out: the fix was made after seeing the result."
+  },
+  {
+    "event": "hidden_rescore_after_fix",
+    "at": "2026-11-20T03:11:01",
+    "code_fingerprint": "19278e8414b1ea1e",
+    "summary": {
+      "n": 6,
+      "detected": 6,
+      "within_hour": 5,
+      "right_driver": 6,
+      "within_hour_and_right": 5,
+      "fa": {
+        "total": 2,
+        "days": 10,
+        "per_day_max": 1,
+        "per_day_mean": 0.2,
+        "incidents": [
+          "INC-1028-1830",
+          "INC-1103-1845"
+        ]
+      }
+    },
+    "public_summary": {
+      "n": 7,
+      "detected": 6,
+      "within_hour": 5,
+      "right_driver": 6,
+      "within_hour_and_right": 5,
+      "fa": {
+        "total": 6,
+        "days": 23,
+        "per_day_max": 2,
+        "per_day_mean": 0.26,
+        "incidents": [
+          "INC-1007-1845",
+          "INC-1019-1930",
+          "INC-1021-1000",
+          "INC-1024-0915",
+          "INC-1024-1745",
+          "INC-1027-1730"
+        ]
+      }
+    },
+    "note": "same hidden data re-scored after the drill-down fix; official numbers unchanged in the report"
+  },
+  {
+    "event": "demo_legal_seeded",
+    "at": "2026-11-20T06:27:04",
+    "events": 173,
+    "violation": {
+      "day": "2026-11-20",
+      "agency": "A4",
+      "notices": 38,
+      "sent": "03:02-03:19",
+      "logged": "06:05-06:14"
+    },
+    "note": "demo scenario seeded by us; not part of the hidden evaluation"
+  },
+  {
+    "event": "demo_legal_removed",
+    "at": "2026-11-20T06:41:12",
+    "events": 173
+  },
+  {
+    "event": "demo_legal_seeded",
+    "at": "2026-11-20T06:41:14",
+    "events": 173,
+    "violation": {
+      "day": "2026-11-20",
+      "agency": "A4",
+      "notices": 38,
+      "sent": "03:02-03:19",
+      "logged": "06:05-06:14"
+    },
+    "note": "demo scenario seeded by us; not part of the hidden evaluation"
+  },
+  {
+    "event": "demo_legal_removed",
+    "at": "2026-11-20T06:59:29",
+    "events": 173
+  },
+  {
+    "event": "demo_legal_seeded",
+    "at": "2026-11-20T06:59:30",
+    "events": 173,
+    "violation": {
+      "day": "2026-11-20",
+      "agency": "A4",
+      "notices": 38,
+      "sent": "03:02-03:19",
+      "logged": "06:05-06:14"
+    },
+    "note": "demo scenario seeded by us; not part of the hidden evaluation"
+  }
+]

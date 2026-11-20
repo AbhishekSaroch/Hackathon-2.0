@@ -1,0 +1,802 @@
+{
+  "generated_at": "2026-11-20T03:03:13",
+  "code_fingerprint": "140b7a43ba23a445",
+  "data_note": "Synthetic data, seeded anomalies. Public days (days 1-30) were used to build and tune. Hidden days (31-40) are run once.",
+  "public": {
+    "anomalies": [
+      {
+        "id": "P1",
+        "kind": "dialer_outage",
+        "segment": {
+          "city": "Hyderabad",
+          "dialer": "D3"
+        },
+        "start": "2026-10-15 11:00:00",
+        "detected": true,
+        "alert_minutes": 45.0,
+        "within_hour": true,
+        "driver": {
+          "city": "Hyderabad",
+          "dialer": "D3"
+        },
+        "driver_first": {
+          "city": "Hyderabad",
+          "dialer": "D3"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1015-1145"
+      },
+      {
+        "id": "P2",
+        "kind": "gateway_failure",
+        "segment": {
+          "gateway": "G4"
+        },
+        "start": "2026-10-19 15:00:00",
+        "detected": true,
+        "alert_minutes": 105.0,
+        "within_hour": false,
+        "driver": {
+          "gateway": "G4"
+        },
+        "driver_first": {
+          "gateway": "G4"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1019-1645"
+      },
+      {
+        "id": "P3",
+        "kind": "duplicate_events",
+        "segment": {
+          "agency": "A5"
+        },
+        "start": "2026-10-23 10:30:00",
+        "detected": true,
+        "alert_minutes": 45.0,
+        "within_hour": true,
+        "driver": {
+          "agency": "A5"
+        },
+        "driver_first": {
+          "agency": "A5"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1023-1115"
+      },
+      {
+        "id": "P4",
+        "kind": "agency_misdisposition",
+        "segment": {
+          "agency": "A2"
+        },
+        "start": "2026-10-14 10:00:00",
+        "detected": true,
+        "alert_minutes": 30.0,
+        "within_hour": true,
+        "driver": {
+          "agency": "A2"
+        },
+        "driver_first": {
+          "agency": "A2"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1014-1030"
+      },
+      {
+        "id": "P5",
+        "kind": "feed_stall",
+        "segment": {
+          "lender": "L3"
+        },
+        "start": "2026-10-21 14:00:00",
+        "detected": true,
+        "alert_minutes": 15.0,
+        "within_hour": true,
+        "driver": {
+          "lender": "L3"
+        },
+        "driver_first": {
+          "lender": "L3"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1021-1415"
+      },
+      {
+        "id": "P6",
+        "kind": "ptp_collapse",
+        "segment": {
+          "product": "Two-Wheeler",
+          "lender": "L2"
+        },
+        "start": "2026-10-22 10:00:00",
+        "detected": true,
+        "alert_minutes": 285.0,
+        "within_hour": false,
+        "driver": {
+          "lender": "L2",
+          "product": "Two-Wheeler"
+        },
+        "driver_first": {
+          "lender": "L2",
+          "product": "Two-Wheeler"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1022-1345"
+      },
+      {
+        "id": "P7",
+        "kind": "dialer_outage",
+        "segment": {
+          "city": "Mumbai",
+          "dialer": "D1"
+        },
+        "start": "2026-10-09 12:00:00",
+        "detected": true,
+        "alert_minutes": 60.0,
+        "within_hour": true,
+        "driver": {
+          "city": "Mumbai",
+          "dialer": "D1"
+        },
+        "driver_first": {
+          "city": "Mumbai",
+          "dialer": "D1"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1009-1300"
+      }
+    ],
+    "false_alerts": {
+      "total": 6,
+      "days": 23,
+      "per_day_max": 2,
+      "per_day_mean": 0.26,
+      "incidents": [
+        "INC-1007-1845",
+        "INC-1019-1930",
+        "INC-1021-1000",
+        "INC-1024-0915",
+        "INC-1024-1745",
+        "INC-1027-1730"
+      ]
+    },
+    "summary": {
+      "n": 7,
+      "detected": 7,
+      "within_hour": 5,
+      "right_driver": 7,
+      "within_hour_and_right": 5,
+      "fa": {
+        "total": 6,
+        "days": 23,
+        "per_day_max": 2,
+        "per_day_mean": 0.26,
+        "incidents": [
+          "INC-1007-1845",
+          "INC-1019-1930",
+          "INC-1021-1000",
+          "INC-1024-0915",
+          "INC-1024-1745",
+          "INC-1027-1730"
+        ]
+      }
+    }
+  },
+  "hidden": {
+    "anomalies": [
+      {
+        "id": "H1",
+        "kind": "dialer_outage",
+        "segment": {
+          "city": "Pune",
+          "dialer": "D2"
+        },
+        "start": "2026-10-28 10:30:00",
+        "detected": true,
+        "alert_minutes": 60.0,
+        "within_hour": true,
+        "driver": {
+          "city": "Pune",
+          "dialer": "D2"
+        },
+        "driver_first": {
+          "city": "Pune",
+          "dialer": "D2"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1028-1130"
+      },
+      {
+        "id": "H2",
+        "kind": "agency_misdisposition",
+        "segment": {
+          "agency": "A3"
+        },
+        "start": "2026-10-29 09:30:00",
+        "detected": true,
+        "alert_minutes": 45.0,
+        "within_hour": true,
+        "driver": {
+          "agency": "A3"
+        },
+        "driver_first": {
+          "agency": "A3"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1029-1015"
+      },
+      {
+        "id": "H3",
+        "kind": "gateway_failure",
+        "segment": {
+          "gateway": "G2"
+        },
+        "start": "2026-10-30 14:00:00",
+        "detected": true,
+        "alert_minutes": 30.0,
+        "within_hour": true,
+        "driver": {
+          "gateway": "G2"
+        },
+        "driver_first": {
+          "gateway": "G2"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1030-1430"
+      },
+      {
+        "id": "H4",
+        "kind": "feed_stall",
+        "segment": {
+          "lender": "L4"
+        },
+        "start": "2026-11-02 11:00:00",
+        "detected": false,
+        "alert_minutes": null,
+        "within_hour": false,
+        "driver": null,
+        "driver_first": null,
+        "driver_correct": false,
+        "driver_correct_at_first_alert": false,
+        "incident": null
+      },
+      {
+        "id": "H5",
+        "kind": "ptp_collapse",
+        "segment": {
+          "product": "Two-Wheeler",
+          "lender": "L1"
+        },
+        "start": "2026-11-03 10:00:00",
+        "detected": false,
+        "alert_minutes": null,
+        "within_hour": false,
+        "driver": null,
+        "driver_first": null,
+        "driver_correct": false,
+        "driver_correct_at_first_alert": false,
+        "incident": null
+      },
+      {
+        "id": "H6",
+        "kind": "duplicate_events",
+        "segment": {
+          "agency": "A6"
+        },
+        "start": "2026-11-04 12:00:00",
+        "detected": false,
+        "alert_minutes": null,
+        "within_hour": false,
+        "driver": null,
+        "driver_first": null,
+        "driver_correct": false,
+        "driver_correct_at_first_alert": false,
+        "incident": null
+      }
+    ],
+    "false_alerts": {
+      "total": 1,
+      "days": 10,
+      "per_day_max": 1,
+      "per_day_mean": 0.1,
+      "incidents": [
+        "INC-1028-1830"
+      ]
+    },
+    "summary": {
+      "n": 6,
+      "detected": 3,
+      "within_hour": 3,
+      "right_driver": 3,
+      "within_hour_and_right": 3,
+      "fa": {
+        "total": 1,
+        "days": 10,
+        "per_day_max": 1,
+        "per_day_mean": 0.1,
+        "incidents": [
+          "INC-1028-1830"
+        ]
+      }
+    }
+  },
+  "acceptance": [
+    {
+      "criterion": "Seeded anomalies detected within an hour with the correct driving segment",
+      "target": "at least 5 of 6",
+      "public": "5 of 7 (all 7 detected, 7 right driver; slower ones are in the table)",
+      "hidden": "3 of 6 within the hour with the right driver; 3 detected, 3 named the right driver",
+      "status": "not met",
+      "hidden_after_fix": "HIDDEN: 5 of 6 within the hour with the right driver; 6 alerted, 6 right driver. PUBLIC with the fixed code: 6 of 7 alerted, 5 within the hour, 6 right driver (the weak PTP-kept one stays 'watched'). Not a clean hold-out."
+    },
+    {
+      "criterion": "False alerts per day",
+      "target": "at most 3 a day",
+      "public": "worst day 2, mean 0.26 a day (6 in 23 days)",
+      "hidden": "worst day 1, mean 0.1 a day (1 in 10 days)",
+      "status": "met",
+      "hidden_after_fix": "HIDDEN: worst day 1, mean 0.2 a day (2 in 10 days). PUBLIC: worst day 2, mean 0.26."
+    },
+    {
+      "criterion": "Every number reconciles to its governed definition",
+      "target": "all numbers",
+      "public": "PASS  every metric x 6 views equals the independent recompute from raw events   [354 metric-views, 0 wrong: []]; findings equal compute() (drill test)",
+      "hidden": "re-run after the hidden days were loaded: 19 checks passed, 0 failed",
+      "status": "met"
+    },
+    {
+      "criterion": "Zero cross-tenant data",
+      "target": "none",
+      "public": "35 access/attack checks pass (forged principal, injection, other-lender asks, alerts per lender)",
+      "hidden": "35 checks pass; 168 lender alert rows checked, 0 leaks",
+      "status": "met"
+    },
+    {
+      "criterion": "Dashboard generated in under 2 minutes",
+      "target": "< 120 s",
+      "public": "10 of 10 public requests good, slowest 19 ms",
+      "hidden": "7 of 10 hidden requests good, slowest 59670 ms (sources fallback, llm)",
+      "status": "partly"
+    },
+    {
+      "criterion": "Refresh every 15 minutes over 100,000 accounts",
+      "target": "15 min",
+      "public": "measured at step 3: busiest 15-minute bucket for all 5 lenders refreshed in 486 ms on 100,000 accounts; a day of one lender's city series reads in 81 ms",
+      "hidden": "same code, not re-measured",
+      "status": "met"
+    }
+  ],
+  "limits": [
+    "HIDDEN RESULT, TWO NUMBERS: the official run (frozen code) found 3 of 6. A drill-down bug was then found and fixed and the same data re-scored: 6 of 6 alerted, 5 of 6 within the hour with the right driver. The second number is not a clean hold-out.",
+    "AFTER THE FIX: the weak PTP-kept practice anomaly (about 8 kept promises an hour) is detected and drilled to the right segment but sits just under the confirmation line (z -3.98 against 4.0), so it stays 'watched' and sends no alert. We did not move the line.",
+    "All data is synthetic and the anomalies were seeded by us: the numbers show the method, not real-world accuracy.",
+    "The hidden period is ours too: the generator's difficulty was set before the detector existed and the hidden anomalies were not changed afterwards, but we wrote both sides.",
+    "A segment with few events per hour (one payment gateway, PTPs kept in one lender and product) cannot be told apart from noise in the first hour: those anomalies are found later, not sooner. That is a limit of the data, not of the threshold.",
+    "'Since' times are an estimate of the first deviating 15-minute bucket, accurate to about one bucket.",
+    "Two segments that cover almost the same events (an agency that works in one city only) cannot be separated by the data; the drill-down names the one with the strongest evidence.",
+    "The AI only drafts dashboard specs; everything it returns is validated in code. Alerts, numbers and drill-down are code. The free Groq tier limits how fast the AI step can run."
+  ],
+  "tests": [
+    {
+      "test": "test_lc04_metrics.py",
+      "passed": 19,
+      "failed": 0,
+      "ok": true,
+      "detail": "PASS  every metric x 6 views equals the independent recompute from raw events   [354 metric-views, 0 wrong: []]"
+    },
+    {
+      "test": "test_lc04_access.py",
+      "passed": 35,
+      "failed": 0,
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "spec": {
+    "public": {
+      "n": 10,
+      "good": 10,
+      "governed": 10,
+      "median_ms": 0,
+      "slowest_ms": 19,
+      "sources": [
+        "fallback"
+      ],
+      "failed": []
+    },
+    "hidden": {
+      "n": 10,
+      "good": 7,
+      "governed": 10,
+      "median_ms": 2127,
+      "slowest_ms": 59670,
+      "sources": [
+        "fallback",
+        "llm"
+      ],
+      "failed": [
+        {
+          "id": "Q02",
+          "why": [
+            "relevant",
+            "ok"
+          ]
+        },
+        {
+          "id": "Q05",
+          "why": [
+            "relevant",
+            "ok"
+          ]
+        },
+        {
+          "id": "Q09",
+          "why": [
+            "relevant",
+            "ok"
+          ]
+        }
+      ]
+    }
+  },
+  "isolation": {
+    "alert_rows_checked": 168,
+    "leaks": 0
+  },
+  "hidden_after_fix": {
+    "anomalies": [
+      {
+        "id": "H1",
+        "kind": "dialer_outage",
+        "segment": {
+          "city": "Pune",
+          "dialer": "D2"
+        },
+        "start": "2026-10-28 10:30:00",
+        "detected": true,
+        "alert_minutes": 60.0,
+        "within_hour": true,
+        "driver": {
+          "city": "Pune",
+          "dialer": "D2"
+        },
+        "driver_first": {
+          "city": "Pune",
+          "dialer": "D2"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1028-1130"
+      },
+      {
+        "id": "H2",
+        "kind": "agency_misdisposition",
+        "segment": {
+          "agency": "A3"
+        },
+        "start": "2026-10-29 09:30:00",
+        "detected": true,
+        "alert_minutes": 45.0,
+        "within_hour": true,
+        "driver": {
+          "agency": "A3"
+        },
+        "driver_first": {
+          "agency": "A3"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1029-1015"
+      },
+      {
+        "id": "H3",
+        "kind": "gateway_failure",
+        "segment": {
+          "gateway": "G2"
+        },
+        "start": "2026-10-30 14:00:00",
+        "detected": true,
+        "alert_minutes": 30.0,
+        "within_hour": true,
+        "driver": {
+          "gateway": "G2"
+        },
+        "driver_first": {
+          "gateway": "G2"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1030-1430"
+      },
+      {
+        "id": "H4",
+        "kind": "feed_stall",
+        "segment": {
+          "lender": "L4"
+        },
+        "start": "2026-11-02 11:00:00",
+        "detected": true,
+        "alert_minutes": 15.0,
+        "within_hour": true,
+        "driver": {
+          "lender": "L4"
+        },
+        "driver_first": {
+          "lender": "L4"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1102-1115"
+      },
+      {
+        "id": "H5",
+        "kind": "ptp_collapse",
+        "segment": {
+          "product": "Two-Wheeler",
+          "lender": "L1"
+        },
+        "start": "2026-11-03 10:00:00",
+        "detected": true,
+        "alert_minutes": 315.0,
+        "within_hour": false,
+        "driver": {
+          "lender": "L1",
+          "product": "Two-Wheeler"
+        },
+        "driver_first": {
+          "lender": "L1",
+          "product": "Two-Wheeler"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1103-1515"
+      },
+      {
+        "id": "H6",
+        "kind": "duplicate_events",
+        "segment": {
+          "agency": "A6"
+        },
+        "start": "2026-11-04 12:00:00",
+        "detected": true,
+        "alert_minutes": 60.0,
+        "within_hour": true,
+        "driver": {
+          "agency": "A6"
+        },
+        "driver_first": {
+          "agency": "A6"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1104-1300"
+      }
+    ],
+    "false_alerts": {
+      "total": 2,
+      "days": 10,
+      "per_day_max": 1,
+      "per_day_mean": 0.2,
+      "incidents": [
+        "INC-1028-1830",
+        "INC-1103-1845"
+      ]
+    },
+    "summary": {
+      "n": 6,
+      "detected": 6,
+      "within_hour": 5,
+      "right_driver": 6,
+      "within_hour_and_right": 5,
+      "fa": {
+        "total": 2,
+        "days": 10,
+        "per_day_max": 1,
+        "per_day_mean": 0.2,
+        "incidents": [
+          "INC-1028-1830",
+          "INC-1103-1845"
+        ]
+      }
+    },
+    "note": "After the hidden run (3 of 6), a post-run look found a BUG in the drill-down, not a tuning problem: it left out of the history every day on which ANY series had an alert, and when fewer than 5 days were left it raised an error that the timeline swallowed, silently dropping the incident. The detector had raised alerts for the 3 missed anomalies (5, 4 and 9 alerts on their days), but the drill-down never confirmed them. Fix (no thresholds touched): a day is left out only for segments that overlap the alerted segment, if too few days remain they are put back instead of giving up, and dropped incidents are counted. The same hidden data was then re-scored. That number is NOT a clean hold-out: the fix was made after seeing the result."
+  },
+  "public_after_fix": {
+    "anomalies": [
+      {
+        "id": "P1",
+        "kind": "dialer_outage",
+        "segment": {
+          "city": "Hyderabad",
+          "dialer": "D3"
+        },
+        "start": "2026-10-15 11:00:00",
+        "detected": true,
+        "alert_minutes": 45.0,
+        "within_hour": true,
+        "driver": {
+          "city": "Hyderabad",
+          "dialer": "D3"
+        },
+        "driver_first": {
+          "city": "Hyderabad",
+          "dialer": "D3"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1015-1145"
+      },
+      {
+        "id": "P2",
+        "kind": "gateway_failure",
+        "segment": {
+          "gateway": "G4"
+        },
+        "start": "2026-10-19 15:00:00",
+        "detected": true,
+        "alert_minutes": 105.0,
+        "within_hour": false,
+        "driver": {
+          "gateway": "G4"
+        },
+        "driver_first": {
+          "gateway": "G4"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1019-1645"
+      },
+      {
+        "id": "P3",
+        "kind": "duplicate_events",
+        "segment": {
+          "agency": "A5"
+        },
+        "start": "2026-10-23 10:30:00",
+        "detected": true,
+        "alert_minutes": 45.0,
+        "within_hour": true,
+        "driver": {
+          "agency": "A5"
+        },
+        "driver_first": {
+          "agency": "A5"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1023-1115"
+      },
+      {
+        "id": "P4",
+        "kind": "agency_misdisposition",
+        "segment": {
+          "agency": "A2"
+        },
+        "start": "2026-10-14 10:00:00",
+        "detected": true,
+        "alert_minutes": 30.0,
+        "within_hour": true,
+        "driver": {
+          "agency": "A2"
+        },
+        "driver_first": {
+          "agency": "A2"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1014-1030"
+      },
+      {
+        "id": "P5",
+        "kind": "feed_stall",
+        "segment": {
+          "lender": "L3"
+        },
+        "start": "2026-10-21 14:00:00",
+        "detected": true,
+        "alert_minutes": 15.0,
+        "within_hour": true,
+        "driver": {
+          "lender": "L3"
+        },
+        "driver_first": {
+          "lender": "L3"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1021-1415"
+      },
+      {
+        "id": "P6",
+        "kind": "ptp_collapse",
+        "segment": {
+          "product": "Two-Wheeler",
+          "lender": "L2"
+        },
+        "start": "2026-10-22 10:00:00",
+        "detected": false,
+        "alert_minutes": null,
+        "within_hour": false,
+        "driver": null,
+        "driver_first": null,
+        "driver_correct": false,
+        "driver_correct_at_first_alert": false,
+        "incident": null
+      },
+      {
+        "id": "P7",
+        "kind": "dialer_outage",
+        "segment": {
+          "city": "Mumbai",
+          "dialer": "D1"
+        },
+        "start": "2026-10-09 12:00:00",
+        "detected": true,
+        "alert_minutes": 60.0,
+        "within_hour": true,
+        "driver": {
+          "city": "Mumbai",
+          "dialer": "D1"
+        },
+        "driver_first": {
+          "city": "Mumbai",
+          "dialer": "D1"
+        },
+        "driver_correct": true,
+        "driver_correct_at_first_alert": true,
+        "incident": "INC-1009-1300"
+      }
+    ],
+    "false_alerts": {
+      "total": 6,
+      "days": 23,
+      "per_day_max": 2,
+      "per_day_mean": 0.26,
+      "incidents": [
+        "INC-1007-1845",
+        "INC-1019-1930",
+        "INC-1021-1000",
+        "INC-1024-0915",
+        "INC-1024-1745",
+        "INC-1027-1730"
+      ]
+    },
+    "summary": {
+      "n": 7,
+      "detected": 6,
+      "within_hour": 5,
+      "right_driver": 6,
+      "within_hour_and_right": 5,
+      "fa": {
+        "total": 6,
+        "days": 23,
+        "per_day_max": 2,
+        "per_day_mean": 0.26,
+        "incidents": [
+          "INC-1007-1845",
+          "INC-1019-1930",
+          "INC-1021-1000",
+          "INC-1024-0915",
+          "INC-1024-1745",
+          "INC-1027-1730"
+        ]
+      }
+    }
+  },
+  "post_run_fix": {
+    "code_fingerprint": "19278e8414b1ea1e",
+    "official_fingerprint": "140b7a43ba23a445",
+    "dropped_incidents_after_fix": 0
+  }
+}

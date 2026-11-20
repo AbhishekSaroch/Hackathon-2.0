@@ -11,6 +11,8 @@ export default defineConfig({
     proxy: {
       '/bi02': API,
       '/bi03': { target: API, timeout: 600000, proxyTimeout: 600000 },   // "advance one day" can take a while
+      '/lc04': { target: API, timeout: 600000, proxyTimeout: 600000 },   // preparing the replay can take a minute
+      '/lc01': { target: API, timeout: 120000, proxyTimeout: 120000 },   // a question can wait for the model's rate limit
       '/health': API,
     },
   },

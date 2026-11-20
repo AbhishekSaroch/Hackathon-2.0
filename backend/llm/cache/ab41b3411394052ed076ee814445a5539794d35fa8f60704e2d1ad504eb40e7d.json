@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "avg_talk_time", "group_by": [], "filters": {"lender": ["L2", "L3"]}, "months": {"from": "2026-09", "to": "2026-09"}, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "average talk time for September"}

@@ -62,10 +62,10 @@ MERCHANTS = ["SWIGGY", "ZOMATO", "BIGBASKET", "DMART", "JIO RECHARGE", "IRCTC", 
 
 # D11: approved service templates (no dues words, no amounts, no urgency). Placeholders are filled by code.
 TEMPLATES = [
-    ("T-EDC-H1", "emi_date_change", "hinglish", "Hi {name}, humne dekha ki aapki salary date badal sakti hai. Kya aap apni EMI date {new_date} tareekh pe shift karna chahenge? Reply YES, hum aapke liye set kar denge.", "name,new_date"),
-    ("T-EDC-H2", "emi_date_change", "hinglish", "Namaste {name}, agar aapki salary der se aa rahi hai toh hum EMI date badal sakte hain. {new_date} tareekh theek rahegi? Reply YES.", "name,new_date"),
-    ("T-EDC-E1", "emi_date_change", "english", "Hi {name}, we noticed your salary date may have changed. Would you like to move your EMI date to the {new_date}? Reply YES and we will set it up for you.", "name,new_date"),
-    ("T-EDC-E2", "emi_date_change", "english", "Hello {name}, if your salary is arriving later, we can change your EMI date. Would the {new_date} suit you? Reply YES.", "name,new_date"),
+    ("T-EDC-H1", "emi_date_change", "hinglish", "Hi {name}, kya aap apni EMI date badalna chahenge? Hum EMI ko {new_date} tareekh pe shift kar sakte hain. Reply YES, hum aapke liye set kar denge.", "name,new_date"),
+    ("T-EDC-H2", "emi_date_change", "hinglish", "Namaste {name}, agar aapko EMI date badalni ho toh hum madad kar sakte hain. {new_date} tareekh theek rahegi? Reply YES.", "name,new_date"),
+    ("T-EDC-E1", "emi_date_change", "english", "Hi {name}, would you like to move your EMI date to the {new_date}? Reply YES and we will set it up for you.", "name,new_date"),
+    ("T-EDC-E2", "emi_date_change", "english", "Hello {name}, we can change your EMI date if that is easier for you. Would the {new_date} suit you? Reply YES.", "name,new_date"),
     ("T-APY-H1", "autopay_setup", "hinglish", "Hi {name}, EMI date yaad rakhne ki chinta chhodiye! 2 minute me auto-pay set kar lein. Madad chahiye toh HELP likhein.", "name"),
     ("T-APY-H2", "autopay_setup", "hinglish", "Namaste {name}, auto-pay se aapki EMI apne aap ho jayegi, koi tension nahi. App me ya HELP likh ke set kar sakte hain.", "name"),
     ("T-APY-E1", "autopay_setup", "english", "Hi {name}, never worry about your EMI date again. Set up auto-pay in 2 minutes. Reply HELP if you would like a hand.", "name"),

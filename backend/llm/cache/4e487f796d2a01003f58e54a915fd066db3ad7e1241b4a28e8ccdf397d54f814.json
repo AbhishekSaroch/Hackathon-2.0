@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "call_attempts", "group_by": [], "filters": {"month": ["2026-06"]}, "months": null, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "Metric identified"}

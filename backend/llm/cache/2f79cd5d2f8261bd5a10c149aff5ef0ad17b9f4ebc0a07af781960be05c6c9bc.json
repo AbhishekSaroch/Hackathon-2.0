@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "new_delinquency_rate", "group_by": [], "filters": {}, "months": {"from": "2026-07", "to": "2026-08"}, "trend": true, "rank": null, "explain": true, "candidates": [], "refuse_category": null, "reason": "Provide explanation for higher new delinquency rate in August vs July"}

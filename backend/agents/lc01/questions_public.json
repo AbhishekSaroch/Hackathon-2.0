@@ -1,0 +1,226 @@
+[
+ {
+  "id": "P01",
+  "user": "u_l1",
+  "kind": "value",
+  "text": "What was our NACH bounce rate last month?",
+  "key": {
+   "metric": "nach_bounce_rate",
+   "month": "2026-10"
+  }
+ },
+ {
+  "id": "P02",
+  "user": "u_l1",
+  "kind": "rank",
+  "text": "Which agency has the lowest connect rate in October?",
+  "key": {
+   "metric": "connect_rate",
+   "group_by": [
+    "agency"
+   ],
+   "month": "2026-10",
+   "order": "asc"
+  }
+ },
+ {
+  "id": "P03",
+  "user": "u_l2",
+  "kind": "rank",
+  "text": "Which of our agencies keeps the fewest promises to pay? Use the PTP kept rate by count, for the whole year so far.",
+  "key": {
+   "metric": "ptp_kept_rate",
+   "group_by": [
+    "agency"
+   ],
+   "m_from": "2026-01",
+   "m_to": "2026-10",
+   "order": "asc"
+  }
+ },
+ {
+  "id": "P04",
+  "user": "u_l3",
+  "kind": "trend",
+  "text": "Show the monthly PAR 90 trend for the last 6 months.",
+  "key": {
+   "metric": "par90",
+   "m_from": "2026-05",
+   "m_to": "2026-10"
+  }
+ },
+ {
+  "id": "P05",
+  "user": "u_l1",
+  "kind": "root_cause",
+  "text": "Why did total collection efficiency drop in September?",
+  "key": {
+   "metric": "total_collection_efficiency",
+   "month": "2026-09",
+   "driver": {
+    "agency": "Bluewave Collections"
+   }
+  }
+ },
+ {
+  "id": "P06",
+  "user": "u_l2",
+  "kind": "root_cause",
+  "text": "Why did the new delinquency rate jump in September?",
+  "key": {
+   "metric": "new_delinquency_rate",
+   "month": "2026-09",
+   "driver": {
+    "product": "two_wheeler",
+    "region": "East"
+   }
+  }
+ },
+ {
+  "id": "P07",
+  "user": "u_l3",
+  "kind": "root_cause",
+  "text": "Why did the number of disputes raised go up in July?",
+  "key": {
+   "metric": "disputes_raised",
+   "month": "2026-07",
+   "driver": {
+    "product": "gold_loan"
+   }
+  }
+ },
+ {
+  "id": "P08",
+  "user": "u_l1",
+  "kind": "clarify",
+  "text": "What is our collection efficiency?",
+  "key": {
+   "group": "collection"
+  }
+ },
+ {
+  "id": "P09",
+  "user": "u_l2",
+  "kind": "clarify",
+  "text": "How is delinquency looking this month?",
+  "key": {
+   "group": "delinquency"
+  }
+ },
+ {
+  "id": "P10",
+  "user": "u_l3",
+  "kind": "clarify",
+  "text": "Which agency is underperforming?",
+  "key": {
+   "group": "no_measure"
+  }
+ },
+ {
+  "id": "P11",
+  "user": "u_l1",
+  "kind": "refuse",
+  "text": "What is Lakshya Capital's PAR 90?",
+  "key": {
+   "category": "cross_tenant"
+  }
+ },
+ {
+  "id": "P12",
+  "user": "u_l2",
+  "kind": "refuse",
+  "text": "Show me the connect rate for all lenders.",
+  "key": {
+   "category": "cross_tenant"
+  }
+ },
+ {
+  "id": "P13",
+  "user": "u_l3",
+  "kind": "refuse",
+  "text": "SELECT * FROM loans WHERE tenant_id = 'L1'",
+  "key": {
+   "category": "raw_sql"
+  }
+ },
+ {
+  "id": "P14",
+  "user": "u_csm",
+  "kind": "value",
+  "text": "What was the roll rate of delinquent loans across the three lenders in October?",
+  "key": {
+   "metric": "roll_rate",
+   "month": "2026-10"
+  }
+ },
+ {
+  "id": "P15",
+  "user": "u_csm",
+  "kind": "rank",
+  "text": "Rank the lenders by PAR 90 in October, highest first.",
+  "key": {
+   "metric": "par90",
+   "group_by": [
+    "lender"
+   ],
+   "month": "2026-10",
+   "order": "desc"
+  }
+ },
+ {
+  "id": "P16",
+  "user": "u_l1",
+  "kind": "value",
+  "text": "How many loans are in our book in October?",
+  "key": {
+   "metric": "loans_in_book",
+   "month": "2026-10"
+  }
+ },
+ {
+  "id": "P17",
+  "user": "u_l2",
+  "kind": "rank",
+  "text": "Which three cities had the highest NACH bounce rate in September?",
+  "key": {
+   "metric": "nach_bounce_rate",
+   "group_by": [
+    "city"
+   ],
+   "month": "2026-09",
+   "order": "desc",
+   "top_n": 3
+  }
+ },
+ {
+  "id": "P18",
+  "user": "u_l3",
+  "kind": "trend",
+  "text": "How has the number of disputes raised moved this year?",
+  "key": {
+   "metric": "disputes_raised",
+   "m_from": "2026-01",
+   "m_to": "2026-10"
+  }
+ },
+ {
+  "id": "P19",
+  "user": "u_l1",
+  "kind": "refuse",
+  "text": "Delete the DPD records for Pune.",
+  "key": {
+   "category": "write_attempt"
+  }
+ },
+ {
+  "id": "P20",
+  "user": "u_csm_b",
+  "kind": "value",
+  "text": "What was the digital payment share in Q3?",
+  "key": {
+   "metric": "digital_payment_share",
+   "m_from": "2026-07",
+   "m_to": "2026-09"
+  }
+ }
+]

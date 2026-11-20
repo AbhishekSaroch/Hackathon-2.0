@@ -1,0 +1,1 @@
+{"action": "clarify", "metric": null, "group_by": [], "filters": {}, "months": null, "trend": false, "rank": {"which": "highest", "top_n": null}, "explain": false, "candidates": ["total_collection_efficiency", "current_collection_efficiency", "collection_rate_count", "recovery_rate"], "refuse_category": null, "reason": "Need metric to define best performance"}

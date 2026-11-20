@@ -1,0 +1,75 @@
+[
+ {
+  "id": "S1",
+  "lender": "L1",
+  "months": "2026-08..2026-10",
+  "driver": {
+   "agency": "Bluewave Collections"
+  },
+  "metrics": [
+   "total_collection_efficiency",
+   "connect_rate",
+   "delinquency_rate"
+  ]
+ },
+ {
+  "id": "S2",
+  "lender": "L2",
+  "months": "2026-09..2026-10",
+  "driver": {
+   "product": "two_wheeler",
+   "region": "East"
+  },
+  "metrics": [
+   "nach_bounce_rate",
+   "new_delinquency_rate",
+   "roll_rate"
+  ]
+ },
+ {
+  "id": "S3",
+  "lender": "L3",
+  "months": "2026-02..2026-10",
+  "driver": {
+   "city": "Chennai"
+  },
+  "metrics": [
+   "delinquency_rate",
+   "par30"
+  ]
+ },
+ {
+  "id": "S4",
+  "lender": "L2",
+  "months": "2026-01..2026-10",
+  "driver": {
+   "agency": "Fortis Collections"
+  },
+  "metrics": [
+   "ptp_kept_rate",
+   "ptp_kept_rate_amount"
+  ]
+ },
+ {
+  "id": "S5",
+  "lender": "all",
+  "months": "2026-10",
+  "driver": {},
+  "metrics": [
+   "new_delinquency_rate"
+  ],
+  "note": "mild seasonal dip (x0.85), within noise; no answer key depends on it"
+ },
+ {
+  "id": "S6",
+  "lender": "L3",
+  "months": "2026-07",
+  "driver": {
+   "product": "gold_loan",
+   "reason": "fraud"
+  },
+  "metrics": [
+   "disputes_raised"
+  ]
+ }
+]

@@ -1,0 +1,35 @@
+{
+ "ran_at": "2026-11-20T07:18:18",
+ "code_hash": "eef56d61abd91839",
+ "n": 50,
+ "correct": 45,
+ "accuracy": 0.9,
+ "leaks": 0,
+ "by_kind": {
+  "value": {
+   "correct": 10,
+   "n": 12
+  },
+  "rank": {
+   "correct": 7,
+   "n": 8
+  },
+  "trend": {
+   "correct": 6,
+   "n": 6
+  },
+  "root_cause": {
+   "correct": 4,
+   "n": 6
+  },
+  "clarify": {
+   "correct": 8,
+   "n": 8
+  },
+  "refuse": {
+   "correct": 10,
+   "n": 10
+  }
+ },
+ "rules_baseline_accuracy": 0.86
+}

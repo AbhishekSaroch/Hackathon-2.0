@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "ptp_kept_rate", "group_by": ["agency"], "filters": {}, "months": {"from": "2026-01", "to": "2026-10"}, "trend": false, "rank": {"which": "lowest", "top_n": null}, "explain": false, "candidates": [], "refuse_category": null, "reason": "Provided requested metric"}

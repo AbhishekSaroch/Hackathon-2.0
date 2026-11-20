@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "avg_bureau_score", "group_by": ["city"], "filters": {"city": ["Mumbai"]}, "months": {"from": "2026-10", "to": "2026-10"}, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "metric found"}

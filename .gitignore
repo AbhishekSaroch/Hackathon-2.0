@@ -26,5 +26,12 @@ Thumbs.db
 # Generated BI-03 synthetic data (52 MB, rebuild with: python backend/data/generate_bi03.py)
 backend/data/csv_bi03/
 
+# Generated LC-04 synthetic data (rebuild with: python backend/data/generate_lc04.py, then inject_hidden_lc04.py)
+backend/data/csv_lc04*/
+backend/data/lc04_cache/
+
+# Generated LC-01 synthetic warehouse (rebuild with: python backend/data/generate_lc01.py)
+backend/data/csv_lc01/
+
 # BI-03 cached daily features (rebuilt automatically)
 backend/data/bi03_cache/

@@ -1,0 +1,1 @@
+{"action": "answer", "metric": "loan_contact_rate", "group_by": ["city"], "filters": {}, "months": null, "trend": false, "rank": null, "explain": false, "candidates": [], "refuse_category": null, "reason": "Metric identified"}

@@ -12,6 +12,18 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "uvicorn", "main:app", "--app-dir", "backend", "--port", "8000"],
       "port": 8000
+    },
+    {
+      "name": "lc01-backend",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "uvicorn", "main:app", "--app-dir", "backend", "--port", "8010"],
+      "port": 8010
+    },
+    {
+      "name": "lc01-frontend",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "set API_PORT=8010&& set WEB_PORT=5174&& C:\\Users\\abhis\\AppData\\Roaming\\nvm\\v22.4.0\\node.exe frontend/node_modules/vite/bin/vite.js frontend --port 5174"],
+      "port": 5174
     }
   ]
 }

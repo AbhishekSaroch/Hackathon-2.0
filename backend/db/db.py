@@ -5,9 +5,11 @@ Rules enforced in code (not in prompts):
   - read queries MUST contain the :tenant_id placeholder, otherwise they are refused
   - tenant_id is always bound by this module, callers cannot override it in params
 
-Two databases live side by side:
+Three databases live side by side:
   - "main" (default): portfolioiq.db, used by BI-02. Behaviour is unchanged from before.
   - "bi03":           bi03.db, used by BI-03 (big event stream, kept apart so BI-02 stays small and fast).
+  - "lc04":           lc04.db, used by LC-04 (intraday event stream + 15-minute cube; tenant = lender).
+  - "lc01":           lc01.db, used by LC-01 (ask-your-portfolio warehouse; tenant = lender, 3 lenders).
 Every function takes an optional database="main" argument at the end, so existing callers are untouched.
 """
 import os
@@ -19,6 +21,10 @@ SCHEMA_PATH = HERE / "schema.sql"
 DB_PATH = Path(os.getenv("PORTFOLIOIQ_DB", HERE.parent / "portfolioiq.db"))
 BI03_SCHEMA_PATH = HERE / "schema_bi03.sql"
 BI03_DB_PATH = Path(os.getenv("PORTFOLIOIQ_BI03_DB", HERE.parent / "bi03.db"))
+LC04_SCHEMA_PATH = HERE / "schema_lc04.sql"
+LC04_DB_PATH = Path(os.getenv("PORTFOLIOIQ_LC04_DB", HERE.parent / "lc04.db"))
+LC01_SCHEMA_PATH = HERE / "schema_lc01.sql"
+LC01_DB_PATH = Path(os.getenv("PORTFOLIOIQ_LC01_DB", HERE.parent / "lc01.db"))
 
 
 class TenantError(Exception):
@@ -31,7 +37,11 @@ def _paths(database: str) -> tuple[Path, Path]:
         return DB_PATH, SCHEMA_PATH
     if database == "bi03":
         return BI03_DB_PATH, BI03_SCHEMA_PATH
-    raise ValueError(f"unknown database {database!r} (use 'main' or 'bi03')")
+    if database == "lc04":
+        return LC04_DB_PATH, LC04_SCHEMA_PATH
+    if database == "lc01":
+        return LC01_DB_PATH, LC01_SCHEMA_PATH
+    raise ValueError(f"unknown database {database!r} (use 'main', 'bi03', 'lc04' or 'lc01')")
 
 
 def get_conn(database: str = "main") -> sqlite3.Connection:
@@ -40,7 +50,7 @@ def get_conn(database: str = "main") -> sqlite3.Connection:
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     conn.execute("PRAGMA journal_mode = WAL")         # readers and writers do not block each other
-    if database == "bi03":
+    if database in ("bi03", "lc04", "lc01"):
         conn.execute("PRAGMA synchronous = NORMAL")   # faster bulk loads, still safe with WAL
     return conn
 
